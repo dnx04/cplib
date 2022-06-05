@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: data-structure
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/fenwick.hpp
       title: data-structure/fenwick.hpp
     - icon: ':heavy_check_mark:'
@@ -12,6 +12,9 @@ data:
   verificationCategories:
   - name: data-structure/test
     pages:
+    - icon: ':heavy_check_mark:'
+      path: data-structure/test/fenwick.test.cpp
+      title: data-structure/test/fenwick.test.cpp
     - icon: ':heavy_check_mark:'
       path: data-structure/test/union_find.test.cpp
       title: data-structure/test/union_find.test.cpp
