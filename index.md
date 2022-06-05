@@ -12,7 +12,7 @@ data:
   verificationCategories:
   - name: data-structure/test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/test/union_find.test.cpp
       title: data-structure/test/union_find.test.cpp
 layout: toppage
