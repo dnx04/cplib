@@ -4,8 +4,16 @@ data:
   - name: data-structure
     pages:
     - icon: ':warning:'
-      path: data-structure/union_find.cpp
-      title: data-structure/union_find.cpp
-  verificationCategories: []
+      path: data-structure/fenwick.hpp
+      title: data-structure/fenwick.hpp
+    - icon: ':warning:'
+      path: data-structure/union_find.hpp
+      title: data-structure/union_find.hpp
+  verificationCategories:
+  - name: data-structure/test
+    pages:
+    - icon: ':x:'
+      path: data-structure/test/union_find.test.cpp
+      title: data-structure/test/union_find.test.cpp
 layout: toppage
 ---
