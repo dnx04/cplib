@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utility/modint.hpp
     title: utility/modint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B
@@ -37,18 +37,18 @@ data:
     \  }\n  friend istream& operator>>(std::istream& in, Mod& a) {\n    ull v;\n \
     \   in >> v;\n    a = Mod(v);\n    return in;\n  }\n};\n#line 9 \"utility/test/Power.test.cpp\"\
     \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  Mod<1000000007>\
-    \ m;\n  int n;\n  cin >> m >> n;\n  cout << (m ^ n);\n}\n"
+    \ m;\n  int n;\n  cin >> m >> n;\n  cout << (m ^ n) << '\\n';\n}\n"
   code: "#define PROBLEM \\\n  \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
     \n\n#include <bits/stdc++.h>\n\nusing namespace std;\n\n#include \"../modint.hpp\"\
     \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  Mod<1000000007>\
-    \ m;\n  int n;\n  cin >> m >> n;\n  cout << (m ^ n);\n}"
+    \ m;\n  int n;\n  cin >> m >> n;\n  cout << (m ^ n) << '\\n';\n}"
   dependsOn:
   - utility/modint.hpp
   isVerificationFile: true
   path: utility/test/Power.test.cpp
   requiredBy: []
-  timestamp: '2022-06-06 10:34:16+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-06-06 10:42:55+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: utility/test/Power.test.cpp
 layout: document

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utility/test/Power.test.cpp
     title: utility/test/Power.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"utility/modint.hpp\"\ntypedef unsigned long long ull;\n\n\
@@ -55,7 +55,7 @@ data:
   path: utility/modint.hpp
   requiredBy: []
   timestamp: '2022-06-06 10:34:16+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - utility/test/Power.test.cpp
 documentation_of: utility/modint.hpp

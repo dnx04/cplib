@@ -11,7 +11,7 @@ data:
       title: data-structure/union_find.hpp
   - name: utility
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: utility/modint.hpp
       title: utility/modint.hpp
   verificationCategories:
@@ -25,7 +25,7 @@ data:
       title: data-structure/test/union_find.test.cpp
   - name: utility/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: utility/test/Power.test.cpp
       title: utility/test/Power.test.cpp
 layout: toppage
