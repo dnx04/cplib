@@ -9,6 +9,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/union_find.hpp
       title: data-structure/union_find.hpp
+  - name: utility
+    pages:
+    - icon: ':x:'
+      path: utility/modint.hpp
+      title: utility/modint.hpp
   verificationCategories:
   - name: data-structure/test
     pages:
@@ -18,5 +23,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/union_find.test.cpp
       title: data-structure/test/union_find.test.cpp
+  - name: utility/test
+    pages:
+    - icon: ':x:'
+      path: utility/test/Power.test.cpp
+      title: utility/test/Power.test.cpp
 layout: toppage
 ---
