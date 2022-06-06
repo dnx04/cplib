@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: data-structure/test/union_find.test.cpp
-    title: data-structure/test/union_find.test.cpp
+    path: data-structure/test/Unionfind.test.cpp
+    title: data-structure/test/Unionfind.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -37,7 +37,7 @@ data:
   timestamp: '2022-06-05 22:18:42+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - data-structure/test/union_find.test.cpp
+  - data-structure/test/Unionfind.test.cpp
 documentation_of: data-structure/union_find.hpp
 layout: document
 redirect_from:

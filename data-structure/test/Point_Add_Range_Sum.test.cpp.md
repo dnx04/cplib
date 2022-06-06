@@ -20,8 +20,8 @@ data:
     , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 400, in update\n    raise BundleErrorAt(path, i + 1, \"unable to process\
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ data-structure/test/fenwick.test.cpp: line 8: unable to process #include in\
-    \ #if / #ifdef / #ifndef other than include guards\n"
+    \ data-structure/test/Point_Add_Range_Sum.test.cpp: line 8: unable to process\
+    \ #include in #if / #ifdef / #ifndef other than include guards\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
     \n#include <bits/stdc++.h>\n\nusing namespace std;\n\n#ifdef local\n#include \"\
     lib/prettyprint.hpp\"\n#endif\n\n#include \"../fenwick.hpp\"\n\nsigned main()\
@@ -33,15 +33,15 @@ data:
   dependsOn:
   - data-structure/fenwick.hpp
   isVerificationFile: true
-  path: data-structure/test/fenwick.test.cpp
+  path: data-structure/test/Point_Add_Range_Sum.test.cpp
   requiredBy: []
-  timestamp: '2022-06-05 23:00:55+07:00'
+  timestamp: '2022-06-06 11:29:09+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: data-structure/test/fenwick.test.cpp
+documentation_of: data-structure/test/Point_Add_Range_Sum.test.cpp
 layout: document
 redirect_from:
-- /verify/data-structure/test/fenwick.test.cpp
-- /verify/data-structure/test/fenwick.test.cpp.html
-title: data-structure/test/fenwick.test.cpp
+- /verify/data-structure/test/Point_Add_Range_Sum.test.cpp
+- /verify/data-structure/test/Point_Add_Range_Sum.test.cpp.html
+title: data-structure/test/Point_Add_Range_Sum.test.cpp
 ---

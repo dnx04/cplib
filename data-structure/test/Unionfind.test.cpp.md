@@ -14,7 +14,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
     links:
     - https://judge.yosupo.jp/problem/unionfind
-  bundledCode: "#line 1 \"data-structure/test/union_find.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"data-structure/test/Unionfind.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include <bits/stdc++.h>\n\n\
     using namespace std;\n\n#line 1 \"data-structure/union_find.hpp\"\nstruct uf {\n\
     \ public:\n  uf(int _n) : n(_n), p(_n, -1) {}\n\n  int merge(int a, int b) {\n\
@@ -25,7 +25,7 @@ data:
     \ head(a) == head(b);\n  }\n\n  int head(int a) {\n    assert(0 <= a && a < n);\n\
     \    if (p[a] < 0) return a;\n    return p[a] = head(p[a]);\n  }\n\n  int size(int\
     \ a) {\n    assert(0 <= a && a < n);\n    return -p[head(a)];\n  }\n\n private:\n\
-    \  int n;\n  vector<int> p;\n};\n#line 8 \"data-structure/test/union_find.test.cpp\"\
+    \  int n;\n  vector<int> p;\n};\n#line 8 \"data-structure/test/Unionfind.test.cpp\"\
     \n\nsigned main() {\n  int n, q;\n  cin >> n >> q;\n  uf dsu(n);\n  while (q--)\
     \ {\n    int t, x, y;\n    cin >> t >> x >> y;\n    if (t)\n      cout << dsu.same(x,\
     \ y) << '\\n';\n    else\n      dsu.merge(x, y);\n  }\n}\n"
@@ -37,15 +37,15 @@ data:
   dependsOn:
   - data-structure/union_find.hpp
   isVerificationFile: true
-  path: data-structure/test/union_find.test.cpp
+  path: data-structure/test/Unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-06-05 22:18:42+07:00'
+  timestamp: '2022-06-06 11:29:09+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: data-structure/test/union_find.test.cpp
+documentation_of: data-structure/test/Unionfind.test.cpp
 layout: document
 redirect_from:
-- /verify/data-structure/test/union_find.test.cpp
-- /verify/data-structure/test/union_find.test.cpp.html
-title: data-structure/test/union_find.test.cpp
+- /verify/data-structure/test/Unionfind.test.cpp
+- /verify/data-structure/test/Unionfind.test.cpp.html
+title: data-structure/test/Unionfind.test.cpp
 ---

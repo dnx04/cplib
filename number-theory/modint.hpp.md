@@ -4,16 +4,16 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: utility/test/Power.test.cpp
-    title: utility/test/Power.test.cpp
+    path: number-theory/test/Power.test.cpp
+    title: number-theory/test/Power.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"utility/modint.hpp\"\ntypedef unsigned long long ull;\n\n\
-    template <ull mod>\nstruct Mod {\n private:\n  ull v;\n  static ull inv(ull a,\
-    \ ull m) {\n    a %= m;\n    assert(a);\n    return a == 1 ? 1 : ull(m - __uint128_t(inv(m,\
+  bundledCode: "#line 1 \"number-theory/modint.hpp\"\ntypedef unsigned long long ull;\n\
+    \ntemplate <ull mod>\nstruct Mod {\n private:\n  ull v;\n  static ull inv(ull\
+    \ a, ull m) {\n    a %= m;\n    assert(a);\n    return a == 1 ? 1 : ull(m - __uint128_t(inv(m,\
     \ a)) * m / a);\n  }\n\n public:\n  Mod() : v(0){};\n  Mod(ull _v) : v((_v % mod\
     \ + mod) % mod){};\n  Mod inv() const {\n    Mod res;\n    res.v = inv(v, mod);\n\
     \    return res;\n  }\n  friend Mod inv(const Mod& a) { return a.inv(); }\n  Mod&\
@@ -52,16 +52,16 @@ data:
     \   in >> v;\n    a = Mod(v);\n    return in;\n  }\n};"
   dependsOn: []
   isVerificationFile: false
-  path: utility/modint.hpp
+  path: number-theory/modint.hpp
   requiredBy: []
-  timestamp: '2022-06-06 10:34:16+07:00'
+  timestamp: '2022-06-06 11:29:09+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - utility/test/Power.test.cpp
-documentation_of: utility/modint.hpp
+  - number-theory/test/Power.test.cpp
+documentation_of: number-theory/modint.hpp
 layout: document
 redirect_from:
-- /library/utility/modint.hpp
-- /library/utility/modint.hpp.html
-title: utility/modint.hpp
+- /library/number-theory/modint.hpp
+- /library/number-theory/modint.hpp.html
+title: number-theory/modint.hpp
 ---
