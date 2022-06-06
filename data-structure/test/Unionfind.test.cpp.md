@@ -24,8 +24,13 @@ data:
     \ b) {\n    assert(0 <= a && a < n);\n    assert(0 <= b && b < n);\n    return\
     \ head(a) == head(b);\n  }\n\n  int head(int a) {\n    assert(0 <= a && a < n);\n\
     \    if (p[a] < 0) return a;\n    return p[a] = head(p[a]);\n  }\n\n  int size(int\
-    \ a) {\n    assert(0 <= a && a < n);\n    return -p[head(a)];\n  }\n\n private:\n\
-    \  int n;\n  vector<int> p;\n};\n#line 8 \"data-structure/test/Unionfind.test.cpp\"\
+    \ a) {\n    assert(0 <= a && a < n);\n    return -p[head(a)];\n  }\n\n  vector<vector<int>>\
+    \ groups() {\n    vector<int> tmp(n), sz(n);\n    for (int i = 0; i < n; ++i)\
+    \ tmp[i] = head(i), ++sz[tmp[i]];\n    vector<vector<int>> gr(n);\n    for (int\
+    \ i = 0; i < n; ++i) gr[i].reserve(sz[i]);\n    for (int i = 0; i < n; ++i) gr[tmp[i]].push_back(i);\n\
+    \    gr.erase(remove_if(begin(gr), end(gr),\n                       [&](const\
+    \ vector<int>& v) { return v.empty(); }),\n             end(gr));\n    return\
+    \ gr;\n  }\n\n private:\n  int n;\n  vector<int> p;\n};\n#line 8 \"data-structure/test/Unionfind.test.cpp\"\
     \n\nsigned main() {\n  int n, q;\n  cin >> n >> q;\n  uf dsu(n);\n  while (q--)\
     \ {\n    int t, x, y;\n    cin >> t >> x >> y;\n    if (t)\n      cout << dsu.same(x,\
     \ y) << '\\n';\n    else\n      dsu.merge(x, y);\n  }\n}\n"
@@ -39,7 +44,7 @@ data:
   isVerificationFile: true
   path: data-structure/test/Unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-06-06 11:29:09+07:00'
+  timestamp: '2022-06-06 21:31:46+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Unionfind.test.cpp
