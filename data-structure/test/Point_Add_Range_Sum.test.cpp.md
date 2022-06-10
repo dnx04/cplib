@@ -14,28 +14,36 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
     links:
     - https://judge.yosupo.jp/problem/point_add_range_sum
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 400, in update\n    raise BundleErrorAt(path, i + 1, \"unable to process\
-    \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ data-structure/test/Point_Add_Range_Sum.test.cpp: line 8: unable to process\
-    \ #include in #if / #ifdef / #ifndef other than include guards\n"
+  bundledCode: "#line 1 \"data-structure/test/Point_Add_Range_Sum.test.cpp\"\n#define\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\n#include\
+    \ <bits/stdc++.h>\n\nusing namespace std;\n\n#line 1 \"data-structure/fenwick.hpp\"\
+    \ntemplate <typename T>\nstruct fenwick_tree {\n  fenwick_tree(int _n) : n(_n),\
+    \ f(_n + 1) {}\n\n  // a[u] += val\n  void add(int u, T val) {\n    assert(0 <=\
+    \ u && u < n);\n    ++u;\n    while (u <= n) {\n      f[u] += val;\n      u +=\
+    \ u & -u;\n    }\n  }\n\n  // return the sum of [0, u)\n  T sum(int u) const {\n\
+    \    assert(0 <= u && u <= n);\n    T res = 0;\n    while (u) {\n      res +=\
+    \ f[u];\n      u -= u & -u;\n    }\n    return res;\n  }\n\n  // return the sum\
+    \ of [l, r)\n  T sum(int l, int r) const {\n    assert(0 <= l && l <= r && r <=\
+    \ n);\n    if (l == r) return 0;\n    return sum(r) - sum(l);\n  }\n\n  void reset()\
+    \ { fill(f.begin(), f.end(), T(0)); }\n\n  int n;\n  vector<T> f;\n};\n#line 8\
+    \ \"data-structure/test/Point_Add_Range_Sum.test.cpp\"\n\nsigned main() {\n  ios::sync_with_stdio(false),\
+    \ cin.tie(0);\n  int n, q;\n  cin >> n >> q;\n  fenwick_tree<int64_t> fw(n);\n\
+    \  for (int i = 0; i < n; ++i) {\n    int x;\n    cin >> x;\n    fw.add(i, x);\n\
+    \  }\n  while (q--) {\n    int t, l, r;\n    cin >> t >> l >> r;\n    if (t)\n\
+    \      cout << fw.sum(l, r) << '\\n';\n    else\n      fw.add(l, r);\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    \n#include <bits/stdc++.h>\n\nusing namespace std;\n\n#ifdef local\n#include \"\
-    lib/prettyprint.hpp\"\n#endif\n\n#include \"../fenwick.hpp\"\n\nsigned main()\
-    \ {\n  ios::sync_with_stdio(false), cin.tie(0);\n  int n, q;\n  cin >> n >> q;\n\
-    \  fenwick_tree<int64_t> fw(n);\n  for (int i = 0; i < n; ++i) {\n    int x;\n\
-    \    cin >> x;\n    fw.add(i, x);\n  }\n  while (q--) {\n    int t, l, r;\n  \
-    \  cin >> t >> l >> r;\n    if (t)\n      cout << fw.sum(l, r) << '\\n';\n   \
-    \ else\n      fw.add(l, r);\n  }\n}"
+    \n#include <bits/stdc++.h>\n\nusing namespace std;\n\n#include \"../fenwick.hpp\"\
+    \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  int n, q;\n\
+    \  cin >> n >> q;\n  fenwick_tree<int64_t> fw(n);\n  for (int i = 0; i < n; ++i)\
+    \ {\n    int x;\n    cin >> x;\n    fw.add(i, x);\n  }\n  while (q--) {\n    int\
+    \ t, l, r;\n    cin >> t >> l >> r;\n    if (t)\n      cout << fw.sum(l, r) <<\
+    \ '\\n';\n    else\n      fw.add(l, r);\n  }\n}"
   dependsOn:
   - data-structure/fenwick.hpp
   isVerificationFile: true
   path: data-structure/test/Point_Add_Range_Sum.test.cpp
   requiredBy: []
-  timestamp: '2022-06-06 11:29:09+07:00'
+  timestamp: '2022-06-10 16:31:43+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Point_Add_Range_Sum.test.cpp

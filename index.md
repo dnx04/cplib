@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: data-structure
     pages:
+    - icon: ':warning:'
+      path: data-structure/2dsum.hpp
+      title: data-structure/2dsum.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/fenwick.hpp
       title: data-structure/fenwick.hpp
