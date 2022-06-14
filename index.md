@@ -17,6 +17,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
+    - icon: ':warning:'
+      path: number-theory/sieve.hpp
+      title: number-theory/sieve.hpp
   verificationCategories:
   - name: data-structure/test
     pages:

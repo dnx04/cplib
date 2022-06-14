@@ -17,25 +17,27 @@ data:
   bundledCode: "#line 1 \"number-theory/test/Power.test.cpp\"\n#define PROBLEM \\\n\
     \  \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\n\n#include\
     \ <bits/stdc++.h>\n\nusing namespace std;\n\n#line 1 \"number-theory/modint.hpp\"\
-    \ntypedef unsigned long long ull;\n\ntemplate <ull mod>\nstruct Mod {\n private:\n\
-    \  ull v;\n  static ull inv(ull a, ull m) {\n    a %= m;\n    assert(a);\n   \
-    \ return a == 1 ? 1 : ull(m - __uint128_t(inv(m, a)) * m / a);\n  }\n\n public:\n\
-    \  Mod() : v(0){};\n  Mod(ull _v) : v((_v % mod + mod) % mod){};\n  Mod inv()\
-    \ const {\n    Mod res;\n    res.v = inv(v, mod);\n    return res;\n  }\n  friend\
-    \ Mod inv(const Mod& a) { return a.inv(); }\n  Mod& operator+=(const Mod& a) {\n\
-    \    v += a.v;\n    if (v >= mod) v -= mod;\n    return *this;\n  }\n  Mod& operator-=(const\
-    \ Mod& a) {\n    v += mod - a.v;\n    if (v >= mod) v -= mod;\n    return *this;\n\
-    \  }\n  Mod& operator*=(const Mod& a) {\n    v = __uint128_t(v) * a.v % mod;\n\
-    \    return *this;\n  }\n  Mod& operator/=(const Mod& a) { return *this *= a.inv();\
-    \ }\n  friend Mod operator+(const Mod& a, const Mod& b) { return Mod(a) += b;\
-    \ }\n  friend Mod operator-(const Mod& a, const Mod& b) { return Mod(a) -= b;\
-    \ }\n  friend Mod operator*(const Mod& a, const Mod& b) { return Mod(a) *= b;\
-    \ }\n  friend Mod operator/(const Mod& a, const Mod& b) { return Mod(a) /= b;\
-    \ }\n  Mod operator^(ull y) {\n    if (!y) return Mod(1);\n    Mod r = *this ^\
-    \ (y >> 1);\n    r = r * r;\n    return y & 1 ? *this * r : r;\n  }\n  friend\
-    \ ostream& operator<<(std::ostream& out, const Mod& a) {\n    return out << a.v;\n\
-    \  }\n  friend istream& operator>>(std::istream& in, Mod& a) {\n    ull v;\n \
-    \   in >> v;\n    a = Mod(v);\n    return in;\n  }\n};\n#line 9 \"number-theory/test/Power.test.cpp\"\
+    \n// works for mod < 2^63\n\nusing ull = unsigned long long;\ntemplate <ull m>\n\
+    struct Mod {\n  ull v;\n\n  Mod() : v(0){};\n  Mod(__uint128_t _v) : v(_v % m){};\n\
+    \  explicit operator ull() { return v; }\n  Mod inv() const {\n    int64_t a =\
+    \ v, b = m, ax = 1, bx = 0;\n    while (b) {\n      ull q = a / b, t = a % b;\n\
+    \      a = b, b = t, t = ax - bx * q, ax = bx, bx = t;\n    }\n    assert(a ==\
+    \ 1);\n    ax = (ax < 0 ? ax + m : ax);\n    return ax;\n  }\n  Mod& operator+=(const\
+    \ Mod& that) {\n    v = (v + that.v >= m ? v + that.v - m : v + that.v);\n   \
+    \ return *this;\n  }\n  Mod& operator-=(const Mod& that) {\n    v = (v >= that.v\
+    \ ? v - that.v : v + m - that.v);\n    return *this;\n  }\n  Mod& operator*=(const\
+    \ Mod& that) {\n    long double x;\n    uint64_t c;\n    int64_t r;\n    x = v;\n\
+    \    c = x * that.v / m;\n    r = (int64_t)(v * that.v - c * m) % (int64_t)m;\n\
+    \    v = (r < 0 ? r + m : r);\n    return *this;\n  }\n  Mod& operator/=(const\
+    \ Mod& that) { return (*this) *= that.inv(); }\n  Mod operator^(ull y) {\n   \
+    \ if (!y) return Mod(1);\n    Mod r = *this ^ (y >> 1);\n    r = r * r;\n    return\
+    \ y & 1 ? *this * r : r;\n  }\n  Mod operator+(const Mod& that) const { return\
+    \ Mod(*this) += that; }\n  Mod operator-(const Mod& that) const { return Mod(*this)\
+    \ -= that; }\n  Mod operator*(const Mod& that) const { return Mod(*this) *= that;\
+    \ }\n  Mod operator/(const Mod& that) const { return Mod(*this) /= that; }\n \
+    \ friend istream& operator>>(istream& in, Mod& that) {\n    ull val;\n    in >>\
+    \ val;\n    that = Mod(val);\n    return in;\n  }\n  friend ostream& operator<<(ostream&\
+    \ out, const Mod& that) {\n    return out << that.v;\n  }\n};\n#line 9 \"number-theory/test/Power.test.cpp\"\
     \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  Mod<1000000007>\
     \ m;\n  int n;\n  cin >> m >> n;\n  cout << (m ^ n) << '\\n';\n}\n"
   code: "#define PROBLEM \\\n  \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
@@ -47,7 +49,7 @@ data:
   isVerificationFile: true
   path: number-theory/test/Power.test.cpp
   requiredBy: []
-  timestamp: '2022-06-06 11:29:09+07:00'
+  timestamp: '2022-06-14 14:26:41+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: number-theory/test/Power.test.cpp
