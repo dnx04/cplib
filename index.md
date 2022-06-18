@@ -10,6 +10,9 @@ data:
       path: data-structure/fenwick.hpp
       title: data-structure/fenwick.hpp
     - icon: ':heavy_check_mark:'
+      path: data-structure/sparse_table.hpp
+      title: data-structure/sparse_table.hpp
+    - icon: ':heavy_check_mark:'
       path: data-structure/union_find.hpp
       title: data-structure/union_find.hpp
   - name: number-theory
@@ -26,6 +29,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Add_Range_Sum.test.cpp
       title: data-structure/test/Point_Add_Range_Sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: data-structure/test/Static_RMQ.test.cpp
+      title: data-structure/test/Static_RMQ.test.cpp
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Unionfind.test.cpp
       title: data-structure/test/Unionfind.test.cpp
