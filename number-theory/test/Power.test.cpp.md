@@ -26,20 +26,19 @@ data:
     \ Mod& that) {\n    v = (v + that.v >= m ? v + that.v - m : v + that.v);\n   \
     \ return *this;\n  }\n  Mod& operator-=(const Mod& that) {\n    v = (v >= that.v\
     \ ? v - that.v : v + m - that.v);\n    return *this;\n  }\n  Mod& operator*=(const\
-    \ Mod& that) {\n    long double x;\n    uint64_t c;\n    int64_t r;\n    x = v;\n\
-    \    c = x * that.v / m;\n    r = (int64_t)(v * that.v - c * m) % (int64_t)m;\n\
-    \    v = (r < 0 ? r + m : r);\n    return *this;\n  }\n  Mod& operator/=(const\
-    \ Mod& that) { return (*this) *= that.inv(); }\n  Mod operator^(ull y) {\n   \
-    \ if (!y) return Mod(1);\n    Mod r = *this ^ (y >> 1);\n    r = r * r;\n    return\
-    \ y & 1 ? *this * r : r;\n  }\n  Mod operator+(const Mod& that) const { return\
-    \ Mod(*this) += that; }\n  Mod operator-(const Mod& that) const { return Mod(*this)\
-    \ -= that; }\n  Mod operator*(const Mod& that) const { return Mod(*this) *= that;\
-    \ }\n  Mod operator/(const Mod& that) const { return Mod(*this) /= that; }\n \
-    \ friend istream& operator>>(istream& in, Mod& that) {\n    ull val;\n    in >>\
-    \ val;\n    that = Mod(val);\n    return in;\n  }\n  friend ostream& operator<<(ostream&\
-    \ out, const Mod& that) {\n    return out << that.v;\n  }\n};\n#line 9 \"number-theory/test/Power.test.cpp\"\
-    \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  Mod<1000000007>\
-    \ m;\n  int n;\n  cin >> m >> n;\n  cout << (m ^ n) << '\\n';\n}\n"
+    \ Mod& that) {\n    v = __uint128_t(v) * that.v % m;\n    return *this;\n  }\n\
+    \  Mod& operator/=(const Mod& that) { return (*this) *= that.inv(); }\n  Mod operator^(ull\
+    \ y) {\n    if (!y) return Mod(1);\n    Mod r = *this ^ (y >> 1);\n    r = r *\
+    \ r;\n    return y & 1 ? *this * r : r;\n  }\n  Mod operator+(const Mod& that)\
+    \ const { return Mod(*this) += that; }\n  Mod operator-(const Mod& that) const\
+    \ { return Mod(*this) -= that; }\n  Mod operator*(const Mod& that) const { return\
+    \ Mod(*this) *= that; }\n  Mod operator/(const Mod& that) const { return Mod(*this)\
+    \ /= that; }\n  friend istream& operator>>(istream& in, Mod& that) {\n    ull\
+    \ val;\n    in >> val;\n    that = Mod(val);\n    return in;\n  }\n  friend ostream&\
+    \ operator<<(ostream& out, const Mod& that) {\n    return out << that.v;\n  }\n\
+    };\n#line 9 \"number-theory/test/Power.test.cpp\"\n\nsigned main() {\n  ios::sync_with_stdio(false),\
+    \ cin.tie(0);\n  Mod<1000000007> m;\n  int n;\n  cin >> m >> n;\n  cout << (m\
+    \ ^ n) << '\\n';\n}\n"
   code: "#define PROBLEM \\\n  \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
     \n\n#include <bits/stdc++.h>\n\nusing namespace std;\n\n#include \"../modint.hpp\"\
     \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  Mod<1000000007>\
@@ -49,7 +48,7 @@ data:
   isVerificationFile: true
   path: number-theory/test/Power.test.cpp
   requiredBy: []
-  timestamp: '2022-06-14 14:26:41+07:00'
+  timestamp: '2022-06-23 16:05:16+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: number-theory/test/Power.test.cpp
