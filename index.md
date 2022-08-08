@@ -21,6 +21,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/union_find.hpp
       title: data-structure/union_find.hpp
+  - name: graph
+    pages:
+    - icon: ':x:'
+      path: graph/maxflow.hpp
+      title: graph/maxflow.hpp
   - name: number-theory
     pages:
     - icon: ':heavy_check_mark:'
@@ -47,6 +52,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Unionfind.test.cpp
       title: data-structure/test/Unionfind.test.cpp
+  - name: graph/test
+    pages:
+    - icon: ':x:'
+      path: graph/test/Maximum_Flow.test.cpp
+      title: graph/test/Maximum_Flow.test.cpp
   - name: number-theory/test
     pages:
     - icon: ':heavy_check_mark:'
