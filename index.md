@@ -26,7 +26,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: number-theory/sieve.hpp
       title: number-theory/sieve.hpp
   verificationCategories:
@@ -52,5 +52,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/test/Power.test.cpp
       title: number-theory/test/Power.test.cpp
+    - icon: ':x:'
+      path: number-theory/test/Prime_Number.test.cpp
+      title: number-theory/test/Prime_Number.test.cpp
 layout: toppage
 ---
