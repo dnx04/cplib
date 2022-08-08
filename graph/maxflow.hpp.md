@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/test/Maximum_Flow.test.cpp
     title: graph/test/Maximum_Flow.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"graph/maxflow.hpp\"\ntemplate <class Cap>\nstruct mf_graph\
@@ -104,7 +104,7 @@ data:
   path: graph/maxflow.hpp
   requiredBy: []
   timestamp: '2022-08-08 21:12:57+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/test/Maximum_Flow.test.cpp
 documentation_of: graph/maxflow.hpp

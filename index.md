@@ -23,7 +23,7 @@ data:
       title: data-structure/union_find.hpp
   - name: graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/maxflow.hpp
       title: graph/maxflow.hpp
   - name: number-theory
@@ -54,7 +54,7 @@ data:
       title: data-structure/test/Unionfind.test.cpp
   - name: graph/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/test/Maximum_Flow.test.cpp
       title: graph/test/Maximum_Flow.test.cpp
   - name: number-theory/test
