@@ -11,9 +11,9 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/challenges/search/categories/0009
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009
     links:
-    - https://onlinejudge.u-aizu.ac.jp/challenges/search/categories/0009
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
@@ -23,7 +23,7 @@ data:
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: bits/extc++.h:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \\\n  \"https://onlinejudge.u-aizu.ac.jp/challenges/search/categories/0009\"\
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009\"\
     \n\n#include \"bits/extc++.h\"\n\nusing namespace std;\nusing namespace __gnu_pbds;\n\
     using namespace __gnu_cxx;\n\n#include \"../algo/number-theory/sieve.hpp\"\n\n\
     #ifdef DEBUG\n#include \"tools/prettyprint.hpp\"\n#endif\n\nsigned main() {\n\
@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: number-theory/test/Prime_Number.test.cpp
   requiredBy: []
-  timestamp: '2022-08-08 19:52:50+07:00'
+  timestamp: '2022-08-08 19:58:01+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: number-theory/test/Prime_Number.test.cpp
