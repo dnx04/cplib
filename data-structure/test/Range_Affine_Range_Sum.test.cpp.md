@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/lazy_segtree.hpp
     title: data-structure/lazy_segtree.hpp
   - icon: ':heavy_check_mark:'
@@ -11,8 +11,10 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/range_affine_range_sum
     links:
     - https://judge.yosupo.jp/problem/range_affine_range_sum
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -41,16 +43,16 @@ data:
   dependsOn:
   - data-structure/lazy_segtree.hpp
   - number-theory/modint.hpp
-  isVerificationFile: false
-  path: data-structure/test/Range_Affine_Range_Sum.cpp
+  isVerificationFile: true
+  path: data-structure/test/Range_Affine_Range_Sum.test.cpp
   requiredBy: []
-  timestamp: '2022-08-08 19:06:24+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2022-08-08 19:12:02+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: data-structure/test/Range_Affine_Range_Sum.cpp
+documentation_of: data-structure/test/Range_Affine_Range_Sum.test.cpp
 layout: document
 redirect_from:
-- /library/data-structure/test/Range_Affine_Range_Sum.cpp
-- /library/data-structure/test/Range_Affine_Range_Sum.cpp.html
-title: data-structure/test/Range_Affine_Range_Sum.cpp
+- /verify/data-structure/test/Range_Affine_Range_Sum.test.cpp
+- /verify/data-structure/test/Range_Affine_Range_Sum.test.cpp.html
+title: data-structure/test/Range_Affine_Range_Sum.test.cpp
 ---

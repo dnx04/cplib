@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: data-structure/test/Range_Affine_Range_Sum.cpp
-    title: data-structure/test/Range_Affine_Range_Sum.cpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: data-structure/test/Queue_Operate_All_Composite.test.cpp
     title: data-structure/test/Queue_Operate_All_Composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: data-structure/test/Range_Affine_Range_Sum.test.cpp
+    title: data-structure/test/Range_Affine_Range_Sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: number-theory/test/Power.test.cpp
     title: number-theory/test/Power.test.cpp
@@ -59,13 +59,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: number-theory/modint.hpp
-  requiredBy:
-  - data-structure/test/Range_Affine_Range_Sum.cpp
+  requiredBy: []
   timestamp: '2022-06-30 19:56:15+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - number-theory/test/Power.test.cpp
   - data-structure/test/Queue_Operate_All_Composite.test.cpp
+  - data-structure/test/Range_Affine_Range_Sum.test.cpp
 documentation_of: number-theory/modint.hpp
 layout: document
 redirect_from:
