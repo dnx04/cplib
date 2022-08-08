@@ -22,16 +22,16 @@ data:
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: bits/extc++.h:\
     \ line -1: no such header\n"
   code: "#include \"bits/extc++.h\"\n\nusing namespace std;\nusing namespace __gnu_cxx;\n\
-    using namespace __gnu_pbds;\n\n#include \"../algo/graph/maxflow.hpp\"\n\nsigned\
-    \ main() {\n  int n, m;\n  cin >> n >> m;\n  mf_graph<int> g(n);\n  for (int i\
-    \ = 0; i < m; ++i) {\n    int a, b, c;\n    cin >> a >> b >> c;\n    g.add_edge(a,\
-    \ b, c);\n  }\n  cout << g.flow(0, n - 1);\n}"
+    using namespace __gnu_pbds;\n\n#include \"../maxflow.hpp\"\n\nsigned main() {\n\
+    \  int n, m;\n  cin >> n >> m;\n  mf_graph<int> g(n);\n  for (int i = 0; i < m;\
+    \ ++i) {\n    int a, b, c;\n    cin >> a >> b >> c;\n    g.add_edge(a, b, c);\n\
+    \  }\n  cout << g.flow(0, n - 1);\n}"
   dependsOn:
   - graph/maxflow.hpp
   isVerificationFile: true
   path: graph/test/Maximum_Flow.test.cpp
   requiredBy: []
-  timestamp: '2022-08-08 21:12:57+07:00'
+  timestamp: '2022-08-08 21:16:06+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/test/Maximum_Flow.test.cpp
