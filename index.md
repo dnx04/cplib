@@ -9,6 +9,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/fenwick.hpp
       title: data-structure/fenwick.hpp
+    - icon: ':warning:'
+      path: data-structure/lazy_segtree.hpp
+      title: data-structure/lazy_segtree.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/sparse_table.hpp
       title: data-structure/sparse_table.hpp
@@ -18,6 +21,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/union_find.hpp
       title: data-structure/union_find.hpp
+  - name: data-structure/test
+    pages:
+    - icon: ':warning:'
+      path: data-structure/test/Range_Affine_Range_Sum.cpp
+      title: data-structure/test/Range_Affine_Range_Sum.cpp
   - name: number-theory
     pages:
     - icon: ':heavy_check_mark:'
