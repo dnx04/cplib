@@ -12,6 +12,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segtree.hpp
       title: data-structure/lazy_segtree.hpp
+    - icon: ':warning:'
+      path: data-structure/pbds.hpp
+      title: data-structure/pbds.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/sparse_table.hpp
       title: data-structure/sparse_table.hpp

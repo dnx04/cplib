@@ -16,7 +16,7 @@ data:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B
   bundledCode: "#line 1 \"number-theory/test/Power.test.cpp\"\n#define PROBLEM \\\n\
     \  \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\n\n#include\
-    \ <bits/stdc++.h>\n\nusing namespace std;\n\n#line 1 \"number-theory/modint.hpp\"\
+    \ <bits/extc++.h>\n\nusing namespace std;\n\n#line 1 \"number-theory/modint.hpp\"\
     \nusing ll = long long;\ntemplate <const ll m>\nstruct Mod {\n  ll v;\n\n  Mod()\
     \ : v(0){};\n  Mod(ll _v) : v((_v + m) % m){};\n  explicit operator ll() { return\
     \ v; }\n  Mod inv() const {\n    ll a = v, b = m, ax = 1, bx = 0;\n    while (b)\
@@ -39,7 +39,7 @@ data:
     \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  Mod<1000000007>\
     \ m;\n  int n;\n  cin >> m >> n;\n  cout << (m ^ n) << '\\n';\n}\n"
   code: "#define PROBLEM \\\n  \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
-    \n\n#include <bits/stdc++.h>\n\nusing namespace std;\n\n#include \"../modint.hpp\"\
+    \n\n#include <bits/extc++.h>\n\nusing namespace std;\n\n#include \"../modint.hpp\"\
     \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  Mod<1000000007>\
     \ m;\n  int n;\n  cin >> m >> n;\n  cout << (m ^ n) << '\\n';\n}"
   dependsOn:
@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: number-theory/test/Power.test.cpp
   requiredBy: []
-  timestamp: '2022-06-30 19:56:15+07:00'
+  timestamp: '2022-08-11 20:11:38+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: number-theory/test/Power.test.cpp

@@ -15,7 +15,7 @@ data:
     links:
     - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "#line 1 \"data-structure/test/Unionfind.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include <bits/stdc++.h>\n\n\
+    \ \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include <bits/extc++.h>\n\n\
     using namespace std;\n\n#line 1 \"data-structure/union_find.hpp\"\nstruct uf {\n\
     \ public:\n  uf(int _n) : n(_n), p(_n, -1) {}\n\n  int merge(int a, int b) {\n\
     \    assert(0 <= a && a < n);\n    assert(0 <= b && b < n);\n    int x = head(a),\
@@ -35,7 +35,7 @@ data:
     \ {\n    int t, x, y;\n    cin >> t >> x >> y;\n    if (t)\n      cout << dsu.same(x,\
     \ y) << '\\n';\n    else\n      dsu.merge(x, y);\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
-    \ <bits/stdc++.h>\n\nusing namespace std;\n\n#include \"../union_find.hpp\"\n\n\
+    \ <bits/extc++.h>\n\nusing namespace std;\n\n#include \"../union_find.hpp\"\n\n\
     signed main() {\n  int n, q;\n  cin >> n >> q;\n  uf dsu(n);\n  while (q--) {\n\
     \    int t, x, y;\n    cin >> t >> x >> y;\n    if (t)\n      cout << dsu.same(x,\
     \ y) << '\\n';\n    else\n      dsu.merge(x, y);\n  }\n}"
@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: data-structure/test/Unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-06-06 21:31:46+07:00'
+  timestamp: '2022-08-11 20:11:38+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Unionfind.test.cpp

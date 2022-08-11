@@ -14,29 +14,31 @@ data:
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
-    \  File \"/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: bits/extc++.h:\
-    \ line -1: no such header\n"
+  bundledCode: "#line 1 \"number-theory/test/Prime_Number.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009\"\n\n#include\
+    \ <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_pbds;\nusing\
+    \ namespace __gnu_cxx;\n\n#line 1 \"number-theory/sieve.hpp\"\nauto sieve = [](int\
+    \ n) {\n  vector<int> lpf(n + 1);\n  iota(begin(lpf), end(lpf), 0);\n  for (int\
+    \ i = 2; i <= n; ++i) {\n    if (lpf[i] == i) {\n      for (long long j = 1ll\
+    \ * i * i; j <= n; j += i) {\n        lpf[j] = i;\n      }\n    }\n  }\n  return\
+    \ lpf;\n};\n#line 10 \"number-theory/test/Prime_Number.test.cpp\"\n\nsigned main()\
+    \ {\n  ios::sync_with_stdio(false), cin.tie(0);\n  vector<int> primes = sieve(1e6);\n\
+    \  for (int i = 1; i <= 1e6; ++i) {\n    primes[i] = (primes[i] == i && i >= 2)\
+    \ + primes[i - 1];\n  }\n  int n;\n  while (cin >> n) {\n    cout << primes[n];\n\
+    \    if (cin.peek() != EOF) cout << '\\n';\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009\"\
-    \n\n#include \"bits/extc++.h\"\n\nusing namespace std;\nusing namespace __gnu_pbds;\n\
-    using namespace __gnu_cxx;\n\n#include \"../sieve.hpp\"\n\n#ifdef DEBUG\n#include\
-    \ \"tools/prettyprint.hpp\"\n#endif\n\nsigned main() {\n  ios::sync_with_stdio(false),\
-    \ cin.tie(0);\n  vector<int> primes = sieve(1e6);\n  for (int i = 1; i <= 1e6;\
-    \ ++i) {\n    primes[i] = (primes[i] == i && i >= 2) + primes[i - 1];\n  }\n \
-    \ int n;\n  while (cin >> n) {\n    cout << primes[n];\n    if (cin.peek() !=\
-    \ EOF) cout << '\\n';\n  }\n}"
+    \n\n#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_pbds;\n\
+    using namespace __gnu_cxx;\n\n#include \"../sieve.hpp\"\n\nsigned main() {\n \
+    \ ios::sync_with_stdio(false), cin.tie(0);\n  vector<int> primes = sieve(1e6);\n\
+    \  for (int i = 1; i <= 1e6; ++i) {\n    primes[i] = (primes[i] == i && i >= 2)\
+    \ + primes[i - 1];\n  }\n  int n;\n  while (cin >> n) {\n    cout << primes[n];\n\
+    \    if (cin.peek() != EOF) cout << '\\n';\n  }\n}"
   dependsOn:
   - number-theory/sieve.hpp
   isVerificationFile: true
   path: number-theory/test/Prime_Number.test.cpp
   requiredBy: []
-  timestamp: '2022-08-08 23:20:20+07:00'
+  timestamp: '2022-08-11 20:11:38+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: number-theory/test/Prime_Number.test.cpp
