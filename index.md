@@ -16,8 +16,11 @@ data:
       path: data-structure/pbds.hpp
       title: data-structure/pbds.hpp
     - icon: ':heavy_check_mark:'
-      path: data-structure/sparse_table.hpp
-      title: data-structure/sparse_table.hpp
+      path: data-structure/rmq.hpp
+      title: data-structure/rmq.hpp
+    - icon: ':warning:'
+      path: data-structure/segtree.hpp
+      title: data-structure/segtree.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/swag.hpp
       title: data-structure/swag.hpp
@@ -29,9 +32,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.hpp
       title: graph/maxflow.hpp
+  - name: math
+    pages:
+    - icon: ':x:'
+      path: math/matrix.hpp
+      title: math/matrix.hpp
   - name: number-theory
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
     - icon: ':x:'
@@ -60,6 +68,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/test/Maximum_Flow.test.cpp
       title: graph/test/Maximum_Flow.test.cpp
+  - name: math/test
+    pages:
+    - icon: ':x:'
+      path: math/test/Matrix_Product.test.cpp
+      title: math/test/Matrix_Product.test.cpp
   - name: number-theory/test
     pages:
     - icon: ':heavy_check_mark:'
