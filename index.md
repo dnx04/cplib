@@ -34,12 +34,12 @@ data:
       title: graph/maxflow.hpp
   - name: math
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math/matrix.hpp
       title: math/matrix.hpp
   - name: number-theory
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
     - icon: ':x:'
@@ -70,7 +70,7 @@ data:
       title: graph/test/Maximum_Flow.test.cpp
   - name: math/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math/test/Matrix_Product.test.cpp
       title: math/test/Matrix_Product.test.cpp
   - name: number-theory/test
