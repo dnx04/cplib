@@ -37,6 +37,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/matrix.hpp
       title: math/matrix.hpp
+  - name: misc
+    pages:
+    - icon: ':warning:'
+      path: misc/dir.hpp
+      title: misc/dir.hpp
+    - icon: ':warning:'
+      path: misc/offset_vector.hpp
+      title: misc/offset_vector.hpp
+    - icon: ':warning:'
+      path: misc/vec.hpp
+      title: misc/vec.hpp
   - name: number-theory
     pages:
     - icon: ':heavy_check_mark:'

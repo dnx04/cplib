@@ -42,13 +42,13 @@ data:
     \ntemplate <typename T>\nstruct matrix {\n  int n_row, n_col;\n  vector<T> x;\n\
     \n  // accessors\n  typename vector<T>::iterator operator[](int r) {\n    return\
     \ x.begin() + r * n_col;\n  }\n  inline T get(int i, int j) const { return x[i\
-    \ * n_col + j]; }\n\n  // constructors\n  matrix() = default;\n  matrix(int _n_row,\
-    \ int _n_col)\n      : n_row(_n_row), n_col(_n_col), x(n_row * n_col) {}\n  matrix(const\
-    \ vector<vector<T>>& d)\n      : n_row(d.size()), n_col(d.size() ? d[0].size()\
-    \ : 0) {\n    for (auto& row : d)\n      copy(row.begin(), row.end(), back_inserter(x));\n\
+    \ * n_col + j]; }\n\n  // constructors\n  matrix() = default;\n  matrix(int n_row,\
+    \ int n_col, T val = 0)\n      : n_row(n_row), n_col(n_col), x(n_row * n_col,\
+    \ val) {}\n  matrix(const vector<vector<T>>& d)\n      : n_row(d.size()), n_col(d.size()\
+    \ ? d[0].size() : 0) {\n    for (auto& row : d) copy(row.begin(), row.end(), back_inserter(x));\n\
     \  }\n\n  // convert to 2d vec\n  vector<vector<T>> vecvec() const {\n    vector<vector<T>>\
     \ ret(n_row);\n    for (int i = 0; i < n_row; i++) {\n      copy(x.begin() + i\
-    \ * n_col, x.begin() + (i + 1) * n_col,\n                back_inserter(ret[i]));\n\
+    \ * n_col, x.begin() + (i + 1) * n_col,\n           back_inserter(ret[i]));\n\
     \    }\n    return ret;\n  }\n  operator vector<vector<T>>() const { return vecvec();\
     \ }\n\n  static matrix identity(int n) {\n    matrix res(n, n);\n    for (int\
     \ i = 0; i < n; i++) {\n      res[i][i] = 1;\n    }\n    return res;\n  }\n\n\
@@ -60,12 +60,11 @@ data:
     \    for (int i = 0; i < n_row; i++) {\n      for (int k = 0; k < n_col; k++)\
     \ {\n        for (int j = 0; j < r.n_col; j++) {\n          res[i][j] += this->get(i,\
     \ k) * r.get(k, j);\n        }\n      }\n    }\n    return res;\n  }\n\n  matrix\
-    \ operator^(long long n) const {\n    assert(n_row == n_col);\n    matrix res\
-    \ = identity(n_row);\n    if (n == 0) return res;\n    bool res_is_id = true;\n\
-    \    for (int i = 63 - __builtin_clzll(n); i >= 0; i--) {\n      if (!res_is_id)\
-    \ res *= res;\n      if ((n >> i) & 1) res *= (*this), res_is_id = false;\n  \
-    \  }\n    return res;\n  }\n};\n#line 11 \"math/test/Matrix_Product.test.cpp\"\
-    \n\nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
+    \ operator^(long long n) const {\n    assert(n_row == n_col);\n    if (n == 0)\
+    \ return identity(n_row);\n    if (n == 1) return *this;\n    matrix res = *this\
+    \ ^ (n >> 1);\n    res = res * res;\n    if (n & 1) res = res * *this;\n    return\
+    \ res;\n  }\n};\n#line 11 \"math/test/Matrix_Product.test.cpp\"\n\nsigned main()\
+    \ {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
     \  using mint = Mod<998244353>;\n  int n, m, k;\n  cin >> n >> m >> k;\n  matrix<mint>\
     \ a(n, m), b(m, k);\n  for (int i = 0; i < n; ++i) {\n    for (int j = 0; j <\
     \ m; ++j) {\n      cin >> a[i][j];\n    }\n  }\n  for (int i = 0; i < m; ++i)\
@@ -88,7 +87,7 @@ data:
   isVerificationFile: true
   path: math/test/Matrix_Product.test.cpp
   requiredBy: []
-  timestamp: '2022-08-12 13:23:31+07:00'
+  timestamp: '2022-08-12 20:20:35+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: math/test/Matrix_Product.test.cpp

@@ -25,20 +25,20 @@ data:
     \ {\n  ios::sync_with_stdio(false), cin.tie(0);\n  vector<int> primes = sieve(1e6);\n\
     \  for (int i = 1; i <= 1e6; ++i) {\n    primes[i] = (primes[i] == i && i >= 2)\
     \ + primes[i - 1];\n  }\n  int n;\n  while (cin >> n) {\n    cout << primes[n];\n\
-    \    if (cin.peek() != EOF) cout << '\\n';\n  }\n}\n"
+    \    if (cin.peek() != EOF) cout << endl;\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009\"\
     \n\n#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_pbds;\n\
     using namespace __gnu_cxx;\n\n#include \"../sieve.hpp\"\n\nsigned main() {\n \
     \ ios::sync_with_stdio(false), cin.tie(0);\n  vector<int> primes = sieve(1e6);\n\
     \  for (int i = 1; i <= 1e6; ++i) {\n    primes[i] = (primes[i] == i && i >= 2)\
     \ + primes[i - 1];\n  }\n  int n;\n  while (cin >> n) {\n    cout << primes[n];\n\
-    \    if (cin.peek() != EOF) cout << '\\n';\n  }\n}"
+    \    if (cin.peek() != EOF) cout << endl;\n  }\n}"
   dependsOn:
   - number-theory/sieve.hpp
   isVerificationFile: true
   path: number-theory/test/Prime_Number.test.cpp
   requiredBy: []
-  timestamp: '2022-08-11 20:11:38+07:00'
+  timestamp: '2022-08-12 20:20:35+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: number-theory/test/Prime_Number.test.cpp
