@@ -56,6 +56,11 @@ data:
     - icon: ':x:'
       path: number-theory/sieve.hpp
       title: number-theory/sieve.hpp
+  - name: strings
+    pages:
+    - icon: ':x:'
+      path: strings/manacher.hpp
+      title: strings/manacher.hpp
   verificationCategories:
   - name: data-structure/test
     pages:
@@ -92,5 +97,10 @@ data:
     - icon: ':x:'
       path: number-theory/test/Prime_Number.test.cpp
       title: number-theory/test/Prime_Number.test.cpp
+  - name: strings/test
+    pages:
+    - icon: ':x:'
+      path: strings/test/Enumerate_Palindromes.test.cpp
+      title: strings/test/Enumerate_Palindromes.test.cpp
 layout: toppage
 ---

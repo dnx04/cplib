@@ -66,10 +66,10 @@ data:
   timestamp: '2022-06-30 19:56:15+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - data-structure/test/Range_Affine_Range_Sum.test.cpp
+  - data-structure/test/Queue_Operate_All_Composite.test.cpp
   - math/test/Matrix_Product.test.cpp
   - number-theory/test/Power.test.cpp
-  - data-structure/test/Queue_Operate_All_Composite.test.cpp
-  - data-structure/test/Range_Affine_Range_Sum.test.cpp
 documentation_of: number-theory/modint.hpp
 layout: document
 redirect_from:
