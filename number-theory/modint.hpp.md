@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
+    title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: data-structure/test/Queue_Operate_All_Composite.test.cpp
     title: data-structure/test/Queue_Operate_All_Composite.test.cpp
@@ -15,9 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: number-theory/test/Power.test.cpp
     title: number-theory/test/Power.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"number-theory/modint.hpp\"\nusing ll = long long;\ntemplate\
@@ -64,8 +67,9 @@ data:
   path: number-theory/modint.hpp
   requiredBy: []
   timestamp: '2022-06-30 19:56:15+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
   - data-structure/test/Range_Affine_Range_Sum.test.cpp
   - data-structure/test/Queue_Operate_All_Composite.test.cpp
   - math/test/Matrix_Product.test.cpp

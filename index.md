@@ -21,6 +21,12 @@ data:
     - icon: ':warning:'
       path: data-structure/segtree.hpp
       title: data-structure/segtree.hpp
+    - icon: ':warning:'
+      path: data-structure/sparse_table.hpp
+      title: data-structure/sparse_table.hpp
+    - icon: ':x:'
+      path: data-structure/splay.hpp
+      title: data-structure/splay.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/swag.hpp
       title: data-structure/swag.hpp
@@ -32,6 +38,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.hpp
       title: graph/maxflow.hpp
+    - icon: ':warning:'
+      path: graph/shortest_path.hpp
+      title: graph/shortest_path.hpp
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
@@ -53,10 +62,10 @@ data:
       title: misc/vec.hpp
   - name: number-theory
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: number-theory/sieve.hpp
       title: number-theory/sieve.hpp
   - name: strings
@@ -70,6 +79,9 @@ data:
   verificationCategories:
   - name: data-structure/test
     pages:
+    - icon: ':x:'
+      path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
+      title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Add_Range_Sum.test.cpp
       title: data-structure/test/Point_Add_Range_Sum.test.cpp
@@ -100,9 +112,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/test/Power.test.cpp
       title: number-theory/test/Power.test.cpp
-    - icon: ':x:'
-      path: number-theory/test/Prime_Number.test.cpp
-      title: number-theory/test/Prime_Number.test.cpp
   - name: strings/test
     pages:
     - icon: ':heavy_check_mark:'

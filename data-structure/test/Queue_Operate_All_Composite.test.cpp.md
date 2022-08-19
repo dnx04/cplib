@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data-structure/swag.hpp
     title: data-structure/swag.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: number-theory/modint.hpp
     title: number-theory/modint.hpp
   _extendedRequiredBy: []
