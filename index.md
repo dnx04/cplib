@@ -40,6 +40,9 @@ data:
   - name: misc
     pages:
     - icon: ':warning:'
+      path: misc/chash.hpp
+      title: misc/chash.hpp
+    - icon: ':warning:'
       path: misc/dir.hpp
       title: misc/dir.hpp
     - icon: ':warning:'
@@ -58,9 +61,12 @@ data:
       title: number-theory/sieve.hpp
   - name: strings
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: strings/manacher.hpp
       title: strings/manacher.hpp
+    - icon: ':heavy_check_mark:'
+      path: strings/zf.hpp
+      title: strings/zf.hpp
   verificationCategories:
   - name: data-structure/test
     pages:
@@ -99,8 +105,11 @@ data:
       title: number-theory/test/Prime_Number.test.cpp
   - name: strings/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: strings/test/Enumerate_Palindromes.test.cpp
       title: strings/test/Enumerate_Palindromes.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: strings/test/Z_Algorithm.test.cpp
+      title: strings/test/Z_Algorithm.test.cpp
 layout: toppage
 ---
