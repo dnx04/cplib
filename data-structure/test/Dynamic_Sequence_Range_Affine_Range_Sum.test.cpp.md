@@ -1,22 +1,25 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/splay.hpp
     title: data-structure/splay.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: number-theory/modint.hpp
     title: number-theory/modint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    links: []
+    PROBLEM: https://judge.yosupo.jp/problem/dynamic_sequence_range_affine_range_sum
+    links:
+    - https://judge.yosupo.jp/problem/dynamic_sequence_range_affine_range_sum
   bundledCode: "#line 1 \"data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp\"\
-    \n#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_cxx;\n\
+    \n#define PROBLEM \\\n  \"https://judge.yosupo.jp/problem/dynamic_sequence_range_affine_range_sum\"\
+    \n\n#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_cxx;\n\
     using namespace __gnu_pbds;\n\n#line 1 \"number-theory/modint.hpp\"\nusing ll\
     \ = long long;\ntemplate <const ll m>\nstruct Mod {\n  ll v;\n\n  Mod() : v(0){};\n\
     \  Mod(ll _v) : v((_v + m) % m){};\n  explicit operator ll() { return v; }\n \
@@ -122,7 +125,7 @@ data:
     \ }\n    }\n    return x;\n  }\n\n  Node *_kth(Node *p, int k) {\n    pushDown(p);\n\
     \    // left: [0, left->size - 1]\n    if (k < p->child[0]->size) {\n      return\
     \ _kth(p->child[0], k);\n    }\n    k -= p->child[0]->size;\n    if (!k) return\
-    \ p;\n    return _kth(p->child[1], k - 1);\n  }\n};\n#line 9 \"data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp\"\
+    \ p;\n    return _kth(p->child[1], k - 1);\n  }\n};\n#line 12 \"data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp\"\
     \n\nusing mint = Mod<998244353>;\n\nstruct S {\n  mint sum;\n  int sz;\n};\n\n\
     struct F {\n  mint a, b;\n};\n\nusing Node = node_t<mint, S, F>;\n\nS op(S left,\
     \ mint key, S right) {\n  return S{left.sum + key + right.sum, left.sz + 1 + right.sz};\n\
@@ -141,7 +144,8 @@ data:
     \   cin >> l >> r;\n      cout << st.prod(l, r).sum << '\\n';\n    }\n  }\n}\n\
     \nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
     \  int tc = 1;\n  // cin >> tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}\n"
-  code: "#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_cxx;\n\
+  code: "#define PROBLEM \\\n  \"https://judge.yosupo.jp/problem/dynamic_sequence_range_affine_range_sum\"\
+    \n\n#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_cxx;\n\
     using namespace __gnu_pbds;\n\n#include \"../algo/number-theory/modint.hpp\"\n\
     #include \"../splay.hpp\"\n\nusing mint = Mod<998244353>;\n\nstruct S {\n  mint\
     \ sum;\n  int sz;\n};\n\nstruct F {\n  mint a, b;\n};\n\nusing Node = node_t<mint,\
@@ -168,8 +172,8 @@ data:
   isVerificationFile: true
   path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
   requiredBy: []
-  timestamp: '2022-08-19 21:06:49+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-08-20 00:16:10+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
 layout: document

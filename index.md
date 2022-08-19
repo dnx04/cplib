@@ -24,7 +24,7 @@ data:
     - icon: ':warning:'
       path: data-structure/sparse_table.hpp
       title: data-structure/sparse_table.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/splay.hpp
       title: data-structure/splay.hpp
     - icon: ':heavy_check_mark:'
@@ -62,7 +62,7 @@ data:
       title: misc/vec.hpp
   - name: number-theory
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
     - icon: ':warning:'
@@ -79,7 +79,7 @@ data:
   verificationCategories:
   - name: data-structure/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
