@@ -11,9 +11,12 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    links: []
-  bundledCode: "#line 1 \"graph/test/Shortest_Path.test.cpp\"\n#include <bits/extc++.h>\n\
-    \nusing namespace std;\nusing namespace __gnu_cxx;\nusing namespace __gnu_pbds;\n\
+    PROBLEM: https://judge.yosupo.jp/problem/shortest_path
+    links:
+    - https://judge.yosupo.jp/problem/shortest_path
+  bundledCode: "#line 1 \"graph/test/Shortest_Path.test.cpp\"\n#define PROBLEM \"\
+    https://judge.yosupo.jp/problem/shortest_path\"\n\n#include <bits/extc++.h>\n\n\
+    using namespace std;\nusing namespace __gnu_cxx;\nusing namespace __gnu_pbds;\n\
     \nusing ll = long long;\n\n#line 1 \"graph/shortest_path.hpp\"\ntemplate <typename\
     \ T, T INF = std::numeric_limits<T>::max() / 2,\n          int INVALID = -1>\n\
     struct shortest_path {\n  int V, E;\n  bool single_positive_weight;\n  T wmin,\
@@ -136,7 +139,7 @@ data:
     \ (int i = 0; i < V; i++) {\n      for (int e = head[i]; e < head[i + 1]; ++e)\
     \ {\n        ss << i << \"->\" << tos[e].first << \"[label=\" << tos[e].second\
     \ << \"];\\n\";\n      }\n    }\n    ss << \"}\\n\";\n    ss.close();\n    return;\n\
-    \  }\n};\n#line 10 \"graph/test/Shortest_Path.test.cpp\"\n\nvoid solve(int ith)\
+    \  }\n};\n#line 12 \"graph/test/Shortest_Path.test.cpp\"\n\nvoid solve(int ith)\
     \ {\n  int n, m, s, t;\n  cin >> n >> m >> s >> t;\n\n  const ll INF = 1ll <<\
     \ 60;\n  shortest_path<long long, INF> g(n);\n  for (int i = 0; i < m; ++i) {\n\
     \    int u, v, w;\n    cin >> u >> v >> w;\n    g.add_edge(u, v, w);\n  }\n  g.solve(s,\
@@ -146,11 +149,12 @@ data:
     \ << path[i] << ' ' << path[i + 1] << '\\n';\n  }\n}\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
     \  cin.tie(nullptr), cin.exceptions(cin.failbit);\n  int tc = 1;\n  // cin >>\
     \ tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}\n"
-  code: "#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_cxx;\n\
-    using namespace __gnu_pbds;\n\nusing ll = long long;\n\n#include \"../shortest_path.hpp\"\
-    \n\nvoid solve(int ith) {\n  int n, m, s, t;\n  cin >> n >> m >> s >> t;\n\n \
-    \ const ll INF = 1ll << 60;\n  shortest_path<long long, INF> g(n);\n  for (int\
-    \ i = 0; i < m; ++i) {\n    int u, v, w;\n    cin >> u >> v >> w;\n    g.add_edge(u,\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/shortest_path\"\n\n#include\
+    \ <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_cxx;\nusing namespace\
+    \ __gnu_pbds;\n\nusing ll = long long;\n\n#include \"../shortest_path.hpp\"\n\n\
+    void solve(int ith) {\n  int n, m, s, t;\n  cin >> n >> m >> s >> t;\n\n  const\
+    \ ll INF = 1ll << 60;\n  shortest_path<long long, INF> g(n);\n  for (int i = 0;\
+    \ i < m; ++i) {\n    int u, v, w;\n    cin >> u >> v >> w;\n    g.add_edge(u,\
     \ v, w);\n  }\n  g.solve(s, t);\n  if (g.dist[t] == INF)\n    cout << -1;\n  else\
     \ {\n    cout << g.dist[t] << ' ';\n    auto path = g.retrieve_path(t);\n    cout\
     \ << (int)path.size() - 1 << '\\n';\n    for (int i = 0; i + 1 < (int)path.size();\
@@ -162,7 +166,7 @@ data:
   isVerificationFile: true
   path: graph/test/Shortest_Path.test.cpp
   requiredBy: []
-  timestamp: '2022-08-22 00:11:09+07:00'
+  timestamp: '2022-08-22 00:13:35+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/test/Shortest_Path.test.cpp

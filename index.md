@@ -43,7 +43,7 @@ data:
       title: data-structure/union_find.hpp
   - name: graph
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/low_link.hpp
       title: graph/low_link.hpp
     - icon: ':heavy_check_mark:'
@@ -116,7 +116,7 @@ data:
     - icon: ':x:'
       path: graph/test/Shortest_Path.test.cpp
       title: graph/test/Shortest_Path.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/test/Two-Edge-Connected_Components.test.cpp
       title: graph/test/Two-Edge-Connected_Components.test.cpp
   - name: math/test
