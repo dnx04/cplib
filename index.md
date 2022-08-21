@@ -34,7 +34,7 @@ data:
       title: data-structure/segtree.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/splay.hpp
-      title: Splay Tree (Implicit Treaps)
+      title: data-structure/splay.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/swag.hpp
       title: data-structure/swag.hpp
@@ -49,7 +49,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.hpp
       title: graph/maxflow.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/shortest_path.hpp
       title: graph/shortest_path.hpp
   - name: math
@@ -113,7 +113,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/test/Maximum_Flow.test.cpp
       title: graph/test/Maximum_Flow.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/test/Shortest_Path.test.cpp
       title: graph/test/Shortest_Path.test.cpp
     - icon: ':heavy_check_mark:'

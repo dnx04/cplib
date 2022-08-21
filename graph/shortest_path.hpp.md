@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/test/Shortest_Path.test.cpp
     title: graph/test/Shortest_Path.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"graph/shortest_path.hpp\"\ntemplate <typename T, T INF =\
@@ -23,8 +23,8 @@ data:
     \ = std::make_pair(e.next, e.w);\n    }\n  }\n\n  shortest_path(int V = 0)\n \
     \     : V(V), E(0), single_positive_weight(true), wmin(0), wmax(0) {}\n  void\
     \ add_edge(int s, int t, T w) {\n    assert(0 <= s and s < V);\n    assert(0 <=\
-    \ t and t < V);\n    edges.emplace_back(s, t, w);\n    ++E;\n    if (w > 0 and\
-    \ wmax > 0 and wmax != w) single_positive_weight = false;\n    wmin = std::min(wmin,\
+    \ t and t < V);\n    edges.push_back(edge{s, t, w});\n    ++E;\n    if (w > 0\
+    \ and wmax > 0 and wmax != w) single_positive_weight = false;\n    wmin = std::min(wmin,\
     \ w);\n    wmax = std::max(wmax, w);\n  }\n\n  void add_bi_edge(int u, int v,\
     \ T w) {\n    add_edge(u, v, w);\n    add_edge(v, u, w);\n  }\n\n  std::vector<T>\
     \ dist;\n  std::vector<int> prev;\n\n  // Dijkstra algorithm\n  // - Requirement:\
@@ -145,8 +145,8 @@ data:
     \ = std::make_pair(e.next, e.w);\n    }\n  }\n\n  shortest_path(int V = 0)\n \
     \     : V(V), E(0), single_positive_weight(true), wmin(0), wmax(0) {}\n  void\
     \ add_edge(int s, int t, T w) {\n    assert(0 <= s and s < V);\n    assert(0 <=\
-    \ t and t < V);\n    edges.emplace_back(s, t, w);\n    ++E;\n    if (w > 0 and\
-    \ wmax > 0 and wmax != w) single_positive_weight = false;\n    wmin = std::min(wmin,\
+    \ t and t < V);\n    edges.push_back(edge{s, t, w});\n    ++E;\n    if (w > 0\
+    \ and wmax > 0 and wmax != w) single_positive_weight = false;\n    wmin = std::min(wmin,\
     \ w);\n    wmax = std::max(wmax, w);\n  }\n\n  void add_bi_edge(int u, int v,\
     \ T w) {\n    add_edge(u, v, w);\n    add_edge(v, u, w);\n  }\n\n  std::vector<T>\
     \ dist;\n  std::vector<int> prev;\n\n  // Dijkstra algorithm\n  // - Requirement:\
@@ -260,8 +260,8 @@ data:
   isVerificationFile: false
   path: graph/shortest_path.hpp
   requiredBy: []
-  timestamp: '2022-08-22 00:11:09+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2022-08-22 00:45:58+07:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/test/Shortest_Path.test.cpp
 documentation_of: graph/shortest_path.hpp
