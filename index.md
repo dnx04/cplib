@@ -1,17 +1,28 @@
 ---
 data:
   libraryCategories:
+  - name: convolution
+    pages:
+    - icon: ':warning:'
+      path: convolution/hadamard.hpp
+      title: convolution/hadamard.hpp
   - name: data-structure
     pages:
     - icon: ':warning:'
       path: data-structure/2dsum.hpp
       title: data-structure/2dsum.hpp
+    - icon: ':warning:'
+      path: data-structure/dynamic_hull.hpp
+      title: data-structure/dynamic_hull.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/fenwick.hpp
       title: data-structure/fenwick.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segtree.hpp
       title: data-structure/lazy_segtree.hpp
+    - icon: ':warning:'
+      path: data-structure/li_chao_tree.hpp
+      title: data-structure/li_chao_tree.hpp
     - icon: ':warning:'
       path: data-structure/pbds.hpp
       title: data-structure/pbds.hpp
@@ -21,9 +32,6 @@ data:
     - icon: ':warning:'
       path: data-structure/segtree.hpp
       title: data-structure/segtree.hpp
-    - icon: ':warning:'
-      path: data-structure/sparse_table.hpp
-      title: data-structure/sparse_table.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/splay.hpp
       title: data-structure/splay.hpp
@@ -35,10 +43,13 @@ data:
       title: data-structure/union_find.hpp
   - name: graph
     pages:
+    - icon: ':warning:'
+      path: graph/low_link.hpp
+      title: graph/low_link.hpp
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.hpp
       title: graph/maxflow.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: graph/shortest_path.hpp
       title: graph/shortest_path.hpp
   - name: math
@@ -102,6 +113,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/test/Maximum_Flow.test.cpp
       title: graph/test/Maximum_Flow.test.cpp
+    - icon: ':x:'
+      path: graph/test/Shortest_Path.test.cpp
+      title: graph/test/Shortest_Path.test.cpp
+    - icon: ':x:'
+      path: graph/test/Two-Edge-Connected_Components.test.cpp
+      title: graph/test/Two-Edge-Connected_Components.test.cpp
   - name: math/test
     pages:
     - icon: ':heavy_check_mark:'
