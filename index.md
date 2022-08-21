@@ -34,7 +34,7 @@ data:
       title: data-structure/segtree.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/splay.hpp
-      title: data-structure/splay.hpp
+      title: Splay Tree (Implicit Treaps)
     - icon: ':heavy_check_mark:'
       path: data-structure/swag.hpp
       title: data-structure/swag.hpp

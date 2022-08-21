@@ -19,9 +19,7 @@ data:
     \  return vector<int>(begin(p) + 1, end(p) - 1);\n}\n\nvector<int> manacher(const\
     \ string &s) {\n  string t;\n  for (auto c : s) {\n    t += string(\"#\") + c;\n\
     \  }\n  auto res = manacher_odd(t + \"#\");\n  return vector<int>(begin(res) +\
-    \ 1, end(res) - 1);\n}\n\nstring longest_palindrome(string s) {\n  auto p = manacher(s);\n\
-    \  int mx_pos = max_element(begin(p), end(p)) - begin(p), len = p[mx_pos] - 1;\n\
-    \  return s.substr(mx_pos / 2 - 1, len);\n}\n"
+    \ 1, end(res) - 1);\n}\n"
   code: "vector<int> manacher_odd(string s) {\n  int n = s.size();\n  s = \"$\" +\
     \ s + \"^\";\n  vector<int> p(n + 2);\n  int l = 1, r = 1;\n  for (int i = 1;\
     \ i <= n; i++) {\n    p[i] = max(0, min(r - i, p[l + (r - i)]));\n    while (s[i\
@@ -29,15 +27,12 @@ data:
     \     l = i - p[i], r = i + p[i];\n    }\n  }\n  return vector<int>(begin(p) +\
     \ 1, end(p) - 1);\n}\n\nvector<int> manacher(const string &s) {\n  string t;\n\
     \  for (auto c : s) {\n    t += string(\"#\") + c;\n  }\n  auto res = manacher_odd(t\
-    \ + \"#\");\n  return vector<int>(begin(res) + 1, end(res) - 1);\n}\n\nstring\
-    \ longest_palindrome(string s) {\n  auto p = manacher(s);\n  int mx_pos = max_element(begin(p),\
-    \ end(p)) - begin(p), len = p[mx_pos] - 1;\n  return s.substr(mx_pos / 2 - 1,\
-    \ len);\n}"
+    \ + \"#\");\n  return vector<int>(begin(res) + 1, end(res) - 1);\n}"
   dependsOn: []
   isVerificationFile: false
   path: strings/manacher.hpp
   requiredBy: []
-  timestamp: '2022-08-19 01:14:13+07:00'
+  timestamp: '2022-08-22 00:24:37+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - strings/test/Enumerate_Palindromes.test.cpp

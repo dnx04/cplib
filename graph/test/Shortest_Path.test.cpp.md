@@ -142,11 +142,11 @@ data:
     \  }\n};\n#line 12 \"graph/test/Shortest_Path.test.cpp\"\n\nvoid solve(int ith)\
     \ {\n  int n, m, s, t;\n  cin >> n >> m >> s >> t;\n\n  const ll INF = 1ll <<\
     \ 60;\n  shortest_path<long long, INF> g(n);\n  for (int i = 0; i < m; ++i) {\n\
-    \    int u, v, w;\n    cin >> u >> v >> w;\n    g.add_edge(u, v, w);\n  }\n  g.solve(s,\
-    \ t);\n  if (g.dist[t] == INF)\n    cout << -1;\n  else {\n    cout << g.dist[t]\
-    \ << ' ';\n    auto path = g.retrieve_path(t);\n    cout << (int)path.size() -\
-    \ 1 << '\\n';\n    for (int i = 0; i + 1 < (int)path.size(); ++i)\n      cout\
-    \ << path[i] << ' ' << path[i + 1] << '\\n';\n  }\n}\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
+    \    int u, v, w;\n    cin >> u >> v >> w;\n    g.add_edge(u, v, w);\n  }\n  g.solve(s);\n\
+    \  if (g.dist[t] == INF)\n    cout << -1;\n  else {\n    cout << g.dist[t] <<\
+    \ ' ';\n    auto path = g.retrieve_path(t);\n    cout << (int)path.size() - 1\
+    \ << '\\n';\n    for (int i = 0; i + 1 < (int)path.size(); ++i)\n      cout <<\
+    \ path[i] << ' ' << path[i + 1] << '\\n';\n  }\n}\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
     \  cin.tie(nullptr), cin.exceptions(cin.failbit);\n  int tc = 1;\n  // cin >>\
     \ tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/shortest_path\"\n\n#include\
@@ -155,7 +155,7 @@ data:
     void solve(int ith) {\n  int n, m, s, t;\n  cin >> n >> m >> s >> t;\n\n  const\
     \ ll INF = 1ll << 60;\n  shortest_path<long long, INF> g(n);\n  for (int i = 0;\
     \ i < m; ++i) {\n    int u, v, w;\n    cin >> u >> v >> w;\n    g.add_edge(u,\
-    \ v, w);\n  }\n  g.solve(s, t);\n  if (g.dist[t] == INF)\n    cout << -1;\n  else\
+    \ v, w);\n  }\n  g.solve(s);\n  if (g.dist[t] == INF)\n    cout << -1;\n  else\
     \ {\n    cout << g.dist[t] << ' ';\n    auto path = g.retrieve_path(t);\n    cout\
     \ << (int)path.size() - 1 << '\\n';\n    for (int i = 0; i + 1 < (int)path.size();\
     \ ++i)\n      cout << path[i] << ' ' << path[i + 1] << '\\n';\n  }\n}\n\nsigned\
@@ -166,7 +166,7 @@ data:
   isVerificationFile: true
   path: graph/test/Shortest_Path.test.cpp
   requiredBy: []
-  timestamp: '2022-08-22 00:13:35+07:00'
+  timestamp: '2022-08-22 00:24:37+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: graph/test/Shortest_Path.test.cpp

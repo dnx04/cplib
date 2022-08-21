@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data-structure/splay.hpp
-    title: data-structure/splay.hpp
+    title: Splay Tree (Implicit Treaps)
   - icon: ':heavy_check_mark:'
     path: number-theory/modint.hpp
     title: number-theory/modint.hpp
