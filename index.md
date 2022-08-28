@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: convolution
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: convolution/hadamard.hpp
       title: convolution/hadamard.hpp
   - name: data-structure
@@ -49,9 +49,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.hpp
       title: graph/maxflow.hpp
-    - icon: ':heavy_check_mark:'
-      path: graph/shortest_path.hpp
-      title: graph/shortest_path.hpp
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
@@ -76,18 +73,29 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
-    - icon: ':warning:'
-      path: number-theory/sieve.hpp
-      title: number-theory/sieve.hpp
+    - icon: ':x:'
+      path: number-theory/sieves.hpp
+      title: number-theory/sieves.hpp
   - name: strings
     pages:
     - icon: ':heavy_check_mark:'
       path: strings/manacher.hpp
       title: strings/manacher.hpp
+    - icon: ':warning:'
+      path: strings/rolling_hash.hpp
+      title: strings/rolling_hash.hpp
     - icon: ':heavy_check_mark:'
       path: strings/zf.hpp
       title: strings/zf.hpp
   verificationCategories:
+  - name: convolution/test
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: convolution/test/Bitwise_And_Convolution.test.cpp
+      title: convolution/test/Bitwise_And_Convolution.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: convolution/test/Bitwise_Xor_Convolution.test.cpp
+      title: convolution/test/Bitwise_Xor_Convolution.test.cpp
   - name: data-structure/test
     pages:
     - icon: ':heavy_check_mark:'
@@ -114,9 +122,6 @@ data:
       path: graph/test/Maximum_Flow.test.cpp
       title: graph/test/Maximum_Flow.test.cpp
     - icon: ':heavy_check_mark:'
-      path: graph/test/Shortest_Path.test.cpp
-      title: graph/test/Shortest_Path.test.cpp
-    - icon: ':heavy_check_mark:'
       path: graph/test/Two-Edge-Connected_Components.test.cpp
       title: graph/test/Two-Edge-Connected_Components.test.cpp
   - name: math/test
@@ -126,6 +131,9 @@ data:
       title: math/test/Matrix_Product.test.cpp
   - name: number-theory/test
     pages:
+    - icon: ':x:'
+      path: number-theory/test/Enumerate_Primes.test.cpp
+      title: number-theory/test/Enumerate_Primes.test.cpp
     - icon: ':heavy_check_mark:'
       path: number-theory/test/Power.test.cpp
       title: number-theory/test/Power.test.cpp

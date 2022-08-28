@@ -21,7 +21,7 @@ data:
     \n#define PROBLEM \\\n  \"https://judge.yosupo.jp/problem/dynamic_sequence_range_affine_range_sum\"\
     \n\n#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_cxx;\n\
     using namespace __gnu_pbds;\n\n#line 1 \"number-theory/modint.hpp\"\nusing ll\
-    \ = long long;\ntemplate <const ll m>\nstruct Mod {\n  ll v;\n\n  Mod() : v(0){};\n\
+    \ = long long;\n\ntemplate <const ll m>\nstruct Mod {\n  ll v;\n\n  Mod() : v(0){};\n\
     \  Mod(ll _v) : v((_v + m) % m){};\n  explicit operator ll() { return v; }\n \
     \ Mod inv() const {\n    ll a = v, b = m, ax = 1, bx = 0;\n    while (b) {\n \
     \     ll q = a / b, t = a % b;\n      a = b, b = t, t = ax - bx * q, ax = bx,\
@@ -36,8 +36,9 @@ data:
     \ }\n  Mod operator+(const Mod& that) const { return Mod(*this) += that; }\n \
     \ Mod operator-(const Mod& that) const { return Mod(*this) -= that; }\n  Mod operator*(const\
     \ Mod& that) const { return Mod(*this) *= that; }\n  Mod operator/(const Mod&\
-    \ that) const { return Mod(*this) /= that; }\n  friend istream& operator>>(istream&\
-    \ in, Mod& that) {\n    ll val;\n    in >> val;\n    that = Mod(val);\n    return\
+    \ that) const { return Mod(*this) /= that; }\n  bool operator==(const Mod& that)\
+    \ const { return this->v == that.v; }\n  friend istream& operator>>(istream& in,\
+    \ Mod& that) {\n    ll val;\n    in >> val;\n    that = Mod(val);\n    return\
     \ in;\n  }\n  friend ostream& operator<<(ostream& out, const Mod& that) {\n  \
     \  return out << that.v;\n  }\n};\n#line 1 \"data-structure/splay.hpp\"\ntemplate\
     \ <class K, class S, class F>\nstruct node_t {\n  using Node = node_t<K, S, F>;\n\
@@ -172,7 +173,7 @@ data:
   isVerificationFile: true
   path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
   requiredBy: []
-  timestamp: '2022-08-20 00:16:10+07:00'
+  timestamp: '2022-08-28 22:13:17+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp

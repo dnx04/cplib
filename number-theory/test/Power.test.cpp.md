@@ -17,7 +17,7 @@ data:
   bundledCode: "#line 1 \"number-theory/test/Power.test.cpp\"\n#define PROBLEM \\\n\
     \  \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\n\n#include\
     \ <bits/extc++.h>\n\nusing namespace std;\n\n#line 1 \"number-theory/modint.hpp\"\
-    \nusing ll = long long;\ntemplate <const ll m>\nstruct Mod {\n  ll v;\n\n  Mod()\
+    \nusing ll = long long;\n\ntemplate <const ll m>\nstruct Mod {\n  ll v;\n\n  Mod()\
     \ : v(0){};\n  Mod(ll _v) : v((_v + m) % m){};\n  explicit operator ll() { return\
     \ v; }\n  Mod inv() const {\n    ll a = v, b = m, ax = 1, bx = 0;\n    while (b)\
     \ {\n      ll q = a / b, t = a % b;\n      a = b, b = t, t = ax - bx * q, ax =\
@@ -32,8 +32,9 @@ data:
     \ }\n  Mod operator+(const Mod& that) const { return Mod(*this) += that; }\n \
     \ Mod operator-(const Mod& that) const { return Mod(*this) -= that; }\n  Mod operator*(const\
     \ Mod& that) const { return Mod(*this) *= that; }\n  Mod operator/(const Mod&\
-    \ that) const { return Mod(*this) /= that; }\n  friend istream& operator>>(istream&\
-    \ in, Mod& that) {\n    ll val;\n    in >> val;\n    that = Mod(val);\n    return\
+    \ that) const { return Mod(*this) /= that; }\n  bool operator==(const Mod& that)\
+    \ const { return this->v == that.v; }\n  friend istream& operator>>(istream& in,\
+    \ Mod& that) {\n    ll val;\n    in >> val;\n    that = Mod(val);\n    return\
     \ in;\n  }\n  friend ostream& operator<<(ostream& out, const Mod& that) {\n  \
     \  return out << that.v;\n  }\n};\n#line 9 \"number-theory/test/Power.test.cpp\"\
     \n\nsigned main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  Mod<1000000007>\
@@ -47,7 +48,7 @@ data:
   isVerificationFile: true
   path: number-theory/test/Power.test.cpp
   requiredBy: []
-  timestamp: '2022-08-11 20:11:38+07:00'
+  timestamp: '2022-08-28 22:13:17+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: number-theory/test/Power.test.cpp
