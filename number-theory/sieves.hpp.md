@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number-theory/test/Enumerate_Primes.test.cpp
     title: number-theory/test/Enumerate_Primes.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"number-theory/sieves.hpp\"\ntemplate <int LIMN>\nstruct\
@@ -33,7 +33,7 @@ data:
   path: number-theory/sieves.hpp
   requiredBy: []
   timestamp: '2022-08-28 22:13:17+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - number-theory/test/Enumerate_Primes.test.cpp
 documentation_of: number-theory/sieves.hpp

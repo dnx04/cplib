@@ -73,7 +73,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: number-theory/sieves.hpp
       title: number-theory/sieves.hpp
   - name: strings
@@ -131,7 +131,7 @@ data:
       title: math/test/Matrix_Product.test.cpp
   - name: number-theory/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: number-theory/test/Enumerate_Primes.test.cpp
       title: number-theory/test/Enumerate_Primes.test.cpp
     - icon: ':heavy_check_mark:'
