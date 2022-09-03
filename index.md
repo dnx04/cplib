@@ -91,6 +91,9 @@ data:
       path: strings/rolling_hash.hpp
       title: strings/rolling_hash.hpp
     - icon: ':heavy_check_mark:'
+      path: strings/suffix_array.hpp
+      title: strings/suffix_array.hpp
+    - icon: ':heavy_check_mark:'
       path: strings/zf.hpp
       title: strings/zf.hpp
   verificationCategories:
@@ -148,6 +151,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: strings/test/Enumerate_Palindromes.test.cpp
       title: strings/test/Enumerate_Palindromes.test.cpp
+    - icon: ':x:'
+      path: strings/test/Number_of_Substrings.test.cpp
+      title: strings/test/Number_of_Substrings.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: strings/test/Suffix_Array.test.cpp
+      title: strings/test/Suffix_Array.test.cpp
     - icon: ':heavy_check_mark:'
       path: strings/test/Z_Algorithm.test.cpp
       title: strings/test/Z_Algorithm.test.cpp
