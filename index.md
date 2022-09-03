@@ -3,9 +3,15 @@ data:
   libraryCategories:
   - name: convolution
     pages:
+    - icon: ':warning:'
+      path: convolution/fft.hpp
+      title: convolution/fft.hpp
     - icon: ':heavy_check_mark:'
       path: convolution/hadamard.hpp
       title: convolution/hadamard.hpp
+    - icon: ':heavy_check_mark:'
+      path: convolution/ntt.hpp
+      title: convolution/ntt.hpp
   - name: data-structure
     pages:
     - icon: ':warning:'
@@ -26,7 +32,7 @@ data:
     - icon: ':warning:'
       path: data-structure/pbds.hpp
       title: data-structure/pbds.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/rmq.hpp
       title: data-structure/rmq.hpp
     - icon: ':warning:'
@@ -70,7 +76,7 @@ data:
       title: misc/vec.hpp
   - name: number-theory
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
     - icon: ':heavy_check_mark:'
@@ -96,6 +102,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/test/Bitwise_Xor_Convolution.test.cpp
       title: convolution/test/Bitwise_Xor_Convolution.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: convolution/test/Convolution.test.cpp
+      title: convolution/test/Convolution.test.cpp
   - name: data-structure/test
     pages:
     - icon: ':heavy_check_mark:'
@@ -110,7 +119,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Range_Affine_Range_Sum.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/test/Static_RMQ.test.cpp
       title: data-structure/test/Static_RMQ.test.cpp
     - icon: ':heavy_check_mark:'
@@ -134,7 +143,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/test/Enumerate_Primes.test.cpp
       title: number-theory/test/Enumerate_Primes.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: number-theory/test/Power.test.cpp
       title: number-theory/test/Power.test.cpp
   - name: strings/test

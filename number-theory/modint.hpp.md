@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: convolution/ntt.hpp
+    title: convolution/ntt.hpp
   - icon: ':warning:'
     path: strings/rolling_hash.hpp
     title: strings/rolling_hash.hpp
@@ -12,6 +15,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/test/Bitwise_Xor_Convolution.test.cpp
     title: convolution/test/Bitwise_Xor_Convolution.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: convolution/test/Convolution.test.cpp
+    title: convolution/test/Convolution.test.cpp
   - icon: ':heavy_check_mark:'
     path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
     title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
@@ -24,12 +30,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/test/Matrix_Product.test.cpp
     title: math/test/Matrix_Product.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: number-theory/test/Power.test.cpp
     title: number-theory/test/Power.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"number-theory/modint.hpp\"\nusing ll = long long;\n\ntemplate\
@@ -77,15 +83,17 @@ data:
   isVerificationFile: false
   path: number-theory/modint.hpp
   requiredBy:
+  - convolution/ntt.hpp
   - strings/rolling_hash.hpp
   timestamp: '2022-08-28 22:13:17+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
   - data-structure/test/Range_Affine_Range_Sum.test.cpp
   - data-structure/test/Queue_Operate_All_Composite.test.cpp
   - math/test/Matrix_Product.test.cpp
   - convolution/test/Bitwise_And_Convolution.test.cpp
+  - convolution/test/Convolution.test.cpp
   - convolution/test/Bitwise_Xor_Convolution.test.cpp
   - number-theory/test/Power.test.cpp
 documentation_of: number-theory/modint.hpp
