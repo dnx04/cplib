@@ -30,12 +30,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/test/Matrix_Product.test.cpp
     title: math/test/Matrix_Product.test.cpp
-  - icon: ':x:'
-    path: number-theory/test/Power.test.cpp
-    title: number-theory/test/Power.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"number-theory/modint.hpp\"\nusing ll = long long;\n\ntemplate\
@@ -86,7 +83,7 @@ data:
   - convolution/ntt.hpp
   - strings/rolling_hash.hpp
   timestamp: '2022-08-28 22:13:17+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
   - data-structure/test/Range_Affine_Range_Sum.test.cpp
@@ -95,7 +92,6 @@ data:
   - convolution/test/Bitwise_And_Convolution.test.cpp
   - convolution/test/Convolution.test.cpp
   - convolution/test/Bitwise_Xor_Convolution.test.cpp
-  - number-theory/test/Power.test.cpp
 documentation_of: number-theory/modint.hpp
 layout: document
 redirect_from:

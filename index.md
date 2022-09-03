@@ -32,7 +32,7 @@ data:
     - icon: ':warning:'
       path: data-structure/pbds.hpp
       title: data-structure/pbds.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/rmq.hpp
       title: data-structure/rmq.hpp
     - icon: ':warning:'
@@ -76,7 +76,7 @@ data:
       title: misc/vec.hpp
   - name: number-theory
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
     - icon: ':heavy_check_mark:'
@@ -119,7 +119,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Range_Affine_Range_Sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/Static_RMQ.test.cpp
       title: data-structure/test/Static_RMQ.test.cpp
     - icon: ':heavy_check_mark:'
@@ -143,9 +143,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/test/Enumerate_Primes.test.cpp
       title: number-theory/test/Enumerate_Primes.test.cpp
-    - icon: ':x:'
-      path: number-theory/test/Power.test.cpp
-      title: number-theory/test/Power.test.cpp
   - name: strings/test
     pages:
     - icon: ':heavy_check_mark:'

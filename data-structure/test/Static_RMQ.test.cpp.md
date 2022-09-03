@@ -1,21 +1,21 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/rmq.hpp
     title: data-structure/rmq.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
     links:
     - https://judge.yosupo.jp/problem/staticrmq
   bundledCode: "#line 1 \"data-structure/test/Static_RMQ.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include <bits/extc++.h>\n\n\
+    \ \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include <bits/stdc++.h>\n\n\
     using namespace std;\n\n#line 1 \"data-structure/rmq.hpp\"\n// RMQ using Sparse\
     \ Table\n// range_min for min, range_max for max\n\ntemplate <class T, T (*op)(T,\
     \ T)>\nstruct rmq {\n  rmq() = default;\n  rmq(const vector<T>& v) : t{v}, n{(int)v.size()}\
@@ -29,22 +29,22 @@ data:
     \ < a ? b : a;\n}\ntemplate <class T>\nT range_max(T a, T b) {\n  return a < b\
     \ ? b : a;\n}\n#line 8 \"data-structure/test/Static_RMQ.test.cpp\"\n\nsigned main()\
     \ {\n  ios::sync_with_stdio(false), cin.tie(0);\n  int n, q;\n  cin >> n >> q;\n\
-    \  vector<int> a(n);\n  for (auto &x : a) cin >> x;\n  rmq<int> st(a);\n  while\
-    \ (q--) {\n    int l, r;\n    cin >> l >> r;\n    cout << st.get(l, r) << '\\\
-    n';\n  }\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include\
-    \ <bits/extc++.h>\n\nusing namespace std;\n\n#include \"../rmq.hpp\"\n\nsigned\
-    \ main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  int n, q;\n  cin >>\
-    \ n >> q;\n  vector<int> a(n);\n  for (auto &x : a) cin >> x;\n  rmq<int> st(a);\n\
+    \  vector<int> a(n);\n  for (auto &x : a) cin >> x;\n  rmq<int, range_min> st(a);\n\
     \  while (q--) {\n    int l, r;\n    cin >> l >> r;\n    cout << st.get(l, r)\
-    \ << '\\n';\n  }\n}"
+    \ << '\\n';\n  }\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include\
+    \ <bits/stdc++.h>\n\nusing namespace std;\n\n#include \"../rmq.hpp\"\n\nsigned\
+    \ main() {\n  ios::sync_with_stdio(false), cin.tie(0);\n  int n, q;\n  cin >>\
+    \ n >> q;\n  vector<int> a(n);\n  for (auto &x : a) cin >> x;\n  rmq<int, range_min>\
+    \ st(a);\n  while (q--) {\n    int l, r;\n    cin >> l >> r;\n    cout << st.get(l,\
+    \ r) << '\\n';\n  }\n}"
   dependsOn:
   - data-structure/rmq.hpp
   isVerificationFile: true
   path: data-structure/test/Static_RMQ.test.cpp
   requiredBy: []
-  timestamp: '2022-09-03 21:27:00+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-09-03 22:10:58+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Static_RMQ.test.cpp
 layout: document
