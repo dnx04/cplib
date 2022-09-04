@@ -61,6 +61,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
       title: graph/scc.hpp
+    - icon: ':heavy_check_mark:'
+      path: graph/tree_diameter.hpp
+      title: graph/tree_diameter.hpp
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
@@ -145,6 +148,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/test/Strongly_Connected_Components.test.cpp
       title: graph/test/Strongly_Connected_Components.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/test/Tree_Diameter.test.cpp
+      title: graph/test/Tree_Diameter.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/test/Two-Edge-Connected_Components.test.cpp
       title: graph/test/Two-Edge-Connected_Components.test.cpp

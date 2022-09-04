@@ -32,10 +32,13 @@ data:
     \  void build() {\n    for (int i = 0; i < n; i++) {\n      if (num[i] == -1)\
     \ dfs(i);\n    }\n    reverse(begin(scc_graph), end(scc_graph));\n  }\n\n  //\
     \ build DAG of strongly connected components\n  // Returns: adjacency list of\
-    \ DAG\n  vector<vector<int>> condense() {\n    vector<vector<int>> dag(scc_graph.size());\n\
-    \    for (int u = 0; u < n; ++u) {\n      int x = id[u];\n      for (int v : g[u])\
-    \ {\n        int y = id[v];\n        if (x != y) {\n          dag[x].push_back(y);\n\
-    \        }\n      }\n    }\n    return dag;\n  }\n};\n"
+    \ DAG, and root vertices (in-degree\n  // = 0)\n  pair<vector<vector<int>>, vector<int>>\
+    \ condense() {\n    vector<vector<int>> dag(scc_graph.size());\n    vector<int>\
+    \ roots, in(scc_graph.size());\n    for (int u = 0; u < n; ++u) {\n      int x\
+    \ = id[u];\n      for (int v : g[u]) {\n        int y = id[v];\n        if (x\
+    \ != y) {\n          dag[x].push_back(y);\n          ++in[y];\n        }\n   \
+    \   }\n    }\n    for (int u = 0; u < (int)dag.size(); ++u)\n      if (in[u] ==\
+    \ 0) roots.push_back(u);\n    return {dag, roots};\n  }\n};\n"
   code: "#pragma once\n\nstruct scc {\n  vector<vector<int>> g;\n  int n;\n  vector<int>\
     \ num, low, current, S;\n  int counter;\n  vector<int> id;\n  vector<vector<int>>\
     \ scc_graph;\n\n  scc(int n)\n      : g(n),\n        n(n),\n        num(n, -1),\n\
@@ -50,16 +53,19 @@ data:
     \  void build() {\n    for (int i = 0; i < n; i++) {\n      if (num[i] == -1)\
     \ dfs(i);\n    }\n    reverse(begin(scc_graph), end(scc_graph));\n  }\n\n  //\
     \ build DAG of strongly connected components\n  // Returns: adjacency list of\
-    \ DAG\n  vector<vector<int>> condense() {\n    vector<vector<int>> dag(scc_graph.size());\n\
-    \    for (int u = 0; u < n; ++u) {\n      int x = id[u];\n      for (int v : g[u])\
-    \ {\n        int y = id[v];\n        if (x != y) {\n          dag[x].push_back(y);\n\
-    \        }\n      }\n    }\n    return dag;\n  }\n};"
+    \ DAG, and root vertices (in-degree\n  // = 0)\n  pair<vector<vector<int>>, vector<int>>\
+    \ condense() {\n    vector<vector<int>> dag(scc_graph.size());\n    vector<int>\
+    \ roots, in(scc_graph.size());\n    for (int u = 0; u < n; ++u) {\n      int x\
+    \ = id[u];\n      for (int v : g[u]) {\n        int y = id[v];\n        if (x\
+    \ != y) {\n          dag[x].push_back(y);\n          ++in[y];\n        }\n   \
+    \   }\n    }\n    for (int u = 0; u < (int)dag.size(); ++u)\n      if (in[u] ==\
+    \ 0) roots.push_back(u);\n    return {dag, roots};\n  }\n};"
   dependsOn: []
   isVerificationFile: false
   path: graph/scc.hpp
   requiredBy:
   - graph/2sat.hpp
-  timestamp: '2022-09-04 10:58:20+07:00'
+  timestamp: '2022-09-04 19:05:25+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/test/2_Sat.test.cpp

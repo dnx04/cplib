@@ -31,10 +31,13 @@ data:
     \  void build() {\n    for (int i = 0; i < n; i++) {\n      if (num[i] == -1)\
     \ dfs(i);\n    }\n    reverse(begin(scc_graph), end(scc_graph));\n  }\n\n  //\
     \ build DAG of strongly connected components\n  // Returns: adjacency list of\
-    \ DAG\n  vector<vector<int>> condense() {\n    vector<vector<int>> dag(scc_graph.size());\n\
-    \    for (int u = 0; u < n; ++u) {\n      int x = id[u];\n      for (int v : g[u])\
-    \ {\n        int y = id[v];\n        if (x != y) {\n          dag[x].push_back(y);\n\
-    \        }\n      }\n    }\n    return dag;\n  }\n};\n#line 10 \"graph/test/Strongly_Connected_Components.test.cpp\"\
+    \ DAG, and root vertices (in-degree\n  // = 0)\n  pair<vector<vector<int>>, vector<int>>\
+    \ condense() {\n    vector<vector<int>> dag(scc_graph.size());\n    vector<int>\
+    \ roots, in(scc_graph.size());\n    for (int u = 0; u < n; ++u) {\n      int x\
+    \ = id[u];\n      for (int v : g[u]) {\n        int y = id[v];\n        if (x\
+    \ != y) {\n          dag[x].push_back(y);\n          ++in[y];\n        }\n   \
+    \   }\n    }\n    for (int u = 0; u < (int)dag.size(); ++u)\n      if (in[u] ==\
+    \ 0) roots.push_back(u);\n    return {dag, roots};\n  }\n};\n#line 10 \"graph/test/Strongly_Connected_Components.test.cpp\"\
     \n\nvoid solve(int ith) {\n  int n, m;\n  cin >> n >> m;\n  scc g(n);\n  for (int\
     \ i = 0; i < m; ++i) {\n    int u, v;\n    cin >> u >> v;\n    g.add_edge(u, v);\n\
     \  }\n  g.build();\n  auto comp = g.scc_graph;\n  cout << comp.size() << '\\n';\n\
@@ -56,7 +59,7 @@ data:
   isVerificationFile: true
   path: graph/test/Strongly_Connected_Components.test.cpp
   requiredBy: []
-  timestamp: '2022-09-04 10:58:20+07:00'
+  timestamp: '2022-09-04 19:05:25+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: graph/test/Strongly_Connected_Components.test.cpp
