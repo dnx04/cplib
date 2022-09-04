@@ -49,12 +49,18 @@ data:
       title: data-structure/union_find.hpp
   - name: graph
     pages:
+    - icon: ':x:'
+      path: graph/2sat.hpp
+      title: graph/2sat.hpp
     - icon: ':heavy_check_mark:'
       path: graph/low_link.hpp
       title: graph/low_link.hpp
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.hpp
       title: graph/maxflow.hpp
+    - icon: ':x:'
+      path: graph/scc.hpp
+      title: graph/scc.hpp
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
@@ -90,7 +96,7 @@ data:
     - icon: ':warning:'
       path: strings/rolling_hash.hpp
       title: strings/rolling_hash.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: strings/suffix_array.hpp
       title: strings/suffix_array.hpp
     - icon: ':heavy_check_mark:'
@@ -130,9 +136,15 @@ data:
       title: data-structure/test/Unionfind.test.cpp
   - name: graph/test
     pages:
+    - icon: ':x:'
+      path: graph/test/2_Sat.test.cpp
+      title: graph/test/2_Sat.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/test/Maximum_Flow.test.cpp
       title: graph/test/Maximum_Flow.test.cpp
+    - icon: ':x:'
+      path: graph/test/Strongly_Connected_Components.test.cpp
+      title: graph/test/Strongly_Connected_Components.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/test/Two-Edge-Connected_Components.test.cpp
       title: graph/test/Two-Edge-Connected_Components.test.cpp

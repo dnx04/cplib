@@ -8,16 +8,23 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"data-structure/pbds.hpp\"\ntemplate <typename T>\nusing\
-    \ ordered_set = __gnu_pbds::tree<T, null_type, less<T>, rb_tree_tag,\n       \
-    \                              tree_order_statistics_node_update>;\n"
-  code: "template <typename T>\nusing ordered_set = __gnu_pbds::tree<T, null_type,\
-    \ less<T>, rb_tree_tag,\n                                     tree_order_statistics_node_update>;"
+  bundledCode: "#line 2 \"data-structure/pbds.hpp\"\n\n#include <ext/pb_ds/assoc_container.hpp>\n\
+    #include <ext/pb_ds/tag_and_trait.hpp>\n#include <ext/pb_ds/tree_policy.hpp>\n\
+    \nusing namespace __gnu_pbds;  // find_by_order(), order_of_key()\ntemplate <typename\
+    \ TK>\nusing pbds_set = tree<TK, null_type, less<TK>, rb_tree_tag,\n         \
+    \             tree_order_statistics_node_update>;\ntemplate <typename TK, typename\
+    \ TV>\nusing pbds_map =\n    tree<TK, TV, less<TK>, rb_tree_tag, tree_order_statistics_node_update>;\n"
+  code: "#pragma once\n\n#include <ext/pb_ds/assoc_container.hpp>\n#include <ext/pb_ds/tag_and_trait.hpp>\n\
+    #include <ext/pb_ds/tree_policy.hpp>\n\nusing namespace __gnu_pbds;  // find_by_order(),\
+    \ order_of_key()\ntemplate <typename TK>\nusing pbds_set = tree<TK, null_type,\
+    \ less<TK>, rb_tree_tag,\n                      tree_order_statistics_node_update>;\n\
+    template <typename TK, typename TV>\nusing pbds_map =\n    tree<TK, TV, less<TK>,\
+    \ rb_tree_tag, tree_order_statistics_node_update>;"
   dependsOn: []
   isVerificationFile: false
   path: data-structure/pbds.hpp
   requiredBy: []
-  timestamp: '2022-08-28 22:13:17+07:00'
+  timestamp: '2022-09-04 10:50:22+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/pbds.hpp

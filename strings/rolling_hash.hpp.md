@@ -11,17 +11,17 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"strings/rolling_hash.hpp\"\n#define IGNORE\n\n#line 1 \"\
-    number-theory/modint.hpp\"\nusing ll = long long;\n\ntemplate <const ll m>\nstruct\
-    \ Mod {\n  ll v;\n\n  Mod() : v(0){};\n  Mod(ll _v) : v((_v + m) % m){};\n  explicit\
-    \ operator ll() { return v; }\n  Mod inv() const {\n    ll a = v, b = m, ax =\
-    \ 1, bx = 0;\n    while (b) {\n      ll q = a / b, t = a % b;\n      a = b, b\
-    \ = t, t = ax - bx * q, ax = bx, bx = t;\n    }\n    assert(a == 1);\n    ax =\
-    \ (ax < 0 ? ax + m : ax);\n    return ax;\n  }\n  Mod& operator+=(const Mod& that)\
-    \ {\n    v = (v + that.v >= m ? v + that.v - m : v + that.v);\n    return *this;\n\
-    \  }\n  Mod& operator-=(const Mod& that) {\n    v = (v >= that.v ? v - that.v\
-    \ : v + m - that.v);\n    return *this;\n  }\n  Mod& operator*=(const Mod& that)\
-    \ {\n    v = v * that.v % m;\n    return *this;\n  }\n  Mod& operator/=(const\
+  bundledCode: "#line 1 \"strings/rolling_hash.hpp\"\n#define IGNORE\n\n#line 2 \"\
+    number-theory/modint.hpp\"\n\nusing ll = long long;\n\ntemplate <const ll m>\n\
+    struct Mod {\n  ll v;\n\n  Mod() : v(0){};\n  Mod(ll _v) : v((_v + m) % m){};\n\
+    \  explicit operator ll() { return v; }\n  Mod inv() const {\n    ll a = v, b\
+    \ = m, ax = 1, bx = 0;\n    while (b) {\n      ll q = a / b, t = a % b;\n    \
+    \  a = b, b = t, t = ax - bx * q, ax = bx, bx = t;\n    }\n    assert(a == 1);\n\
+    \    ax = (ax < 0 ? ax + m : ax);\n    return ax;\n  }\n  Mod& operator+=(const\
+    \ Mod& that) {\n    v = (v + that.v >= m ? v + that.v - m : v + that.v);\n   \
+    \ return *this;\n  }\n  Mod& operator-=(const Mod& that) {\n    v = (v >= that.v\
+    \ ? v - that.v : v + m - that.v);\n    return *this;\n  }\n  Mod& operator*=(const\
+    \ Mod& that) {\n    v = v * that.v % m;\n    return *this;\n  }\n  Mod& operator/=(const\
     \ Mod& that) { return (*this) *= that.inv(); }\n  Mod operator^(ll y) {\n    if\
     \ (!y) return Mod(1);\n    Mod r = *this ^ (y >> 1);\n    r = r * r;\n    return\
     \ y & 1 ? *this * r : r;\n  }\n  Mod operator+(const Mod& that) const { return\
@@ -72,7 +72,7 @@ data:
   isVerificationFile: false
   path: strings/rolling_hash.hpp
   requiredBy: []
-  timestamp: '2022-08-28 22:13:17+07:00'
+  timestamp: '2022-09-04 10:50:22+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: strings/rolling_hash.hpp

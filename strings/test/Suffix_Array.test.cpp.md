@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: strings/suffix_array.hpp
     title: strings/suffix_array.hpp
   _extendedRequiredBy: []
