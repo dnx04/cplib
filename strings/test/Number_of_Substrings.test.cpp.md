@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: strings/suffix_array.hpp
     title: strings/suffix_array.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/number_of_substrings
@@ -42,24 +42,24 @@ data:
     \ < n && s[i + k] == s[j + k]) k++;\n    lcp[rank[i]] = k;\n    if (k) k--;\n\
     \  }\n  return lcp;\n}\n#line 10 \"strings/test/Number_of_Substrings.test.cpp\"\
     \n\nvoid solve(int ith) {\n  string s;\n  cin >> s;\n  int n = s.length();\n \
-    \ auto lcp = lcp_array(s, suffix_array(s));\n  ll ans = n * (n + 1) / 2;\n  for(auto\
-    \ v: lcp) ans -= v;\n  cout << ans;\n}\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
+    \ auto lcp = lcp_array(s, suffix_array(s));\n  ll ans = 1ll * n * (n + 1) / 2;\n\
+    \  for(auto v: lcp) ans -= v;\n  cout << ans;\n}\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
     \  cin.tie(nullptr), cin.exceptions(cin.failbit);\n  int tc = 1;\n  // cin >>\
     \ tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/number_of_substrings\"\n\
     \n#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing ll = long long;\n\n\
     #include \"../suffix_array.hpp\"\n\nvoid solve(int ith) {\n  string s;\n  cin\
     \ >> s;\n  int n = s.length();\n  auto lcp = lcp_array(s, suffix_array(s));\n\
-    \  ll ans = n * (n + 1) / 2;\n  for(auto v: lcp) ans -= v;\n  cout << ans;\n}\n\
-    \nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
+    \  ll ans = 1ll * n * (n + 1) / 2;\n  for(auto v: lcp) ans -= v;\n  cout << ans;\n\
+    }\n\nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
     \  int tc = 1;\n  // cin >> tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}"
   dependsOn:
   - strings/suffix_array.hpp
   isVerificationFile: true
   path: strings/test/Number_of_Substrings.test.cpp
   requiredBy: []
-  timestamp: '2022-09-03 23:45:45+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-09-04 11:19:35+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: strings/test/Number_of_Substrings.test.cpp
 layout: document

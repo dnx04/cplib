@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: strings/test/Number_of_Substrings.test.cpp
     title: strings/test/Number_of_Substrings.test.cpp
   - icon: ':heavy_check_mark:'
     path: strings/test/Suffix_Array.test.cpp
     title: strings/test/Suffix_Array.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"strings/suffix_array.hpp\"\nvector<int> sort_cyclic_shifts(string\
@@ -67,7 +67,7 @@ data:
   path: strings/suffix_array.hpp
   requiredBy: []
   timestamp: '2022-09-03 22:25:11+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - strings/test/Suffix_Array.test.cpp
   - strings/test/Number_of_Substrings.test.cpp

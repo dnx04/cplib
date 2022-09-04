@@ -96,7 +96,7 @@ data:
     - icon: ':warning:'
       path: strings/rolling_hash.hpp
       title: strings/rolling_hash.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: strings/suffix_array.hpp
       title: strings/suffix_array.hpp
     - icon: ':heavy_check_mark:'
@@ -163,7 +163,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: strings/test/Enumerate_Palindromes.test.cpp
       title: strings/test/Enumerate_Palindromes.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: strings/test/Number_of_Substrings.test.cpp
       title: strings/test/Number_of_Substrings.test.cpp
     - icon: ':heavy_check_mark:'
