@@ -45,12 +45,12 @@ data:
     \ w) {\n      for (int x = 0; x < w; x++) {\n        auto l = a[y << 1 | x];\n\
     \        auto r = now * a[y << 1 | x | w];\n        b[y | x] = l + r;\n      \
     \  b[y | x | n >> 1] = l - r;\n      }\n      now *= base;\n    }\n    swap(a,\
-    \ b);\n  }\n}\n\nvector<mint> nttconv(vector<mint> const& a, vector<mint> const&\
-    \ b) {\n  vector<mint> fa(a.begin(), a.end()), fb(b.begin(), b.end());\n  int\
-    \ n = 1;\n  while (n < int(a.size() + b.size())) n <<= 1;\n  fa.resize(n);\n \
-    \ fb.resize(n);\n  ntt(fa, false);\n  ntt(fb, false);\n  for (int i = 0; i < n;\
-    \ i++) fa[i] *= fb[i];\n  ntt(fa, true);\n  fa.resize(int(a.size() + b.size()\
-    \ - 1));\n  for (auto& x : fa) x /= n;\n  return fa;\n}\n"
+    \ b);\n  }\n  if(invert) for(auto &x: a) x /= n;\n}\n\nvector<mint> nttconv(vector<mint>\
+    \ const& a, vector<mint> const& b) {\n  vector<mint> fa(a.begin(), a.end()), fb(b.begin(),\
+    \ b.end());\n  int n = 1;\n  while (n < int(a.size() + b.size())) n <<= 1;\n \
+    \ fa.resize(n);\n  fb.resize(n);\n  ntt(fa, false);\n  ntt(fb, false);\n  for\
+    \ (int i = 0; i < n; i++) fa[i] *= fb[i];\n  ntt(fa, true);\n  fa.resize(int(a.size()\
+    \ + b.size() - 1));\n  return fa;\n}\n"
   code: "#include \"../number-theory/modint.hpp\"\n\n// NTT modulo 998244353. If change\
     \ modulo, change these parameters accordingly\nusing mint = Mod<998244353>;\n\
     mint G = 3;\n\nvoid ntt(vector<mint>& a, bool invert) {\n  int n = int(a.size()),\
@@ -62,18 +62,18 @@ data:
     \ w) {\n      for (int x = 0; x < w; x++) {\n        auto l = a[y << 1 | x];\n\
     \        auto r = now * a[y << 1 | x | w];\n        b[y | x] = l + r;\n      \
     \  b[y | x | n >> 1] = l - r;\n      }\n      now *= base;\n    }\n    swap(a,\
-    \ b);\n  }\n}\n\nvector<mint> nttconv(vector<mint> const& a, vector<mint> const&\
-    \ b) {\n  vector<mint> fa(a.begin(), a.end()), fb(b.begin(), b.end());\n  int\
-    \ n = 1;\n  while (n < int(a.size() + b.size())) n <<= 1;\n  fa.resize(n);\n \
-    \ fb.resize(n);\n  ntt(fa, false);\n  ntt(fb, false);\n  for (int i = 0; i < n;\
-    \ i++) fa[i] *= fb[i];\n  ntt(fa, true);\n  fa.resize(int(a.size() + b.size()\
-    \ - 1));\n  for (auto& x : fa) x /= n;\n  return fa;\n}"
+    \ b);\n  }\n  if(invert) for(auto &x: a) x /= n;\n}\n\nvector<mint> nttconv(vector<mint>\
+    \ const& a, vector<mint> const& b) {\n  vector<mint> fa(a.begin(), a.end()), fb(b.begin(),\
+    \ b.end());\n  int n = 1;\n  while (n < int(a.size() + b.size())) n <<= 1;\n \
+    \ fa.resize(n);\n  fb.resize(n);\n  ntt(fa, false);\n  ntt(fb, false);\n  for\
+    \ (int i = 0; i < n; i++) fa[i] *= fb[i];\n  ntt(fa, true);\n  fa.resize(int(a.size()\
+    \ + b.size() - 1));\n  return fa;\n}"
   dependsOn:
   - number-theory/modint.hpp
   isVerificationFile: false
   path: convolution/ntt.hpp
   requiredBy: []
-  timestamp: '2022-09-04 10:50:22+07:00'
+  timestamp: '2022-09-04 21:32:52+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - convolution/test/Convolution.test.cpp
