@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc.hpp
     title: graph/scc.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/test/2_Sat.test.cpp
     title: graph/test/2_Sat.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"graph/scc.hpp\"\n\nstruct scc {\n  vector<vector<int>> g;\n\
@@ -27,23 +27,23 @@ data:
     \     scc_graph.back().push_back(v);\n        id[v] = (int)scc_graph.size() -\
     \ 1;\n        if (u == v) break;\n      }\n    }\n  }\n\n  // build scc_graph\n\
     \  void build() {\n    for (int i = 0; i < n; i++) {\n      if (num[i] == -1)\
-    \ dfs(i);\n    }\n  }\n\n  // build DAG of strongly connected components\n  //\
-    \ Returns: adjacency list of DAG\n  vector<vector<int>> condense() {\n    vector<vector<int>>\
-    \ dag(scc_graph.size());\n    for (int u = 0; u < n; ++u) {\n      int x = id[u];\n\
-    \      for (int v : g[u]) {\n        int y = id[v];\n        if (x != y) {\n \
-    \         dag[x].push_back(y);\n        }\n      }\n    }\n    return dag;\n \
-    \ }\n};\n#line 2 \"graph/2sat.hpp\"\n\nstruct twosat : scc {\n  int n;\n  vector<int>\
-    \ sol;\n  twosat(int n) : n(n), scc(2 * n), sol(n) {}\n\n  // add 2-SAT clause\n\
-    \  void add_clause(bool is_x_true, int x, bool is_y_true, int y) {\n    assert(x\
-    \ >= 0 && x < n);\n    assert(y >= 0 && y < n);\n    if (!is_x_true) x += n;\n\
-    \    if (!is_y_true) y += n;\n    // x || y\n    // !x -> y\n    // !y -> x\n\
-    \    add_edge((x + n) % (2 * n), y);\n    add_edge((y + n) % (2 * n), x);\n  }\n\
-    \n  // Returns:\n  // If no sol -> returns {false, {}}\n  // If has sol -> returns\
-    \ {true, sol}\n  //    where |sol| = n, sol = true / false\n  pair<bool, vector<bool>>\
-    \ solve() {\n    build();\n    vector<bool> sol(n);\n    for (int i = 0; i < n;\
-    \ i++) {\n      if (id[i] == id[i + n]) {\n        return {false, {}};\n     \
-    \ }\n      sol[i] = id[i] < id[i + n];\n    }\n    return {true, sol};\n  }\n\
-    };\n"
+    \ dfs(i);\n    }\n    reverse(begin(scc_graph), end(scc_graph));\n  }\n\n  //\
+    \ build DAG of strongly connected components\n  // Returns: adjacency list of\
+    \ DAG\n  vector<vector<int>> condense() {\n    vector<vector<int>> dag(scc_graph.size());\n\
+    \    for (int u = 0; u < n; ++u) {\n      int x = id[u];\n      for (int v : g[u])\
+    \ {\n        int y = id[v];\n        if (x != y) {\n          dag[x].push_back(y);\n\
+    \        }\n      }\n    }\n    return dag;\n  }\n};\n#line 2 \"graph/2sat.hpp\"\
+    \n\nstruct twosat : scc {\n  int n;\n  vector<int> sol;\n  twosat(int n) : n(n),\
+    \ scc(2 * n), sol(n) {}\n\n  // add 2-SAT clause\n  void add_clause(bool is_x_true,\
+    \ int x, bool is_y_true, int y) {\n    assert(x >= 0 && x < n);\n    assert(y\
+    \ >= 0 && y < n);\n    if (!is_x_true) x += n;\n    if (!is_y_true) y += n;\n\
+    \    // x || y\n    // !x -> y\n    // !y -> x\n    add_edge((x + n) % (2 * n),\
+    \ y);\n    add_edge((y + n) % (2 * n), x);\n  }\n\n  // Returns:\n  // If no sol\
+    \ -> returns {false, {}}\n  // If has sol -> returns {true, sol}\n  //    where\
+    \ |sol| = n, sol = true / false\n  pair<bool, vector<bool>> solve() {\n    build();\n\
+    \    vector<bool> sol(n);\n    for (int i = 0; i < n; i++) {\n      if (id[i]\
+    \ == id[i + n]) {\n        return {false, {}};\n      }\n      sol[i] = id[i]\
+    \ < id[i + n];\n    }\n    return {true, sol};\n  }\n};\n"
   code: "#include \"scc.hpp\"\n\nstruct twosat : scc {\n  int n;\n  vector<int> sol;\n\
     \  twosat(int n) : n(n), scc(2 * n), sol(n) {}\n\n  // add 2-SAT clause\n  void\
     \ add_clause(bool is_x_true, int x, bool is_y_true, int y) {\n    assert(x >=\
@@ -61,8 +61,8 @@ data:
   isVerificationFile: false
   path: graph/2sat.hpp
   requiredBy: []
-  timestamp: '2022-09-04 10:50:22+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2022-09-04 10:58:20+07:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/test/2_Sat.test.cpp
 documentation_of: graph/2sat.hpp

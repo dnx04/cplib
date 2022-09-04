@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc.hpp
     title: graph/scc.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/scc
@@ -29,14 +29,14 @@ data:
     \ current[v] = 0;\n        scc_graph.back().push_back(v);\n        id[v] = (int)scc_graph.size()\
     \ - 1;\n        if (u == v) break;\n      }\n    }\n  }\n\n  // build scc_graph\n\
     \  void build() {\n    for (int i = 0; i < n; i++) {\n      if (num[i] == -1)\
-    \ dfs(i);\n    }\n  }\n\n  // build DAG of strongly connected components\n  //\
-    \ Returns: adjacency list of DAG\n  vector<vector<int>> condense() {\n    vector<vector<int>>\
-    \ dag(scc_graph.size());\n    for (int u = 0; u < n; ++u) {\n      int x = id[u];\n\
-    \      for (int v : g[u]) {\n        int y = id[v];\n        if (x != y) {\n \
-    \         dag[x].push_back(y);\n        }\n      }\n    }\n    return dag;\n \
-    \ }\n};\n#line 10 \"graph/test/Strongly_Connected_Components.test.cpp\"\n\nvoid\
-    \ solve(int ith) {\n  int n, m;\n  cin >> n >> m;\n  scc g(n);\n  for (int i =\
-    \ 0; i < m; ++i) {\n    int u, v;\n    cin >> u >> v;\n    g.add_edge(u, v);\n\
+    \ dfs(i);\n    }\n    reverse(begin(scc_graph), end(scc_graph));\n  }\n\n  //\
+    \ build DAG of strongly connected components\n  // Returns: adjacency list of\
+    \ DAG\n  vector<vector<int>> condense() {\n    vector<vector<int>> dag(scc_graph.size());\n\
+    \    for (int u = 0; u < n; ++u) {\n      int x = id[u];\n      for (int v : g[u])\
+    \ {\n        int y = id[v];\n        if (x != y) {\n          dag[x].push_back(y);\n\
+    \        }\n      }\n    }\n    return dag;\n  }\n};\n#line 10 \"graph/test/Strongly_Connected_Components.test.cpp\"\
+    \n\nvoid solve(int ith) {\n  int n, m;\n  cin >> n >> m;\n  scc g(n);\n  for (int\
+    \ i = 0; i < m; ++i) {\n    int u, v;\n    cin >> u >> v;\n    g.add_edge(u, v);\n\
     \  }\n  g.build();\n  auto comp = g.scc_graph;\n  cout << comp.size() << '\\n';\n\
     \  for (auto c : comp) {\n    cout << c.size() << ' ';\n    for (auto v : c) cout\
     \ << v << ' ';\n    cout << '\\n';\n  }\n}\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
@@ -56,8 +56,8 @@ data:
   isVerificationFile: true
   path: graph/test/Strongly_Connected_Components.test.cpp
   requiredBy: []
-  timestamp: '2022-09-04 10:50:22+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-09-04 10:58:20+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: graph/test/Strongly_Connected_Components.test.cpp
 layout: document

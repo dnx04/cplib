@@ -49,7 +49,7 @@ data:
       title: data-structure/union_find.hpp
   - name: graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/2sat.hpp
       title: graph/2sat.hpp
     - icon: ':heavy_check_mark:'
@@ -58,7 +58,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.hpp
       title: graph/maxflow.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
       title: graph/scc.hpp
   - name: math
@@ -136,13 +136,13 @@ data:
       title: data-structure/test/Unionfind.test.cpp
   - name: graph/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/test/2_Sat.test.cpp
       title: graph/test/2_Sat.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/test/Maximum_Flow.test.cpp
       title: graph/test/Maximum_Flow.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/test/Strongly_Connected_Components.test.cpp
       title: graph/test/Strongly_Connected_Components.test.cpp
     - icon: ':heavy_check_mark:'
