@@ -32,14 +32,14 @@ data:
     \ int> cur = {c[p[i]], c[(p[i] + (1 << h)) % n]};\n      pair<int, int> prev =\
     \ {c[p[i - 1]], c[(p[i - 1] + (1 << h)) % n]};\n      if (cur != prev) ++classes;\n\
     \      cn[p[i]] = classes - 1;\n    }\n    c.swap(cn);\n  }\n  return p;\n}\n\n\
-    vector<int> suffix_array(string s) {\n  s += \"$\";\n  vector<int> sorted_shifts\
-    \ = sort_cyclic_shifts(s);\n  sorted_shifts.erase(sorted_shifts.begin());\n  return\
-    \ sorted_shifts;\n}\n\nvector<int> lcp_array(string const& s, vector<int> const&\
-    \ p) {\n  int n = s.size();\n  vector<int> rank(n, 0);\n  for (int i = 0; i <\
-    \ n; i++) rank[p[i]] = i;\n\n  int k = 0;\n  vector<int> lcp(n - 1, 0);\n  for\
-    \ (int i = 0; i < n; i++) {\n    if (rank[i] == n - 1) {\n      k = 0;\n     \
-    \ continue;\n    }\n    int j = p[rank[i] + 1];\n    while (i + k < n && j + k\
-    \ < n && s[i + k] == s[j + k]) k++;\n    lcp[rank[i]] = k;\n    if (k) k--;\n\
+    vector<int> suffix_array(string s) {\n  s += (unsigned char)(0);\n  vector<int>\
+    \ sorted_shifts = sort_cyclic_shifts(s);\n  sorted_shifts.erase(sorted_shifts.begin());\n\
+    \  return sorted_shifts;\n}\n\nvector<int> lcp_array(string const& s, vector<int>\
+    \ const& p) {\n  int n = s.size();\n  vector<int> rank(n, 0);\n  for (int i =\
+    \ 0; i < n; i++) rank[p[i]] = i;\n\n  int k = 0;\n  vector<int> lcp(n - 1, 0);\n\
+    \  for (int i = 0; i < n; i++) {\n    if (rank[i] == n - 1) {\n      k = 0;\n\
+    \      continue;\n    }\n    int j = p[rank[i] + 1];\n    while (i + k < n &&\
+    \ j + k < n && s[i + k] == s[j + k]) k++;\n    lcp[rank[i]] = k;\n    if (k) k--;\n\
     \  }\n  return lcp;\n}\n#line 10 \"strings/test/Suffix_Array.test.cpp\"\n\nvoid\
     \ solve(int ith) {\n  string s;\n  cin >> s;\n  auto sa = suffix_array(s);\n \
     \ for (auto v : sa) cout << v << ' ';\n}\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: strings/test/Suffix_Array.test.cpp
   requiredBy: []
-  timestamp: '2022-09-03 22:25:11+07:00'
+  timestamp: '2022-09-06 21:59:15+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: strings/test/Suffix_Array.test.cpp
