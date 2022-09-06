@@ -126,8 +126,5 @@ data:
   - data-structure/test/Range_Affine_Range_Sum.test.cpp
 documentation_of: data-structure/lazy_segtree.hpp
 layout: document
-redirect_from:
-- /library/data-structure/lazy_segtree.hpp
-- /library/data-structure/lazy_segtree.hpp.html
-title: data-structure/lazy_segtree.hpp
+title: Lazy Segment Tree
 ---

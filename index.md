@@ -17,6 +17,9 @@ data:
     - icon: ':warning:'
       path: data-structure/2dsum.hpp
       title: data-structure/2dsum.hpp
+    - icon: ':heavy_check_mark:'
+      path: data-structure/dsu.hpp
+      title: Disjoint Set Union (with Rank and Path Compression)
     - icon: ':warning:'
       path: data-structure/dynamic_hull.hpp
       title: data-structure/dynamic_hull.hpp
@@ -25,10 +28,7 @@ data:
       title: data-structure/fenwick.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segtree.hpp
-      title: data-structure/lazy_segtree.hpp
-    - icon: ':warning:'
-      path: data-structure/li_chao_tree.hpp
-      title: data-structure/li_chao_tree.hpp
+      title: Lazy Segment Tree
     - icon: ':warning:'
       path: data-structure/pbds.hpp
       title: data-structure/pbds.hpp
@@ -44,9 +44,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/swag.hpp
       title: data-structure/swag.hpp
-    - icon: ':heavy_check_mark:'
-      path: data-structure/union_find.hpp
-      title: data-structure/union_find.hpp
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -55,9 +52,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/low_link.hpp
       title: graph/low_link.hpp
-    - icon: ':heavy_check_mark:'
-      path: graph/maxflow.hpp
-      title: graph/maxflow.hpp
+    - icon: ':warning:'
+      path: graph/mst.hpp
+      title: graph/mst.hpp
     - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
       title: graph/scc.hpp
@@ -142,9 +139,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/test/2_Sat.test.cpp
       title: graph/test/2_Sat.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: graph/test/Maximum_Flow.test.cpp
-      title: graph/test/Maximum_Flow.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/test/Strongly_Connected_Components.test.cpp
       title: graph/test/Strongly_Connected_Components.test.cpp
