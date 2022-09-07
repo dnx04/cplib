@@ -12,9 +12,9 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/dsu.hpp\"\nstruct dsu {\n public:\n  dsu(int\
-    \ _n) : n(_n), p(_n, -1) {}\n\n  int merge(int a, int b) {\n    assert(0 <= a\
-    \ && a < n);\n    assert(0 <= b && b < n);\n    int x = head(a), y = head(b);\n\
-    \    if (x == y) return x;\n    if (-p[x] < -p[y]) swap(x, y);\n    p[x] += p[y];\n\
+    \ n) : n(n), p(n, -1) {}\n\n  int merge(int a, int b) {\n    assert(0 <= a &&\
+    \ a < n);\n    assert(0 <= b && b < n);\n    int x = head(a), y = head(b);\n \
+    \   if (x == y) return x;\n    if (-p[x] < -p[y]) swap(x, y);\n    p[x] += p[y];\n\
     \    p[y] = x;\n    return x;\n  }\n\n  bool same(int a, int b) {\n    assert(0\
     \ <= a && a < n);\n    assert(0 <= b && b < n);\n    return head(a) == head(b);\n\
     \  }\n\n  int head(int a) {\n    assert(0 <= a && a < n);\n    if (p[a] < 0) return\
@@ -26,7 +26,7 @@ data:
     \    gr.erase(remove_if(begin(gr), end(gr),\n                       [&](const\
     \ vector<int>& v) { return v.empty(); }),\n             end(gr));\n    return\
     \ gr;\n  }\n\n private:\n  int n;\n  vector<int> p;\n};\n"
-  code: "struct dsu {\n public:\n  dsu(int _n) : n(_n), p(_n, -1) {}\n\n  int merge(int\
+  code: "struct dsu {\n public:\n  dsu(int n) : n(n), p(n, -1) {}\n\n  int merge(int\
     \ a, int b) {\n    assert(0 <= a && a < n);\n    assert(0 <= b && b < n);\n  \
     \  int x = head(a), y = head(b);\n    if (x == y) return x;\n    if (-p[x] < -p[y])\
     \ swap(x, y);\n    p[x] += p[y];\n    p[y] = x;\n    return x;\n  }\n\n  bool\
@@ -45,7 +45,7 @@ data:
   isVerificationFile: false
   path: data-structure/dsu.hpp
   requiredBy: []
-  timestamp: '2022-09-07 00:03:47+07:00'
+  timestamp: '2022-09-07 21:33:38+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data-structure/test/Unionfind.test.cpp

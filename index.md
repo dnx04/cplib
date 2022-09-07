@@ -50,8 +50,8 @@ data:
       path: graph/2sat.hpp
       title: graph/2sat.hpp
     - icon: ':heavy_check_mark:'
-      path: graph/low_link.hpp
-      title: graph/low_link.hpp
+      path: graph/lowlink.hpp
+      title: graph/lowlink.hpp
     - icon: ':warning:'
       path: graph/mst.hpp
       title: graph/mst.hpp

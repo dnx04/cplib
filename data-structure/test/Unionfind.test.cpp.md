@@ -17,7 +17,7 @@ data:
   bundledCode: "#line 1 \"data-structure/test/Unionfind.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include <bits/extc++.h>\n\n\
     using namespace std;\n\n#line 1 \"data-structure/dsu.hpp\"\nstruct dsu {\n public:\n\
-    \  dsu(int _n) : n(_n), p(_n, -1) {}\n\n  int merge(int a, int b) {\n    assert(0\
+    \  dsu(int n) : n(n), p(n, -1) {}\n\n  int merge(int a, int b) {\n    assert(0\
     \ <= a && a < n);\n    assert(0 <= b && b < n);\n    int x = head(a), y = head(b);\n\
     \    if (x == y) return x;\n    if (-p[x] < -p[y]) swap(x, y);\n    p[x] += p[y];\n\
     \    p[y] = x;\n    return x;\n  }\n\n  bool same(int a, int b) {\n    assert(0\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: data-structure/test/Unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-09-07 00:03:47+07:00'
+  timestamp: '2022-09-07 21:33:38+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Unionfind.test.cpp
