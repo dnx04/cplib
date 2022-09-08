@@ -36,8 +36,8 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"number-theory/modint.hpp\"\n\nusing ll = long long;\n\n\
-    template <const ll m>\nstruct Mod {\n  ll v;\n\n  Mod() : v(0){};\n  Mod(ll _v)\
-    \ : v((_v + m) % m){};\n  explicit operator ll() { return v; }\n  Mod inv() const\
+    template <const ll m>\nstruct Mod {\n  ll v;\n\n  Mod() : v(0){};\n  Mod(ll v)\
+    \ : v((v + m) % m){};\n  explicit operator ll() { return v; }\n  Mod inv() const\
     \ {\n    ll a = v, b = m, ax = 1, bx = 0;\n    while (b) {\n      ll q = a / b,\
     \ t = a % b;\n      a = b, b = t, t = ax - bx * q, ax = bx, bx = t;\n    }\n \
     \   assert(a == 1);\n    ax = (ax < 0 ? ax + m : ax);\n    return ax;\n  }\n \
@@ -57,7 +57,7 @@ data:
     \ ostream& operator<<(ostream& out, const Mod& that) {\n    return out << that.v;\n\
     \  }\n};\n"
   code: "#pragma once\n\nusing ll = long long;\n\ntemplate <const ll m>\nstruct Mod\
-    \ {\n  ll v;\n\n  Mod() : v(0){};\n  Mod(ll _v) : v((_v + m) % m){};\n  explicit\
+    \ {\n  ll v;\n\n  Mod() : v(0){};\n  Mod(ll v) : v((v + m) % m){};\n  explicit\
     \ operator ll() { return v; }\n  Mod inv() const {\n    ll a = v, b = m, ax =\
     \ 1, bx = 0;\n    while (b) {\n      ll q = a / b, t = a % b;\n      a = b, b\
     \ = t, t = ax - bx * q, ax = bx, bx = t;\n    }\n    assert(a == 1);\n    ax =\
@@ -82,7 +82,7 @@ data:
   requiredBy:
   - convolution/ntt.hpp
   - strings/rolling_hash.hpp
-  timestamp: '2022-09-04 10:50:22+07:00'
+  timestamp: '2022-09-08 21:32:23+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp

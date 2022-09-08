@@ -30,7 +30,7 @@ data:
     \ + (1 << h)) % n]};\n      pair<int, int> prev = {c[p[i - 1]], c[(p[i - 1] +\
     \ (1 << h)) % n]};\n      if (cur != prev) ++classes;\n      cn[p[i]] = classes\
     \ - 1;\n    }\n    c.swap(cn);\n  }\n  return p;\n}\n\nvector<int> suffix_array(string\
-    \ s) {\n  s += (unsigned char)(0);\n  vector<int> sorted_shifts = sort_cyclic_shifts(s);\n\
+    \ s) {\n  s += string(1, 0);\n  vector<int> sorted_shifts = sort_cyclic_shifts(s);\n\
     \  sorted_shifts.erase(sorted_shifts.begin());\n  return sorted_shifts;\n}\n\n\
     vector<int> lcp_array(string const& s, vector<int> const& p) {\n  int n = s.size();\n\
     \  vector<int> rank(n, 0);\n  for (int i = 0; i < n; i++) rank[p[i]] = i;\n\n\
@@ -53,20 +53,20 @@ data:
     \ int> cur = {c[p[i]], c[(p[i] + (1 << h)) % n]};\n      pair<int, int> prev =\
     \ {c[p[i - 1]], c[(p[i - 1] + (1 << h)) % n]};\n      if (cur != prev) ++classes;\n\
     \      cn[p[i]] = classes - 1;\n    }\n    c.swap(cn);\n  }\n  return p;\n}\n\n\
-    vector<int> suffix_array(string s) {\n  s += (unsigned char)(0);\n  vector<int>\
-    \ sorted_shifts = sort_cyclic_shifts(s);\n  sorted_shifts.erase(sorted_shifts.begin());\n\
-    \  return sorted_shifts;\n}\n\nvector<int> lcp_array(string const& s, vector<int>\
-    \ const& p) {\n  int n = s.size();\n  vector<int> rank(n, 0);\n  for (int i =\
-    \ 0; i < n; i++) rank[p[i]] = i;\n\n  int k = 0;\n  vector<int> lcp(n - 1, 0);\n\
-    \  for (int i = 0; i < n; i++) {\n    if (rank[i] == n - 1) {\n      k = 0;\n\
-    \      continue;\n    }\n    int j = p[rank[i] + 1];\n    while (i + k < n &&\
-    \ j + k < n && s[i + k] == s[j + k]) k++;\n    lcp[rank[i]] = k;\n    if (k) k--;\n\
+    vector<int> suffix_array(string s) {\n  s += string(1, 0);\n  vector<int> sorted_shifts\
+    \ = sort_cyclic_shifts(s);\n  sorted_shifts.erase(sorted_shifts.begin());\n  return\
+    \ sorted_shifts;\n}\n\nvector<int> lcp_array(string const& s, vector<int> const&\
+    \ p) {\n  int n = s.size();\n  vector<int> rank(n, 0);\n  for (int i = 0; i <\
+    \ n; i++) rank[p[i]] = i;\n\n  int k = 0;\n  vector<int> lcp(n - 1, 0);\n  for\
+    \ (int i = 0; i < n; i++) {\n    if (rank[i] == n - 1) {\n      k = 0;\n     \
+    \ continue;\n    }\n    int j = p[rank[i] + 1];\n    while (i + k < n && j + k\
+    \ < n && s[i + k] == s[j + k]) k++;\n    lcp[rank[i]] = k;\n    if (k) k--;\n\
     \  }\n  return lcp;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: strings/suffix_array.hpp
   requiredBy: []
-  timestamp: '2022-09-06 21:59:15+07:00'
+  timestamp: '2022-09-08 21:32:23+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - strings/test/Suffix_Array.test.cpp

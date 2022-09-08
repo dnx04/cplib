@@ -44,6 +44,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/swag.hpp
       title: data-structure/swag.hpp
+  - name: dp
+    pages:
+    - icon: ':warning:'
+      path: dp/dnc.hpp
+      title: dp/dnc.hpp
+    - icon: ':warning:'
+      path: dp/lis.hpp
+      title: dp/lis.hpp
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -90,6 +98,9 @@ data:
       title: number-theory/sieves.hpp
   - name: strings
     pages:
+    - icon: ':warning:'
+      path: strings/kmp.hpp
+      title: strings/kmp.hpp
     - icon: ':heavy_check_mark:'
       path: strings/manacher.hpp
       title: strings/manacher.hpp
@@ -134,6 +145,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Unionfind.test.cpp
       title: data-structure/test/Unionfind.test.cpp
+  - name: dp/test
+    pages:
+    - icon: ':x:'
+      path: dp/test/Longest_Increasing_Subsequence.test.cpp
+      title: dp/test/Longest_Increasing_Subsequence.test.cpp
   - name: graph/test
     pages:
     - icon: ':heavy_check_mark:'
