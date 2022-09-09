@@ -49,7 +49,7 @@ data:
     - icon: ':warning:'
       path: dp/dnc.hpp
       title: dp/dnc.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: dp/lis.hpp
       title: dp/lis.hpp
   - name: graph
@@ -101,6 +101,9 @@ data:
     - icon: ':warning:'
       path: strings/kmp.hpp
       title: strings/kmp.hpp
+    - icon: ':warning:'
+      path: strings/lyndon.hpp
+      title: strings/lyndon.hpp
     - icon: ':heavy_check_mark:'
       path: strings/manacher.hpp
       title: strings/manacher.hpp

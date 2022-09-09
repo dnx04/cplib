@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: dp/test/Longest_Increasing_Subsequence.test.cpp
+    title: dp/test/Longest_Increasing_Subsequence.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"dp/lis.hpp\"\n// return a vector contains indices of the\
@@ -28,8 +31,9 @@ data:
   path: dp/lis.hpp
   requiredBy: []
   timestamp: '2022-09-08 21:32:23+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - dp/test/Longest_Increasing_Subsequence.test.cpp
 documentation_of: dp/lis.hpp
 layout: document
 redirect_from:
