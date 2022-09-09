@@ -49,7 +49,7 @@ data:
     - icon: ':warning:'
       path: dp/dnc.hpp
       title: dp/dnc.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: dp/lis.hpp
       title: dp/lis.hpp
   - name: graph
@@ -150,7 +150,7 @@ data:
       title: data-structure/test/Unionfind.test.cpp
   - name: dp/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: dp/test/Longest_Increasing_Subsequence.test.cpp
       title: dp/test/Longest_Increasing_Subsequence.test.cpp
   - name: graph/test
