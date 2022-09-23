@@ -21,7 +21,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
     title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/test/Point_Set_Range_Composite.test.cpp
     title: data-structure/test/Point_Set_Range_Composite.test.cpp
   - icon: ':heavy_check_mark:'
@@ -33,9 +33,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/test/Matrix_Product.test.cpp
     title: math/test/Matrix_Product.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"number-theory/modint.hpp\"\n\nusing ll = long long;\n\n\
@@ -86,7 +86,7 @@ data:
   - convolution/ntt.hpp
   - strings/rolling_hash.hpp
   timestamp: '2022-09-08 21:32:23+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data-structure/test/Point_Set_Range_Composite.test.cpp
   - data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp

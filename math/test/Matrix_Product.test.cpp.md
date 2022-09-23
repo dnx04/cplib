@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/matrix.hpp
     title: math/matrix.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: number-theory/modint.hpp
     title: number-theory/modint.hpp
   _extendedRequiredBy: []

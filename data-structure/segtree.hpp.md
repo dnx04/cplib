@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/test/Point_Set_Range_Composite.test.cpp
     title: data-structure/test/Point_Set_Range_Composite.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/segtree.hpp\"\ntemplate <class S, S (*op)(S,\
@@ -80,7 +80,7 @@ data:
   path: data-structure/segtree.hpp
   requiredBy: []
   timestamp: '2022-08-12 11:03:46+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data-structure/test/Point_Set_Range_Composite.test.cpp
 documentation_of: data-structure/segtree.hpp

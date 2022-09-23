@@ -35,7 +35,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/rmq.hpp
       title: data-structure/rmq.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/segtree.hpp
       title: data-structure/segtree.hpp
     - icon: ':heavy_check_mark:'
@@ -93,7 +93,7 @@ data:
       title: misc/vec.hpp
   - name: number-theory
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
     - icon: ':heavy_check_mark:'
@@ -139,7 +139,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Add_Range_Sum.test.cpp
       title: data-structure/test/Point_Add_Range_Sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Set_Range_Composite.test.cpp
       title: data-structure/test/Point_Set_Range_Composite.test.cpp
     - icon: ':heavy_check_mark:'

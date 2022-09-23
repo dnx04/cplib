@@ -1,22 +1,25 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/segtree.hpp
     title: data-structure/segtree.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: number-theory/modint.hpp
     title: number-theory/modint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    links: []
+    PROBLEM: https://judge.yosupo.jp/problem/point_set_range_composite
+    links:
+    - https://judge.yosupo.jp/problem/point_set_range_composite
   bundledCode: "#line 1 \"data-structure/test/Point_Set_Range_Composite.test.cpp\"\
-    \n#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing ll = long long;\n\
+    \n#define PROBLEM \"https://judge.yosupo.jp/problem/point_set_range_composite\"\
+    \n\n#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing ll = long long;\n\
     using ull = unsigned long long;\n\n#line 1 \"data-structure/segtree.hpp\"\ntemplate\
     \ <class S, S (*op)(S, S), S (*e)()>\nstruct segtree {\n public:\n  segtree()\
     \ : segtree(0) {}\n  explicit segtree(int n) : segtree(vector<S>(n, e())) {}\n\
@@ -69,7 +72,7 @@ data:
     \ this->v == that.v; }\n  friend istream& operator>>(istream& in, Mod& that) {\n\
     \    ll val;\n    in >> val;\n    that = Mod(val);\n    return in;\n  }\n  friend\
     \ ostream& operator<<(ostream& out, const Mod& that) {\n    return out << that.v;\n\
-    \  }\n};\n#line 10 \"data-structure/test/Point_Set_Range_Composite.test.cpp\"\n\
+    \  }\n};\n#line 12 \"data-structure/test/Point_Set_Range_Composite.test.cpp\"\n\
     \nusing Fp = Mod<998244353>;\n\nstruct S {\n  Fp a, b;\n};\n\nS op(S x, S y) {\
     \ return {x.a * y.a, x.b * y.a + y.b}; }\n\nS e() { return {1, 0}; }\n\nsigned\
     \ main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
@@ -79,7 +82,8 @@ data:
     \     cin >> pos >> c >> d;\n      seg.set(pos, S{c, d});\n    } else {\n    \
     \  int l, r, x;\n      cin >> l >> r >> x;\n      auto [c, d] = seg.prod(l, r);\n\
     \      cout << c * x + d << '\\n';\n    }\n  }\n}\n"
-  code: "#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing ll = long long;\n\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_set_range_composite\"\
+    \n\n#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing ll = long long;\n\
     using ull = unsigned long long;\n\n#include \"data-structure/segtree.hpp\"\n#include\
     \ \"number-theory/modint.hpp\"\n\nusing Fp = Mod<998244353>;\n\nstruct S {\n \
     \ Fp a, b;\n};\n\nS op(S x, S y) { return {x.a * y.a, x.b * y.a + y.b}; }\n\n\
@@ -97,8 +101,8 @@ data:
   isVerificationFile: true
   path: data-structure/test/Point_Set_Range_Composite.test.cpp
   requiredBy: []
-  timestamp: '2022-09-23 09:40:42+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-09-23 09:58:37+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Point_Set_Range_Composite.test.cpp
 layout: document
