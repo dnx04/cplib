@@ -35,7 +35,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/rmq.hpp
       title: data-structure/rmq.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data-structure/segtree.hpp
       title: data-structure/segtree.hpp
     - icon: ':heavy_check_mark:'
@@ -86,11 +86,14 @@ data:
       path: misc/offset_vector.hpp
       title: misc/offset_vector.hpp
     - icon: ':warning:'
+      path: misc/optimize.hpp
+      title: misc/optimize.hpp
+    - icon: ':warning:'
       path: misc/vec.hpp
       title: misc/vec.hpp
   - name: number-theory
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: number-theory/modint.hpp
       title: number-theory/modint.hpp
     - icon: ':heavy_check_mark:'
@@ -136,6 +139,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Add_Range_Sum.test.cpp
       title: data-structure/test/Point_Add_Range_Sum.test.cpp
+    - icon: ':x:'
+      path: data-structure/test/Point_Set_Range_Composite.test.cpp
+      title: data-structure/test/Point_Set_Range_Composite.test.cpp
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Queue_Operate_All_Composite.test.cpp
       title: data-structure/test/Queue_Operate_All_Composite.test.cpp
