@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data-structure/test/Queue_Operate_All_Composite.test.cpp
-    title: data-structure/test/Queue_Operate_All_Composite.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/swag.hpp\"\ntemplate <class T, class Op>\n\
@@ -33,9 +30,8 @@ data:
   path: data-structure/swag.hpp
   requiredBy: []
   timestamp: '2022-06-30 19:56:15+07:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - data-structure/test/Queue_Operate_All_Composite.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: data-structure/swag.hpp
 layout: document
 redirect_from:
