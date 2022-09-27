@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/test/Sum_of_Floor_of_Linear.test.cpp
     title: math/test/Sum_of_Floor_of_Linear.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"math/floor_sum.hpp\"\n\n// sum_{0 <= i < N} (ai + b) //\
@@ -34,7 +34,7 @@ data:
   path: math/floor_sum.hpp
   requiredBy: []
   timestamp: '2022-09-27 20:44:18+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - math/test/Sum_of_Floor_of_Linear.test.cpp
 documentation_of: math/floor_sum.hpp

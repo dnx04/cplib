@@ -71,10 +71,10 @@ data:
       title: graph/tree_diameter.hpp
   - name: math
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/berlekamp_massey.hpp
       title: math/berlekamp_massey.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math/floor_sum.hpp
       title: math/floor_sum.hpp
     - icon: ':heavy_check_mark:'
@@ -186,13 +186,13 @@ data:
       title: graph/test/Two-Edge-Connected_Components.test.cpp
   - name: math/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math/test/Find_Linear_Recurrence.test.cpp
       title: math/test/Find_Linear_Recurrence.test.cpp
     - icon: ':heavy_check_mark:'
       path: math/test/Matrix_Product.test.cpp
       title: math/test/Matrix_Product.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math/test/Sum_of_Floor_of_Linear.test.cpp
       title: math/test/Sum_of_Floor_of_Linear.test.cpp
   - name: number-theory/test

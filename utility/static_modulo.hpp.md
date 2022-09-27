@@ -22,6 +22,9 @@ data:
     path: data-structure/test/Range_Affine_Range_Sum.test.cpp
     title: data-structure/test/Range_Affine_Range_Sum.test.cpp
   - icon: ':heavy_check_mark:'
+    path: math/test/Find_Linear_Recurrence.test.cpp
+    title: math/test/Find_Linear_Recurrence.test.cpp
+  - icon: ':heavy_check_mark:'
     path: math/test/Matrix_Product.test.cpp
     title: math/test/Matrix_Product.test.cpp
   _isVerificationFailed: false
@@ -81,6 +84,7 @@ data:
   timestamp: '2022-09-27 22:26:49+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - math/test/Find_Linear_Recurrence.test.cpp
   - math/test/Matrix_Product.test.cpp
   - data-structure/test/Point_Set_Range_Composite.test.cpp
   - data-structure/test/Queue_Operate_All_Composite.test.cpp
