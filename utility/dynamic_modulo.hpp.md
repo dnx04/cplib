@@ -85,8 +85,5 @@ data:
   - convolution/test/Bitwise_And_Convolution.test.cpp
 documentation_of: utility/dynamic_modulo.hpp
 layout: document
-redirect_from:
-- /library/utility/dynamic_modulo.hpp
-- /library/utility/dynamic_modulo.hpp.html
-title: utility/dynamic_modulo.hpp
+title: Dynamic Modular Arithmetic
 ---

@@ -93,8 +93,5 @@ data:
   - convolution/test/Convolution.test.cpp
 documentation_of: utility/static_modulo.hpp
 layout: document
-redirect_from:
-- /library/utility/static_modulo.hpp
-- /library/utility/static_modulo.hpp.html
-title: utility/static_modulo.hpp
+title: Static Modular Arithmetic
 ---

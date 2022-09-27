@@ -6,7 +6,7 @@ data:
     title: math/berlekamp_massey.hpp
   - icon: ':heavy_check_mark:'
     path: utility/static_modulo.hpp
-    title: utility/static_modulo.hpp
+    title: Static Modular Arithmetic
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

@@ -21,6 +21,9 @@ data:
       path: data-structure/dsu.hpp
       title: Disjoint Set Union (with Rank and Path Compression)
     - icon: ':warning:'
+      path: data-structure/dsu_rollback.hpp
+      title: data-structure/dsu_rollback.hpp
+    - icon: ':warning:'
       path: data-structure/dynamic_hull.hpp
       title: data-structure/dynamic_hull.hpp
     - icon: ':heavy_check_mark:'
@@ -126,10 +129,10 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: utility/dynamic_modulo.hpp
-      title: utility/dynamic_modulo.hpp
+      title: Dynamic Modular Arithmetic
     - icon: ':heavy_check_mark:'
       path: utility/static_modulo.hpp
-      title: utility/static_modulo.hpp
+      title: Static Modular Arithmetic
   verificationCategories:
   - name: convolution/test
     pages:

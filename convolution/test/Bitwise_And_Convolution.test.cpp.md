@@ -6,7 +6,7 @@ data:
     title: convolution/hadamard.hpp
   - icon: ':heavy_check_mark:'
     path: utility/dynamic_modulo.hpp
-    title: utility/dynamic_modulo.hpp
+    title: Dynamic Modular Arithmetic
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
