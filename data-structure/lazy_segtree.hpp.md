@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: data-structure/test/Range_Affine_Range_Sum.test.cpp
+    title: data-structure/test/Range_Affine_Range_Sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/lazy_segtree.hpp\"\ntemplate <class S, S\
@@ -118,8 +121,9 @@ data:
   path: data-structure/lazy_segtree.hpp
   requiredBy: []
   timestamp: '2022-08-08 19:06:24+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - data-structure/test/Range_Affine_Range_Sum.test.cpp
 documentation_of: data-structure/lazy_segtree.hpp
 layout: document
 title: Lazy Segment Tree

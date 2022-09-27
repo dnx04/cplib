@@ -6,10 +6,10 @@ data:
     - icon: ':warning:'
       path: convolution/fft.hpp
       title: convolution/fft.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: convolution/hadamard.hpp
       title: convolution/hadamard.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: convolution/ntt.hpp
       title: convolution/ntt.hpp
   - name: data-structure
@@ -26,7 +26,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/fenwick.hpp
       title: data-structure/fenwick.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segtree.hpp
       title: Lazy Segment Tree
     - icon: ':warning:'
@@ -35,13 +35,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/rmq.hpp
       title: data-structure/rmq.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/segtree.hpp
       title: data-structure/segtree.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/splay.hpp
       title: Splay Tree (Implicit Treaps)
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/swag.hpp
       title: data-structure/swag.hpp
   - name: dp
@@ -99,9 +99,6 @@ data:
       title: misc/vec.hpp
   - name: number-theory
     pages:
-    - icon: ':warning:'
-      path: number-theory/montgomery64.hpp
-      title: number-theory/montgomery64.hpp
     - icon: ':heavy_check_mark:'
       path: number-theory/sieves.hpp
       title: number-theory/sieves.hpp
@@ -125,33 +122,41 @@ data:
     - icon: ':heavy_check_mark:'
       path: strings/zf.hpp
       title: strings/zf.hpp
+  - name: utility
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: utility/dynamic_modulo.hpp
+      title: utility/dynamic_modulo.hpp
+    - icon: ':heavy_check_mark:'
+      path: utility/static_modulo.hpp
+      title: utility/static_modulo.hpp
   verificationCategories:
   - name: convolution/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: convolution/test/Bitwise_And_Convolution.test.cpp
       title: convolution/test/Bitwise_And_Convolution.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: convolution/test/Bitwise_Xor_Convolution.test.cpp
       title: convolution/test/Bitwise_Xor_Convolution.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: convolution/test/Convolution.test.cpp
       title: convolution/test/Convolution.test.cpp
   - name: data-structure/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Add_Range_Sum.test.cpp
       title: data-structure/test/Point_Add_Range_Sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Set_Range_Composite.test.cpp
       title: data-structure/test/Point_Set_Range_Composite.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/Queue_Operate_All_Composite.test.cpp
       title: data-structure/test/Queue_Operate_All_Composite.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Range_Affine_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -205,3 +210,7 @@ data:
       title: strings/test/Z_Algorithm.test.cpp
 layout: toppage
 ---
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dnx04/algo?style=flat-square)
+
+Welcome to algo, my competitive programming library.
+
