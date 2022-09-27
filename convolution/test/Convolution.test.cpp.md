@@ -65,18 +65,19 @@ data:
     \ tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/convolution_mod\"\n\n#include\
     \ <bits/stdc++.h>\n\nusing namespace std;\n\nusing ll = long long;\n\n#include\
-    \ \"../ntt.hpp\"\n\nvoid solve(int ith) {\n  int n, m;\n  cin >> n >> m;\n  vector<Fp>\
-    \ a(n), b(m);\n  for (auto &x : a) cin >> x;\n  for (auto &x : b) cin >> x;\n\
-    \  auto c = nttconv(a, b);\n  for (auto val : c) cout << val << ' ';\n}\n\nsigned\
-    \ main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
-    \  int tc = 1;\n  // cin >> tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}"
+    \ \"convolution/ntt.hpp\"\n\nvoid solve(int ith) {\n  int n, m;\n  cin >> n >>\
+    \ m;\n  vector<Fp> a(n), b(m);\n  for (auto &x : a) cin >> x;\n  for (auto &x\
+    \ : b) cin >> x;\n  auto c = nttconv(a, b);\n  for (auto val : c) cout << val\
+    \ << ' ';\n}\n\nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr),\
+    \ cin.exceptions(cin.failbit);\n  int tc = 1;\n  // cin >> tc;\n  for (int i =\
+    \ 1; i <= tc; ++i) solve(i);\n}"
   dependsOn:
   - convolution/ntt.hpp
   - utility/static_modulo.hpp
   isVerificationFile: true
   path: convolution/test/Convolution.test.cpp
   requiredBy: []
-  timestamp: '2022-09-27 22:26:49+07:00'
+  timestamp: '2022-09-27 23:05:16+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: convolution/test/Convolution.test.cpp

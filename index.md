@@ -74,10 +74,10 @@ data:
     - icon: ':warning:'
       path: math/berlekamp_massey.hpp
       title: math/berlekamp_massey.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: math/floor_sum.hpp
       title: math/floor_sum.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/matrix.hpp
       title: math/matrix.hpp
   - name: misc
@@ -187,8 +187,14 @@ data:
   - name: math/test
     pages:
     - icon: ':x:'
+      path: math/test/Find_Linear_Recurrence.test.cpp
+      title: math/test/Find_Linear_Recurrence.test.cpp
+    - icon: ':heavy_check_mark:'
       path: math/test/Matrix_Product.test.cpp
       title: math/test/Matrix_Product.test.cpp
+    - icon: ':x:'
+      path: math/test/Sum_of_Floor_of_Linear.test.cpp
+      title: math/test/Sum_of_Floor_of_Linear.test.cpp
   - name: number-theory/test
     pages:
     - icon: ':heavy_check_mark:'
