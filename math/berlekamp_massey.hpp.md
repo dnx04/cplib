@@ -43,8 +43,5 @@ data:
   - math/test/Find_Linear_Recurrence.test.cpp
 documentation_of: math/berlekamp_massey.hpp
 layout: document
-redirect_from:
-- /library/math/berlekamp_massey.hpp
-- /library/math/berlekamp_massey.hpp.html
-title: math/berlekamp_massey.hpp
+title: Berlekamp-Massey algorithm
 ---

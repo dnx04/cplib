@@ -38,8 +38,5 @@ data:
   verifiedWith: []
 documentation_of: strings/lyndon.hpp
 layout: document
-redirect_from:
-- /library/strings/lyndon.hpp
-- /library/strings/lyndon.hpp.html
-title: strings/lyndon.hpp
+title: Lyndon factorization
 ---

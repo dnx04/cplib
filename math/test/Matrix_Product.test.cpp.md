@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: math/matrix.hpp
-    title: math/matrix.hpp
+    title: Operators on Matrix
   - icon: ':heavy_check_mark:'
     path: utility/static_modulo.hpp
     title: Static Modular Arithmetic
@@ -57,23 +57,21 @@ data:
     \ return Fp(*this) -= p; }\n  Fp operator*(const Fp &p) const { return Fp(*this)\
     \ *= p; }\n  Fp operator/(const Fp &p) const { return Fp(*this) /= p; }\n  bool\
     \ operator==(const Fp &p) const { return x == p.x; }\n  bool operator!=(const\
-    \ Fp &p) const { return x != p.x; }\n  Fp inv() const {\n    int a = x, b = mod,\
-    \ u = 1, v = 0, t;\n    while (b > 0) {\n      t = a / b;\n      swap(a -= t *\
-    \ b, b);\n      swap(u -= t * v, v);\n    }\n    return Fp(u);\n  }\n  Fp pow(int64_t\
-    \ n) const {\n    Fp ret(1), mul(x);\n    while (n > 0) {\n      if (n & 1) ret\
-    \ *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n  friend\
-    \ ostream &operator<<(ostream &os, const Fp &p) { return os << p.x; }\n  friend\
-    \ istream &operator>>(istream &is, Fp &a) {\n    int64_t t;\n    is >> t;\n  \
-    \  a = static_modulo<mod>(t);\n    return (is);\n  }\n  int get() const { return\
-    \ x; }\n  static constexpr int get_mod() { return mod; }\n};\n#line 9 \"math/test/Matrix_Product.test.cpp\"\
-    \n\nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
-    \  using Fp = static_modulo<998244353>;\n  int n, m, k;\n  cin >> n >> m >> k;\n\
-    \  matrix<Fp> a(n, m), b(m, k);\n  for (int i = 0; i < n; ++i) {\n    for (int\
-    \ j = 0; j < m; ++j) {\n      cin >> a[i][j];\n    }\n  }\n  for (int i = 0; i\
-    \ < m; ++i) {\n    for (int j = 0; j < k; ++j) {\n      cin >> b[i][j];\n    }\n\
-    \  }\n  matrix<Fp> c = a * b;\n  for (int i = 0; i < n; ++i) {\n    for (int j\
-    \ = 0; j < k; ++j) {\n      cout << c[i][j] << \" \\n\"[j == k - 1];\n    }\n\
-    \  }\n}\n"
+    \ Fp &p) const { return x != p.x; }\n  Fp inv() const { return pow(mod - 2); }\n\
+    \  Fp pow(int64_t n) const {\n    Fp ret(1), mul(x);\n    while (n > 0) {\n  \
+    \    if (n & 1) ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return\
+    \ ret;\n  }\n  friend ostream &operator<<(ostream &os, const Fp &p) { return os\
+    \ << p.x; }\n  friend istream &operator>>(istream &is, Fp &a) {\n    int64_t t;\n\
+    \    is >> t;\n    a = static_modulo<mod>(t);\n    return (is);\n  }\n  int get()\
+    \ const { return x; }\n  static constexpr int get_mod() { return mod; }\n};\n\
+    #line 9 \"math/test/Matrix_Product.test.cpp\"\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
+    \  cin.tie(nullptr), cin.exceptions(cin.failbit);\n  using Fp = static_modulo<998244353>;\n\
+    \  int n, m, k;\n  cin >> n >> m >> k;\n  matrix<Fp> a(n, m), b(m, k);\n  for\
+    \ (int i = 0; i < n; ++i) {\n    for (int j = 0; j < m; ++j) {\n      cin >> a[i][j];\n\
+    \    }\n  }\n  for (int i = 0; i < m; ++i) {\n    for (int j = 0; j < k; ++j)\
+    \ {\n      cin >> b[i][j];\n    }\n  }\n  matrix<Fp> c = a * b;\n  for (int i\
+    \ = 0; i < n; ++i) {\n    for (int j = 0; j < k; ++j) {\n      cout << c[i][j]\
+    \ << \" \\n\"[j == k - 1];\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/matrix_product\"\n\n#include\
     \ <bits/extc++.h>\n\nusing namespace std;\n\n#include \"math/matrix.hpp\"\n#include\
     \ \"utility/static_modulo.hpp\"\n\nsigned main() {\n  ios::sync_with_stdio(false);\n\
@@ -90,7 +88,7 @@ data:
   isVerificationFile: true
   path: math/test/Matrix_Product.test.cpp
   requiredBy: []
-  timestamp: '2022-09-27 23:05:16+07:00'
+  timestamp: '2022-09-28 08:16:24+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: math/test/Matrix_Product.test.cpp

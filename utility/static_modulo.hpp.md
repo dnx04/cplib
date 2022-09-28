@@ -45,15 +45,13 @@ data:
     \ return Fp(*this) -= p; }\n  Fp operator*(const Fp &p) const { return Fp(*this)\
     \ *= p; }\n  Fp operator/(const Fp &p) const { return Fp(*this) /= p; }\n  bool\
     \ operator==(const Fp &p) const { return x == p.x; }\n  bool operator!=(const\
-    \ Fp &p) const { return x != p.x; }\n  Fp inv() const {\n    int a = x, b = mod,\
-    \ u = 1, v = 0, t;\n    while (b > 0) {\n      t = a / b;\n      swap(a -= t *\
-    \ b, b);\n      swap(u -= t * v, v);\n    }\n    return Fp(u);\n  }\n  Fp pow(int64_t\
-    \ n) const {\n    Fp ret(1), mul(x);\n    while (n > 0) {\n      if (n & 1) ret\
-    \ *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n  friend\
-    \ ostream &operator<<(ostream &os, const Fp &p) { return os << p.x; }\n  friend\
-    \ istream &operator>>(istream &is, Fp &a) {\n    int64_t t;\n    is >> t;\n  \
-    \  a = static_modulo<mod>(t);\n    return (is);\n  }\n  int get() const { return\
-    \ x; }\n  static constexpr int get_mod() { return mod; }\n};\n"
+    \ Fp &p) const { return x != p.x; }\n  Fp inv() const { return pow(mod - 2); }\n\
+    \  Fp pow(int64_t n) const {\n    Fp ret(1), mul(x);\n    while (n > 0) {\n  \
+    \    if (n & 1) ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return\
+    \ ret;\n  }\n  friend ostream &operator<<(ostream &os, const Fp &p) { return os\
+    \ << p.x; }\n  friend istream &operator>>(istream &is, Fp &a) {\n    int64_t t;\n\
+    \    is >> t;\n    a = static_modulo<mod>(t);\n    return (is);\n  }\n  int get()\
+    \ const { return x; }\n  static constexpr int get_mod() { return mod; }\n};\n"
   code: "#pragma once\n\ntemplate <int mod>\nstruct static_modulo {\n  using Fp =\
     \ static_modulo;\n\n private:\n  int x;\n\n public:\n  static_modulo() : x(0)\
     \ {}\n  static_modulo(int64_t y) : x(y >= 0 ? y % mod : (mod - (-y) % mod) % mod)\
@@ -67,21 +65,19 @@ data:
     \ Fp &p) const { return Fp(*this) *= p; }\n  Fp operator/(const Fp &p) const {\
     \ return Fp(*this) /= p; }\n  bool operator==(const Fp &p) const { return x ==\
     \ p.x; }\n  bool operator!=(const Fp &p) const { return x != p.x; }\n  Fp inv()\
-    \ const {\n    int a = x, b = mod, u = 1, v = 0, t;\n    while (b > 0) {\n   \
-    \   t = a / b;\n      swap(a -= t * b, b);\n      swap(u -= t * v, v);\n    }\n\
-    \    return Fp(u);\n  }\n  Fp pow(int64_t n) const {\n    Fp ret(1), mul(x);\n\
-    \    while (n > 0) {\n      if (n & 1) ret *= mul;\n      mul *= mul;\n      n\
-    \ >>= 1;\n    }\n    return ret;\n  }\n  friend ostream &operator<<(ostream &os,\
-    \ const Fp &p) { return os << p.x; }\n  friend istream &operator>>(istream &is,\
-    \ Fp &a) {\n    int64_t t;\n    is >> t;\n    a = static_modulo<mod>(t);\n   \
-    \ return (is);\n  }\n  int get() const { return x; }\n  static constexpr int get_mod()\
-    \ { return mod; }\n};"
+    \ const { return pow(mod - 2); }\n  Fp pow(int64_t n) const {\n    Fp ret(1),\
+    \ mul(x);\n    while (n > 0) {\n      if (n & 1) ret *= mul;\n      mul *= mul;\n\
+    \      n >>= 1;\n    }\n    return ret;\n  }\n  friend ostream &operator<<(ostream\
+    \ &os, const Fp &p) { return os << p.x; }\n  friend istream &operator>>(istream\
+    \ &is, Fp &a) {\n    int64_t t;\n    is >> t;\n    a = static_modulo<mod>(t);\n\
+    \    return (is);\n  }\n  int get() const { return x; }\n  static constexpr int\
+    \ get_mod() { return mod; }\n};"
   dependsOn: []
   isVerificationFile: false
   path: utility/static_modulo.hpp
   requiredBy:
   - convolution/ntt.hpp
-  timestamp: '2022-09-27 22:26:49+07:00'
+  timestamp: '2022-09-28 08:16:24+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - math/test/Find_Linear_Recurrence.test.cpp
@@ -95,3 +91,13 @@ documentation_of: utility/static_modulo.hpp
 layout: document
 title: Static Modular Arithmetic
 ---
+
+It efficiently performs modular arithmetic given a constant modulo $M$.
+
+Because the modulo is given at compile time, most respectable C++ compilers can optimize this operation by some kind of internal Barrett reduction.
+
+Note that if $M$ is not a prime, then replace the `inv()` part of this code with the same part in the [Dynamic Modulo](./dynamic_modulo.md) code.
+
+## Complexity
+- $\mathcal{O}(1)$ (all operation except division)
+- $\mathcal{O}(\log M)$ (division)

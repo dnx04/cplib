@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: math/floor_sum.hpp
-    title: math/floor_sum.hpp
+    title: Sum of Floor of Linear
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

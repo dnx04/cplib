@@ -39,8 +39,5 @@ data:
   - math/test/Sum_of_Floor_of_Linear.test.cpp
 documentation_of: math/floor_sum.hpp
 layout: document
-redirect_from:
-- /library/math/floor_sum.hpp
-- /library/math/floor_sum.hpp.html
-title: math/floor_sum.hpp
+title: Sum of Floor of Linear
 ---

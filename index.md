@@ -6,7 +6,7 @@ data:
     - icon: ':warning:'
       path: convolution/fft.hpp
       title: convolution/fft.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: convolution/hadamard.hpp
       title: convolution/hadamard.hpp
     - icon: ':heavy_check_mark:'
@@ -76,13 +76,13 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: math/berlekamp_massey.hpp
-      title: math/berlekamp_massey.hpp
+      title: Berlekamp-Massey algorithm
     - icon: ':heavy_check_mark:'
       path: math/floor_sum.hpp
-      title: math/floor_sum.hpp
+      title: Sum of Floor of Linear
     - icon: ':heavy_check_mark:'
       path: math/matrix.hpp
-      title: math/matrix.hpp
+      title: Operators on Matrix
   - name: misc
     pages:
     - icon: ':warning:'
@@ -112,7 +112,7 @@ data:
       title: strings/kmp.hpp
     - icon: ':warning:'
       path: strings/lyndon.hpp
-      title: strings/lyndon.hpp
+      title: Lyndon factorization
     - icon: ':heavy_check_mark:'
       path: strings/manacher.hpp
       title: strings/manacher.hpp
@@ -121,13 +121,13 @@ data:
       title: strings/rolling_hash.hpp
     - icon: ':heavy_check_mark:'
       path: strings/suffix_array.hpp
-      title: strings/suffix_array.hpp
+      title: Suffix Array
     - icon: ':heavy_check_mark:'
       path: strings/zf.hpp
       title: strings/zf.hpp
   - name: utility
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: utility/dynamic_modulo.hpp
       title: Dynamic Modular Arithmetic
     - icon: ':heavy_check_mark:'
@@ -139,7 +139,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/test/Bitwise_And_Convolution.test.cpp
       title: convolution/test/Bitwise_And_Convolution.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: convolution/test/Bitwise_Xor_Convolution.test.cpp
       title: convolution/test/Bitwise_Xor_Convolution.test.cpp
     - icon: ':heavy_check_mark:'

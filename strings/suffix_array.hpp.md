@@ -73,8 +73,5 @@ data:
   - strings/test/Suffix_Array.test.cpp
 documentation_of: strings/suffix_array.hpp
 layout: document
-redirect_from:
-- /library/strings/suffix_array.hpp
-- /library/strings/suffix_array.hpp.html
-title: strings/suffix_array.hpp
+title: Suffix Array
 ---

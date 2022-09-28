@@ -71,8 +71,5 @@ data:
   - math/test/Matrix_Product.test.cpp
 documentation_of: math/matrix.hpp
 layout: document
-redirect_from:
-- /library/math/matrix.hpp
-- /library/math/matrix.hpp.html
-title: math/matrix.hpp
+title: Operators on Matrix
 ---

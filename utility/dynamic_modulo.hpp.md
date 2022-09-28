@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/test/Bitwise_And_Convolution.test.cpp
     title: convolution/test/Bitwise_And_Convolution.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: convolution/test/Bitwise_Xor_Convolution.test.cpp
     title: convolution/test/Bitwise_Xor_Convolution.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"utility/dynamic_modulo.hpp\"\n\nstruct dynamic_modulo {\n\
@@ -21,65 +21,69 @@ data:
     \ ++i) ret *= 2 - mod * ret;\n    return ret;\n  }\n  static void set_mod(u64\
     \ m) {\n    assert(m < (1LL << 62));\n    assert((m & 1) == 1);\n    mod = m;\n\
     \    n2 = -u128(m) % m;\n    r = get_r();\n    assert(r * mod == 1);\n  }\n  u64\
-    \ a;\n  dynamic_modulo() : a(0) {}\n  dynamic_modulo(const int64_t &b) : a(reduce((u128(b)\
+    \ x;\n  dynamic_modulo() : x(0) {}\n  dynamic_modulo(const int64_t &b) : x(reduce((u128(b)\
     \ + mod) * n2)){};\n  static u64 reduce(const u128 &b) {\n    return (b + u128(u64(b)\
-    \ * u64(-r)) * mod) >> 64;\n  }\n  Fp &operator+=(const Fp &b) {\n    if (i64(a\
-    \ += b.a - 2 * mod) < 0) a += 2 * mod;\n    return *this;\n  }\n  Fp &operator-=(const\
-    \ Fp &b) {\n    if (i64(a -= b.a) < 0) a += 2 * mod;\n    return *this;\n  }\n\
-    \  Fp &operator*=(const Fp &b) {\n    a = reduce(u128(a) * b.a);\n    return *this;\n\
+    \ * u64(-r)) * mod) >> 64;\n  }\n  Fp &operator+=(const Fp &b) {\n    if (i64(x\
+    \ += b.x - 2 * mod) < 0) x += 2 * mod;\n    return *this;\n  }\n  Fp &operator-=(const\
+    \ Fp &b) {\n    if (i64(x -= b.x) < 0) x += 2 * mod;\n    return *this;\n  }\n\
+    \  Fp &operator*=(const Fp &b) {\n    x = reduce(u128(x) * b.x);\n    return *this;\n\
     \  }\n  Fp &operator/=(const Fp &b) {\n    *this *= b.inv();\n    return *this;\n\
     \  }\n  Fp operator+(const Fp &b) const { return Fp(*this) += b; }\n  Fp operator-(const\
     \ Fp &b) const { return Fp(*this) -= b; }\n  Fp operator*(const Fp &b) const {\
     \ return Fp(*this) *= b; }\n  Fp operator/(const Fp &b) const { return Fp(*this)\
-    \ /= b; }\n  bool operator==(const Fp &b) const {\n    return (a >= mod ? a -\
-    \ mod : a) == (b.a >= mod ? b.a - mod : b.a);\n  }\n  bool operator!=(const Fp\
-    \ &b) const {\n    return (a >= mod ? a - mod : a) != (b.a >= mod ? b.a - mod\
-    \ : b.a);\n  }\n  Fp operator-() const { return Fp() - Fp(*this); }\n  Fp pow(u128\
+    \ /= b; }\n  bool operator==(const Fp &b) const {\n    return (x >= mod ? x -\
+    \ mod : x) == (b.x >= mod ? b.x - mod : b.x);\n  }\n  bool operator!=(const Fp\
+    \ &b) const {\n    return (x >= mod ? x - mod : x) != (b.x >= mod ? b.x - mod\
+    \ : b.x);\n  }\n  Fp operator-() const { return Fp() - Fp(*this); }\n  Fp pow(u128\
     \ n) const {\n    Fp ret(1), mul(*this);\n    while (n > 0) {\n      if (n & 1)\
     \ ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n\
     \  friend ostream &operator<<(ostream &os, const Fp &b) { return os << b.get();\
     \ }\n  friend istream &operator>>(istream &is, Fp &b) {\n    int64_t t;\n    is\
-    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\
-    \ return pow(mod - 2); }\n  u64 get() const {\n    u64 ret = reduce(a);\n    return\
-    \ ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod() { return mod; }\n\
-    };\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n   \
-    \ dynamic_modulo::n2;\n"
+    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\n\
+    \    assert(gcd(x, mod) == 1);\n    u64 a = x, b = mod, u = 1, v = 0, t;\n   \
+    \ while (b > 0) {\n      t = a / b;\n      swap(a -= t * b, b);\n      swap(u\
+    \ -= t * v, v);\n    }\n    return Fp(u);\n  }\n  u64 get() const {\n    u64 ret\
+    \ = reduce(x);\n    return ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod()\
+    \ { return mod; }\n};\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n\
+    \    dynamic_modulo::n2;\n"
   code: "#pragma once\n\nstruct dynamic_modulo {\n  using Fp = dynamic_modulo;\n \
     \ using i64 = int64_t;\n  using u64 = uint64_t;\n  using u128 = __uint128_t;\n\
     \n  static u64 mod;\n  static u64 r;\n  static u64 n2;\n\n  static u64 get_r()\
     \ {\n    u64 ret = mod;\n    for (i64 i = 0; i < 5; ++i) ret *= 2 - mod * ret;\n\
     \    return ret;\n  }\n  static void set_mod(u64 m) {\n    assert(m < (1LL <<\
     \ 62));\n    assert((m & 1) == 1);\n    mod = m;\n    n2 = -u128(m) % m;\n   \
-    \ r = get_r();\n    assert(r * mod == 1);\n  }\n  u64 a;\n  dynamic_modulo() :\
-    \ a(0) {}\n  dynamic_modulo(const int64_t &b) : a(reduce((u128(b) + mod) * n2)){};\n\
+    \ r = get_r();\n    assert(r * mod == 1);\n  }\n  u64 x;\n  dynamic_modulo() :\
+    \ x(0) {}\n  dynamic_modulo(const int64_t &b) : x(reduce((u128(b) + mod) * n2)){};\n\
     \  static u64 reduce(const u128 &b) {\n    return (b + u128(u64(b) * u64(-r))\
-    \ * mod) >> 64;\n  }\n  Fp &operator+=(const Fp &b) {\n    if (i64(a += b.a -\
-    \ 2 * mod) < 0) a += 2 * mod;\n    return *this;\n  }\n  Fp &operator-=(const\
-    \ Fp &b) {\n    if (i64(a -= b.a) < 0) a += 2 * mod;\n    return *this;\n  }\n\
-    \  Fp &operator*=(const Fp &b) {\n    a = reduce(u128(a) * b.a);\n    return *this;\n\
+    \ * mod) >> 64;\n  }\n  Fp &operator+=(const Fp &b) {\n    if (i64(x += b.x -\
+    \ 2 * mod) < 0) x += 2 * mod;\n    return *this;\n  }\n  Fp &operator-=(const\
+    \ Fp &b) {\n    if (i64(x -= b.x) < 0) x += 2 * mod;\n    return *this;\n  }\n\
+    \  Fp &operator*=(const Fp &b) {\n    x = reduce(u128(x) * b.x);\n    return *this;\n\
     \  }\n  Fp &operator/=(const Fp &b) {\n    *this *= b.inv();\n    return *this;\n\
     \  }\n  Fp operator+(const Fp &b) const { return Fp(*this) += b; }\n  Fp operator-(const\
     \ Fp &b) const { return Fp(*this) -= b; }\n  Fp operator*(const Fp &b) const {\
     \ return Fp(*this) *= b; }\n  Fp operator/(const Fp &b) const { return Fp(*this)\
-    \ /= b; }\n  bool operator==(const Fp &b) const {\n    return (a >= mod ? a -\
-    \ mod : a) == (b.a >= mod ? b.a - mod : b.a);\n  }\n  bool operator!=(const Fp\
-    \ &b) const {\n    return (a >= mod ? a - mod : a) != (b.a >= mod ? b.a - mod\
-    \ : b.a);\n  }\n  Fp operator-() const { return Fp() - Fp(*this); }\n  Fp pow(u128\
+    \ /= b; }\n  bool operator==(const Fp &b) const {\n    return (x >= mod ? x -\
+    \ mod : x) == (b.x >= mod ? b.x - mod : b.x);\n  }\n  bool operator!=(const Fp\
+    \ &b) const {\n    return (x >= mod ? x - mod : x) != (b.x >= mod ? b.x - mod\
+    \ : b.x);\n  }\n  Fp operator-() const { return Fp() - Fp(*this); }\n  Fp pow(u128\
     \ n) const {\n    Fp ret(1), mul(*this);\n    while (n > 0) {\n      if (n & 1)\
     \ ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n\
     \  friend ostream &operator<<(ostream &os, const Fp &b) { return os << b.get();\
     \ }\n  friend istream &operator>>(istream &is, Fp &b) {\n    int64_t t;\n    is\
-    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\
-    \ return pow(mod - 2); }\n  u64 get() const {\n    u64 ret = reduce(a);\n    return\
-    \ ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod() { return mod; }\n\
-    };\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n   \
-    \ dynamic_modulo::n2;"
+    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\n\
+    \    assert(gcd(x, mod) == 1);\n    u64 a = x, b = mod, u = 1, v = 0, t;\n   \
+    \ while (b > 0) {\n      t = a / b;\n      swap(a -= t * b, b);\n      swap(u\
+    \ -= t * v, v);\n    }\n    return Fp(u);\n  }\n  u64 get() const {\n    u64 ret\
+    \ = reduce(x);\n    return ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod()\
+    \ { return mod; }\n};\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n\
+    \    dynamic_modulo::n2;"
   dependsOn: []
   isVerificationFile: false
   path: utility/dynamic_modulo.hpp
   requiredBy: []
-  timestamp: '2022-09-27 22:26:49+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2022-09-28 08:22:46+07:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - convolution/test/Bitwise_Xor_Convolution.test.cpp
   - convolution/test/Bitwise_And_Convolution.test.cpp
@@ -87,3 +91,7 @@ documentation_of: utility/dynamic_modulo.hpp
 layout: document
 title: Dynamic Modular Arithmetic
 ---
+
+It efficiently performs modular arithmetic in case the modulo is not given at compile time by utilizing inline Barrett reduction.
+
+Use this if the modulo required by a problem is not fixed.
