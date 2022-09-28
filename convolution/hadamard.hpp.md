@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/test/Bitwise_And_Convolution.test.cpp
     title: convolution/test/Bitwise_And_Convolution.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: convolution/test/Bitwise_Xor_Convolution.test.cpp
     title: convolution/test/Bitwise_Xor_Convolution.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"convolution/hadamard.hpp\"\ntemplate <typename T, typename\
@@ -66,7 +66,7 @@ data:
   path: convolution/hadamard.hpp
   requiredBy: []
   timestamp: '2022-09-04 10:50:22+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - convolution/test/Bitwise_Xor_Convolution.test.cpp
   - convolution/test/Bitwise_And_Convolution.test.cpp

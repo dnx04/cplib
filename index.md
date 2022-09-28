@@ -6,7 +6,7 @@ data:
     - icon: ':warning:'
       path: convolution/fft.hpp
       title: convolution/fft.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: convolution/hadamard.hpp
       title: convolution/hadamard.hpp
     - icon: ':heavy_check_mark:'
@@ -127,7 +127,7 @@ data:
       title: strings/zf.hpp
   - name: utility
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: utility/dynamic_modulo.hpp
       title: Dynamic Modular Arithmetic
     - icon: ':heavy_check_mark:'
@@ -139,7 +139,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/test/Bitwise_And_Convolution.test.cpp
       title: convolution/test/Bitwise_And_Convolution.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: convolution/test/Bitwise_Xor_Convolution.test.cpp
       title: convolution/test/Bitwise_Xor_Convolution.test.cpp
     - icon: ':heavy_check_mark:'

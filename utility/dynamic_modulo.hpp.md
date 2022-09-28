@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/test/Bitwise_And_Convolution.test.cpp
     title: convolution/test/Bitwise_And_Convolution.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: convolution/test/Bitwise_Xor_Convolution.test.cpp
     title: convolution/test/Bitwise_Xor_Convolution.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"utility/dynamic_modulo.hpp\"\n\nstruct dynamic_modulo {\n\
@@ -39,13 +39,11 @@ data:
     \ ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n\
     \  friend ostream &operator<<(ostream &os, const Fp &b) { return os << b.get();\
     \ }\n  friend istream &operator>>(istream &is, Fp &b) {\n    int64_t t;\n    is\
-    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\n\
-    \    assert(gcd(x, mod) == 1);\n    u64 a = x, b = mod, u = 1, v = 0, t;\n   \
-    \ while (b > 0) {\n      t = a / b;\n      swap(a -= t * b, b);\n      swap(u\
-    \ -= t * v, v);\n    }\n    return Fp(u);\n  }\n  u64 get() const {\n    u64 ret\
-    \ = reduce(x);\n    return ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod()\
-    \ { return mod; }\n};\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n\
-    \    dynamic_modulo::n2;\n"
+    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\
+    \ return pow(mod - 2); }\n  u64 get() const {\n    u64 ret = reduce(x);\n    return\
+    \ ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod() { return mod; }\n\
+    };\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n   \
+    \ dynamic_modulo::n2;\n"
   code: "#pragma once\n\nstruct dynamic_modulo {\n  using Fp = dynamic_modulo;\n \
     \ using i64 = int64_t;\n  using u64 = uint64_t;\n  using u128 = __uint128_t;\n\
     \n  static u64 mod;\n  static u64 r;\n  static u64 n2;\n\n  static u64 get_r()\
@@ -71,19 +69,17 @@ data:
     \ ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n\
     \  friend ostream &operator<<(ostream &os, const Fp &b) { return os << b.get();\
     \ }\n  friend istream &operator>>(istream &is, Fp &b) {\n    int64_t t;\n    is\
-    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\n\
-    \    assert(gcd(x, mod) == 1);\n    u64 a = x, b = mod, u = 1, v = 0, t;\n   \
-    \ while (b > 0) {\n      t = a / b;\n      swap(a -= t * b, b);\n      swap(u\
-    \ -= t * v, v);\n    }\n    return Fp(u);\n  }\n  u64 get() const {\n    u64 ret\
-    \ = reduce(x);\n    return ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod()\
-    \ { return mod; }\n};\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n\
-    \    dynamic_modulo::n2;"
+    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\
+    \ return pow(mod - 2); }\n  u64 get() const {\n    u64 ret = reduce(x);\n    return\
+    \ ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod() { return mod; }\n\
+    };\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n   \
+    \ dynamic_modulo::n2;"
   dependsOn: []
   isVerificationFile: false
   path: utility/dynamic_modulo.hpp
   requiredBy: []
-  timestamp: '2022-09-28 08:22:46+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2022-09-28 08:32:31+07:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - convolution/test/Bitwise_Xor_Convolution.test.cpp
   - convolution/test/Bitwise_And_Convolution.test.cpp
@@ -95,3 +91,7 @@ title: Dynamic Modular Arithmetic
 It efficiently performs modular arithmetic in case the modulo is not given at compile time by utilizing inline Barrett reduction.
 
 Use this if the modulo required by a problem is not fixed.
+
+## Complexity
+- $\mathcal{O}(1)$ (all operation except division)
+- $\mathcal{O}(\log M)$ (division, $M$ must be a prime)

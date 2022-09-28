@@ -96,8 +96,8 @@ It efficiently performs modular arithmetic given a constant modulo $M$.
 
 Because the modulo is given at compile time, most respectable C++ compilers can optimize this operation by some kind of internal Barrett reduction.
 
-Note that if $M$ is not a prime, then replace the `inv()` part of this code with the same part in the [Dynamic Modulo](./dynamic_modulo.md) code.
+Nowadays the modulo in problems will always be a prime (for us to perform division properly), so the division and inverse operator requires that $M$ is a prime to function correctly.
 
 ## Complexity
 - $\mathcal{O}(1)$ (all operation except division)
-- $\mathcal{O}(\log M)$ (division)
+- $\mathcal{O}(\log M)$ (division, $M$ must be a prime)

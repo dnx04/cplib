@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: convolution/hadamard.hpp
     title: convolution/hadamard.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utility/dynamic_modulo.hpp
     title: Dynamic Modular Arithmetic
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/bitwise_xor_convolution
@@ -67,13 +67,11 @@ data:
     \ ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n\
     \  friend ostream &operator<<(ostream &os, const Fp &b) { return os << b.get();\
     \ }\n  friend istream &operator>>(istream &is, Fp &b) {\n    int64_t t;\n    is\
-    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\n\
-    \    assert(gcd(x, mod) == 1);\n    u64 a = x, b = mod, u = 1, v = 0, t;\n   \
-    \ while (b > 0) {\n      t = a / b;\n      swap(a -= t * b, b);\n      swap(u\
-    \ -= t * v, v);\n    }\n    return Fp(u);\n  }\n  u64 get() const {\n    u64 ret\
-    \ = reduce(x);\n    return ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod()\
-    \ { return mod; }\n};\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n\
-    \    dynamic_modulo::n2;\n#line 9 \"convolution/test/Bitwise_Xor_Convolution.test.cpp\"\
+    \ >> t;\n    b = dynamic_modulo(t);\n    return (is);\n  }\n  Fp inv() const {\
+    \ return pow(mod - 2); }\n  u64 get() const {\n    u64 ret = reduce(x);\n    return\
+    \ ret >= mod ? ret - mod : ret;\n  }\n  static u64 get_mod() { return mod; }\n\
+    };\ntypename dynamic_modulo::u64 dynamic_modulo::mod, dynamic_modulo::r,\n   \
+    \ dynamic_modulo::n2;\n#line 9 \"convolution/test/Bitwise_Xor_Convolution.test.cpp\"\
     \n\nvoid solve(int ith) {\n  dynamic_modulo::set_mod(998244353);\n  using Fp =\
     \ dynamic_modulo;\n  int n;\n  cin >> n;\n  vector<Fp> a(1 << n), b(1 << n);\n\
     \  for (auto &x : a) cin >> x;\n  for (auto &x : b) cin >> x;\n  for (auto v :\
@@ -94,8 +92,8 @@ data:
   isVerificationFile: true
   path: convolution/test/Bitwise_Xor_Convolution.test.cpp
   requiredBy: []
-  timestamp: '2022-09-28 08:22:46+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-09-28 08:32:31+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: convolution/test/Bitwise_Xor_Convolution.test.cpp
 layout: document
