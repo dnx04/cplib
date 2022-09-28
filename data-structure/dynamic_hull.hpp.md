@@ -47,8 +47,5 @@ data:
   verifiedWith: []
 documentation_of: data-structure/dynamic_hull.hpp
 layout: document
-redirect_from:
-- /library/data-structure/dynamic_hull.hpp
-- /library/data-structure/dynamic_hull.hpp.html
-title: data-structure/dynamic_hull.hpp
+title: Dynamic Line Container (Convex Hull Trick)
 ---

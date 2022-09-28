@@ -49,8 +49,5 @@ data:
   verifiedWith: []
 documentation_of: convolution/fft.hpp
 layout: document
-redirect_from:
-- /library/convolution/fft.hpp
-- /library/convolution/fft.hpp.html
-title: convolution/fft.hpp
+title: Fast Fourier Transform
 ---

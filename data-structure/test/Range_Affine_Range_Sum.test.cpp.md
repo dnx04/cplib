@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data-structure/lazy_segtree.hpp
-    title: Lazy Segment Tree
+    title: Segment Tree (with Lazy Propagation)
   - icon: ':heavy_check_mark:'
     path: utility/static_modulo.hpp
     title: Static Modular Arithmetic

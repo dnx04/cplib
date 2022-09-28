@@ -17,7 +17,7 @@ data:
   bundledCode: "#line 1 \"strings/test/Z_Algorithm.test.cpp\"\n#define PROBLEM \"\
     https://judge.yosupo.jp/problem/zalgorithm\"\n\n#include <bits/extc++.h>\n\nusing\
     \ namespace std;\nusing namespace __gnu_cxx;\nusing namespace __gnu_pbds;\n\n\
-    #line 1 \"strings/zf.hpp\"\nvector<int> zf(const string &s) {\n  int n = (int)s.length();\n\
+    #line 2 \"strings/zf.hpp\"\n\nvector<int> zf(const string &s) {\n  int n = (int)s.length();\n\
     \  vector<int> z(n);\n  for (int i = 1, l = 0, r = 0; i < n; ++i) {\n    if (i\
     \ <= r) z[i] = min(r - i + 1, z[i - l]);\n    while (i + z[i] < n && s[z[i]] ==\
     \ s[i + z[i]]) ++z[i];\n    if (i + z[i] - 1 > r) l = i, r = i + z[i] - 1;\n \
@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: strings/test/Z_Algorithm.test.cpp
   requiredBy: []
-  timestamp: '2022-08-19 13:47:55+07:00'
+  timestamp: '2022-09-28 10:01:57+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: strings/test/Z_Algorithm.test.cpp

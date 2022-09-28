@@ -14,7 +14,7 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"strings/suffix_array.hpp\"\nvector<int> sort_cyclic_shifts(string\
+  bundledCode: "#line 2 \"strings/suffix_array.hpp\"\n\nvector<int> sort_cyclic_shifts(string\
     \ const& s) {\n  int n = s.size();\n  const int alphabet = 256;\n\n  vector<int>\
     \ p(n), c(n), cnt(max(alphabet, n), 0);\n  for (int i = 0; i < n; i++) cnt[s[i]]++;\n\
     \  for (int i = 1; i < alphabet; i++) cnt[i] += cnt[i - 1];\n  for (int i = 0;\
@@ -38,9 +38,9 @@ data:
     \    if (rank[i] == n - 1) {\n      k = 0;\n      continue;\n    }\n    int j\
     \ = p[rank[i] + 1];\n    while (i + k < n && j + k < n && s[i + k] == s[j + k])\
     \ k++;\n    lcp[rank[i]] = k;\n    if (k) k--;\n  }\n  return lcp;\n}\n"
-  code: "vector<int> sort_cyclic_shifts(string const& s) {\n  int n = s.size();\n\
-    \  const int alphabet = 256;\n\n  vector<int> p(n), c(n), cnt(max(alphabet, n),\
-    \ 0);\n  for (int i = 0; i < n; i++) cnt[s[i]]++;\n  for (int i = 1; i < alphabet;\
+  code: "#pragma once\n\nvector<int> sort_cyclic_shifts(string const& s) {\n  int\
+    \ n = s.size();\n  const int alphabet = 256;\n\n  vector<int> p(n), c(n), cnt(max(alphabet,\
+    \ n), 0);\n  for (int i = 0; i < n; i++) cnt[s[i]]++;\n  for (int i = 1; i < alphabet;\
     \ i++) cnt[i] += cnt[i - 1];\n  for (int i = 0; i < n; i++) p[--cnt[s[i]]] = i;\n\
     \  c[p[0]] = 0;\n  int classes = 1;\n  for (int i = 1; i < n; i++) {\n    if (s[p[i]]\
     \ != s[p[i - 1]]) classes++;\n    c[p[i]] = classes - 1;\n  }\n  vector<int> pn(n),\
@@ -66,7 +66,7 @@ data:
   isVerificationFile: false
   path: strings/suffix_array.hpp
   requiredBy: []
-  timestamp: '2022-09-08 21:32:23+07:00'
+  timestamp: '2022-09-28 10:01:57+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - strings/test/Number_of_Substrings.test.cpp

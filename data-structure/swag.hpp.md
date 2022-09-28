@@ -38,8 +38,5 @@ data:
   - data-structure/test/Queue_Operate_All_Composite.test.cpp
 documentation_of: data-structure/swag.hpp
 layout: document
-redirect_from:
-- /library/data-structure/swag.hpp
-- /library/data-structure/swag.hpp.html
-title: data-structure/swag.hpp
+title: Sliding Window Aggregation
 ---

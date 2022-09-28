@@ -92,6 +92,8 @@ It efficiently performs modular arithmetic in case the modulo is not given at co
 
 Use this if the modulo required by a problem is not fixed.
 
+The usage is the same as [Static Modulo](./static_modulo.hpp).
+
 ## Complexity
 - $\mathcal{O}(1)$ (all operation except division)
 - $\mathcal{O}(\log M)$ (division, $M$ must be a prime)

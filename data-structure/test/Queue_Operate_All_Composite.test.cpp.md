@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data-structure/swag.hpp
-    title: data-structure/swag.hpp
+    title: Sliding Window Aggregation
   - icon: ':heavy_check_mark:'
     path: utility/static_modulo.hpp
     title: Static Modular Arithmetic

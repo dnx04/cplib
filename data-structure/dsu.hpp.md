@@ -1,14 +1,20 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: graph/mst.hpp
+    title: graph/mst.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: data-structure/test/Unionfind.test.cpp
     title: data-structure/test/Unionfind.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: graph/test/Minimum_Spanning_Tree.test.cpp
+    title: graph/test/Minimum_Spanning_Tree.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/dsu.hpp\"\nstruct dsu {\n public:\n  dsu(int\
@@ -44,11 +50,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data-structure/dsu.hpp
-  requiredBy: []
+  requiredBy:
+  - graph/mst.hpp
   timestamp: '2022-09-07 21:33:38+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - data-structure/test/Unionfind.test.cpp
+  - graph/test/Minimum_Spanning_Tree.test.cpp
 documentation_of: data-structure/dsu.hpp
 layout: document
 title: Disjoint Set Union (with Rank and Path Compression)

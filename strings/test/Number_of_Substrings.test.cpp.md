@@ -16,12 +16,12 @@ data:
     - https://judge.yosupo.jp/problem/number_of_substrings
   bundledCode: "#line 1 \"strings/test/Number_of_Substrings.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/number_of_substrings\"\n\n#include <bits/stdc++.h>\n\
-    \nusing namespace std;\n\nusing ll = long long;\n\n#line 1 \"strings/suffix_array.hpp\"\
-    \nvector<int> sort_cyclic_shifts(string const& s) {\n  int n = s.size();\n  const\
-    \ int alphabet = 256;\n\n  vector<int> p(n), c(n), cnt(max(alphabet, n), 0);\n\
-    \  for (int i = 0; i < n; i++) cnt[s[i]]++;\n  for (int i = 1; i < alphabet; i++)\
-    \ cnt[i] += cnt[i - 1];\n  for (int i = 0; i < n; i++) p[--cnt[s[i]]] = i;\n \
-    \ c[p[0]] = 0;\n  int classes = 1;\n  for (int i = 1; i < n; i++) {\n    if (s[p[i]]\
+    \nusing namespace std;\n\nusing ll = long long;\n\n#line 2 \"strings/suffix_array.hpp\"\
+    \n\nvector<int> sort_cyclic_shifts(string const& s) {\n  int n = s.size();\n \
+    \ const int alphabet = 256;\n\n  vector<int> p(n), c(n), cnt(max(alphabet, n),\
+    \ 0);\n  for (int i = 0; i < n; i++) cnt[s[i]]++;\n  for (int i = 1; i < alphabet;\
+    \ i++) cnt[i] += cnt[i - 1];\n  for (int i = 0; i < n; i++) p[--cnt[s[i]]] = i;\n\
+    \  c[p[0]] = 0;\n  int classes = 1;\n  for (int i = 1; i < n; i++) {\n    if (s[p[i]]\
     \ != s[p[i - 1]]) classes++;\n    c[p[i]] = classes - 1;\n  }\n  vector<int> pn(n),\
     \ cn(n);\n  for (int h = 0; (1 << h) < n; ++h) {\n    for (int i = 0; i < n; i++)\
     \ {\n      pn[i] = p[i] - (1 << h);\n      if (pn[i] < 0) pn[i] += n;\n    }\n\
@@ -58,7 +58,7 @@ data:
   isVerificationFile: true
   path: strings/test/Number_of_Substrings.test.cpp
   requiredBy: []
-  timestamp: '2022-09-08 21:32:23+07:00'
+  timestamp: '2022-09-28 10:01:57+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: strings/test/Number_of_Substrings.test.cpp

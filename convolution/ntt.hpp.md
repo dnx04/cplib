@@ -51,8 +51,8 @@ data:
     \ fa.resize(n);\n  fb.resize(n);\n  ntt(fa, false);\n  ntt(fb, false);\n  for\
     \ (int i = 0; i < n; i++) fa[i] *= fb[i];\n  ntt(fa, true);\n  fa.resize(int(a.size()\
     \ + b.size() - 1));\n  return fa;\n}\n"
-  code: "#include \"../utility/static_modulo.hpp\"\n\n// NTT modulo 998244353. If\
-    \ change modulo, change these parameters accordingly\nusing Fp = static_modulo<998244353>;\n\
+  code: "#include \"utility/static_modulo.hpp\"\n\n// NTT modulo 998244353. If change\
+    \ modulo, change these parameters accordingly\nusing Fp = static_modulo<998244353>;\n\
     Fp G = 3;\n\nvoid ntt(vector<Fp>& a, bool invert) {\n  int n = int(a.size()),\
     \ s = 0;\n  while ((1 << s) < n) s++;\n  assert(1 << s == n);\n\n  static vector<Fp>\
     \ ep, iep;\n  while (int(ep.size()) <= s) {\n    ep.push_back(G.pow((Fp(-1) /\
@@ -73,14 +73,11 @@ data:
   isVerificationFile: false
   path: convolution/ntt.hpp
   requiredBy: []
-  timestamp: '2022-09-28 08:16:24+07:00'
+  timestamp: '2022-09-28 10:01:57+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - convolution/test/Convolution.test.cpp
 documentation_of: convolution/ntt.hpp
 layout: document
-redirect_from:
-- /library/convolution/ntt.hpp
-- /library/convolution/ntt.hpp.html
-title: convolution/ntt.hpp
+title: Number Theoretic Transform
 ---

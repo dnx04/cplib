@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/ntt.hpp
-    title: convolution/ntt.hpp
+    title: Number Theoretic Transform
   - icon: ':heavy_check_mark:'
     path: utility/static_modulo.hpp
     title: Static Modular Arithmetic
@@ -75,7 +75,7 @@ data:
   isVerificationFile: true
   path: convolution/test/Convolution.test.cpp
   requiredBy: []
-  timestamp: '2022-09-28 08:16:24+07:00'
+  timestamp: '2022-09-28 10:01:57+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: convolution/test/Convolution.test.cpp

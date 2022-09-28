@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/scc.hpp
-    title: graph/scc.hpp
+    title: Strongly Connected Component
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

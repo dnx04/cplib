@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data-structure/segtree.hpp
-    title: data-structure/segtree.hpp
+    title: Segment Tree
   - icon: ':heavy_check_mark:'
     path: utility/static_modulo.hpp
     title: Static Modular Arithmetic

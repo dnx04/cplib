@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: graph/2sat.hpp
-    title: graph/2sat.hpp
+    title: 2-SAT
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: graph/test/2_Sat.test.cpp
@@ -72,8 +72,5 @@ data:
   - graph/test/Strongly_Connected_Components.test.cpp
 documentation_of: graph/scc.hpp
 layout: document
-redirect_from:
-- /library/graph/scc.hpp
-- /library/graph/scc.hpp.html
-title: graph/scc.hpp
+title: Strongly Connected Component
 ---

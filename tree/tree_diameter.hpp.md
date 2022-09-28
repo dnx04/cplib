@@ -4,14 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: graph/test/Tree_Diameter.test.cpp
-    title: graph/test/Tree_Diameter.test.cpp
+    path: tree/test/Tree_Diameter.test.cpp
+    title: tree/test/Tree_Diameter.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"graph/tree_diameter.hpp\"\npair<ll, vector<int>> get_diameter(const\
+  bundledCode: "#line 1 \"tree/tree_diameter.hpp\"\npair<ll, vector<int>> get_diameter(const\
     \ vector<vector<pair<int, int>>>& g) {\n  int n = g.size();\n  vector<ll> dist(n);\n\
     \  vector<int> parent(n);\n\n  auto dfs = [&](auto self, int u, int fu, ll cur_dist)\
     \ -> void {\n    dist[u] = cur_dist;\n    parent[u] = fu;\n    for (auto [v, cost]\
@@ -33,16 +33,13 @@ data:
     \ {dist[s], path};\n}"
   dependsOn: []
   isVerificationFile: false
-  path: graph/tree_diameter.hpp
+  path: tree/tree_diameter.hpp
   requiredBy: []
-  timestamp: '2022-09-04 19:05:25+07:00'
+  timestamp: '2022-09-28 10:01:57+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/test/Tree_Diameter.test.cpp
-documentation_of: graph/tree_diameter.hpp
+  - tree/test/Tree_Diameter.test.cpp
+documentation_of: tree/tree_diameter.hpp
 layout: document
-redirect_from:
-- /library/graph/tree_diameter.hpp
-- /library/graph/tree_diameter.hpp.html
-title: graph/tree_diameter.hpp
+title: Tree Diameter
 ---

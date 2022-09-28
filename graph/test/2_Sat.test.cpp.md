@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/2sat.hpp
-    title: graph/2sat.hpp
+    title: 2-SAT
   - icon: ':heavy_check_mark:'
     path: graph/scc.hpp
-    title: graph/scc.hpp
+    title: Strongly Connected Component
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

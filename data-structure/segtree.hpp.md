@@ -85,8 +85,5 @@ data:
   - data-structure/test/Point_Set_Range_Composite.test.cpp
 documentation_of: data-structure/segtree.hpp
 layout: document
-redirect_from:
-- /library/data-structure/segtree.hpp
-- /library/data-structure/segtree.hpp.html
-title: data-structure/segtree.hpp
+title: Segment Tree
 ---

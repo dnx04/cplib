@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: convolution/ntt.hpp
-    title: convolution/ntt.hpp
+    title: Number Theoretic Transform
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: convolution/test/Convolution.test.cpp

@@ -5,33 +5,33 @@ data:
     pages:
     - icon: ':warning:'
       path: convolution/fft.hpp
-      title: convolution/fft.hpp
+      title: Fast Fourier Transform
     - icon: ':heavy_check_mark:'
-      path: convolution/hadamard.hpp
-      title: convolution/hadamard.hpp
+      path: convolution/fwht.hpp
+      title: Fast Walsh-Hadamard Transform
     - icon: ':heavy_check_mark:'
       path: convolution/ntt.hpp
-      title: convolution/ntt.hpp
+      title: Number Theoretic Transform
   - name: data-structure
     pages:
     - icon: ':warning:'
       path: data-structure/2dsum.hpp
       title: data-structure/2dsum.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data-structure/dsu.hpp
       title: Disjoint Set Union (with Rank and Path Compression)
     - icon: ':warning:'
       path: data-structure/dsu_rollback.hpp
-      title: data-structure/dsu_rollback.hpp
+      title: Disjoint Set Union with Rollback
     - icon: ':warning:'
       path: data-structure/dynamic_hull.hpp
-      title: data-structure/dynamic_hull.hpp
+      title: Dynamic Line Container (Convex Hull Trick)
     - icon: ':heavy_check_mark:'
       path: data-structure/fenwick.hpp
-      title: data-structure/fenwick.hpp
+      title: Fenwick Tree
     - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segtree.hpp
-      title: Lazy Segment Tree
+      title: Segment Tree (with Lazy Propagation)
     - icon: ':warning:'
       path: data-structure/pbds.hpp
       title: data-structure/pbds.hpp
@@ -40,13 +40,13 @@ data:
       title: data-structure/rmq.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/segtree.hpp
-      title: data-structure/segtree.hpp
+      title: Segment Tree
     - icon: ':heavy_check_mark:'
       path: data-structure/splay.hpp
       title: Splay Tree (Implicit Treaps)
     - icon: ':heavy_check_mark:'
       path: data-structure/swag.hpp
-      title: data-structure/swag.hpp
+      title: Sliding Window Aggregation
   - name: dp
     pages:
     - icon: ':warning:'
@@ -59,19 +59,16 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: graph/2sat.hpp
-      title: graph/2sat.hpp
+      title: 2-SAT
     - icon: ':heavy_check_mark:'
       path: graph/lowlink.hpp
       title: graph/lowlink.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: graph/mst.hpp
       title: graph/mst.hpp
     - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
-      title: graph/scc.hpp
-    - icon: ':heavy_check_mark:'
-      path: graph/tree_diameter.hpp
-      title: graph/tree_diameter.hpp
+      title: Strongly Connected Component
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
@@ -125,6 +122,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: strings/zf.hpp
       title: strings/zf.hpp
+  - name: tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tree/tree_diameter.hpp
+      title: Tree Diameter
   - name: utility
     pages:
     - icon: ':heavy_check_mark:'
@@ -178,12 +180,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/test/2_Sat.test.cpp
       title: graph/test/2_Sat.test.cpp
+    - icon: ':x:'
+      path: graph/test/Minimum_Spanning_Tree.test.cpp
+      title: graph/test/Minimum_Spanning_Tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/test/Strongly_Connected_Components.test.cpp
       title: graph/test/Strongly_Connected_Components.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: graph/test/Tree_Diameter.test.cpp
-      title: graph/test/Tree_Diameter.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/test/Two-Edge-Connected_Components.test.cpp
       title: graph/test/Two-Edge-Connected_Components.test.cpp
@@ -217,6 +219,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: strings/test/Z_Algorithm.test.cpp
       title: strings/test/Z_Algorithm.test.cpp
+  - name: tree/test
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tree/test/Tree_Diameter.test.cpp
+      title: tree/test/Tree_Diameter.test.cpp
 layout: toppage
 ---
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dnx04/algo?style=flat-square)

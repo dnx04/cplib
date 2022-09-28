@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: convolution/hadamard.hpp
-    title: convolution/hadamard.hpp
+    path: convolution/fwht.hpp
+    title: Fast Walsh-Hadamard Transform
   - icon: ':heavy_check_mark:'
     path: utility/dynamic_modulo.hpp
     title: Dynamic Modular Arithmetic
@@ -49,7 +49,7 @@ data:
     \ const {\n    u64 ret = reduce(x);\n    return ret >= mod ? ret - mod : ret;\n\
     \  }\n  static u64 get_mod() { return mod; }\n};\ntypename dynamic_modulo::u64\
     \ dynamic_modulo::mod, dynamic_modulo::r,\n    dynamic_modulo::n2;\n#line 1 \"\
-    convolution/hadamard.hpp\"\ntemplate <typename T, typename F>\nvoid abstract_fwht(vector<T>\
+    convolution/fwht.hpp\"\ntemplate <typename T, typename F>\nvoid abstract_fwht(vector<T>\
     \ &seq, F f) {\n  const int n = seq.size();\n  assert(__builtin_popcount(n) ==\
     \ 1);\n  for (int w = 1; w < n; w *= 2) {\n    for (int i = 0; i < n; i += w *\
     \ 2) {\n      for (int j = 0; j < w; j++) {\n        f(seq[i + j], seq[i + j +\
@@ -81,7 +81,7 @@ data:
     \ tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/bitwise_and_convolution\"\
     \n\n#include <bits/extc++.h>\n\nusing namespace std;\n\n#include \"utility/dynamic_modulo.hpp\"\
-    \n#include \"convolution/hadamard.hpp\"\n\nvoid solve(int ith) {\n  dynamic_modulo::set_mod(998244353);\n\
+    \n#include \"convolution/fwht.hpp\"\n\nvoid solve(int ith) {\n  dynamic_modulo::set_mod(998244353);\n\
     \  using Fp = dynamic_modulo;\n  int n;\n  cin >> n;\n  vector<Fp> a(1 << n),\
     \ b(1 << n);\n  for (auto &x : a) cin >> x;\n  for (auto &x : b) cin >> x;\n \
     \ for (auto val : andconv(a, b)) cout << val << ' ';\n}\n\nsigned main() {\n \
@@ -89,11 +89,11 @@ data:
     \  int tc = 1;\n  // cin >> tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}"
   dependsOn:
   - utility/dynamic_modulo.hpp
-  - convolution/hadamard.hpp
+  - convolution/fwht.hpp
   isVerificationFile: true
   path: convolution/test/Bitwise_And_Convolution.test.cpp
   requiredBy: []
-  timestamp: '2022-09-28 08:32:31+07:00'
+  timestamp: '2022-09-28 10:01:57+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: convolution/test/Bitwise_And_Convolution.test.cpp

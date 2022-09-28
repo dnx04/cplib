@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: convolution/hadamard.hpp
-    title: convolution/hadamard.hpp
+    path: convolution/fwht.hpp
+    title: Fast Walsh-Hadamard Transform
   - icon: ':heavy_check_mark:'
     path: utility/dynamic_modulo.hpp
     title: Dynamic Modular Arithmetic
@@ -19,8 +19,8 @@ data:
     - https://judge.yosupo.jp/problem/bitwise_xor_convolution
   bundledCode: "#line 1 \"convolution/test/Bitwise_Xor_Convolution.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/bitwise_xor_convolution\"\n\n#include\
-    \ <bits/extc++.h>\n\nusing namespace std;\n\n#line 1 \"convolution/hadamard.hpp\"\
-    \ntemplate <typename T, typename F>\nvoid abstract_fwht(vector<T> &seq, F f) {\n\
+    \ <bits/extc++.h>\n\nusing namespace std;\n\n#line 1 \"convolution/fwht.hpp\"\n\
+    template <typename T, typename F>\nvoid abstract_fwht(vector<T> &seq, F f) {\n\
     \  const int n = seq.size();\n  assert(__builtin_popcount(n) == 1);\n  for (int\
     \ w = 1; w < n; w *= 2) {\n    for (int i = 0; i < n; i += w * 2) {\n      for\
     \ (int j = 0; j < w; j++) {\n        f(seq[i + j], seq[i + j + w]);\n      }\n\
@@ -79,7 +79,7 @@ data:
     \  cin.tie(nullptr), cin.exceptions(cin.failbit);\n  int tc = 1;\n  // cin >>\
     \ tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/bitwise_xor_convolution\"\
-    \n\n#include <bits/extc++.h>\n\nusing namespace std;\n\n#include \"convolution/hadamard.hpp\"\
+    \n\n#include <bits/extc++.h>\n\nusing namespace std;\n\n#include \"convolution/fwht.hpp\"\
     \n#include \"utility/dynamic_modulo.hpp\"\n\nvoid solve(int ith) {\n  dynamic_modulo::set_mod(998244353);\n\
     \  using Fp = dynamic_modulo;\n  int n;\n  cin >> n;\n  vector<Fp> a(1 << n),\
     \ b(1 << n);\n  for (auto &x : a) cin >> x;\n  for (auto &x : b) cin >> x;\n \
@@ -87,12 +87,12 @@ data:
     \  cin.tie(nullptr), cin.exceptions(cin.failbit);\n  int tc = 1;\n  // cin >>\
     \ tc;\n  for (int i = 1; i <= tc; ++i) solve(i);\n}"
   dependsOn:
-  - convolution/hadamard.hpp
+  - convolution/fwht.hpp
   - utility/dynamic_modulo.hpp
   isVerificationFile: true
   path: convolution/test/Bitwise_Xor_Convolution.test.cpp
   requiredBy: []
-  timestamp: '2022-09-28 08:32:31+07:00'
+  timestamp: '2022-09-28 10:01:57+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: convolution/test/Bitwise_Xor_Convolution.test.cpp

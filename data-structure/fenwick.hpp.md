@@ -40,8 +40,5 @@ data:
   - data-structure/test/Point_Add_Range_Sum.test.cpp
 documentation_of: data-structure/fenwick.hpp
 layout: document
-redirect_from:
-- /library/data-structure/fenwick.hpp
-- /library/data-structure/fenwick.hpp.html
-title: data-structure/fenwick.hpp
+title: Fenwick Tree
 ---

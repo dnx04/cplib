@@ -47,8 +47,5 @@ data:
   verifiedWith: []
 documentation_of: data-structure/dsu_rollback.hpp
 layout: document
-redirect_from:
-- /library/data-structure/dsu_rollback.hpp
-- /library/data-structure/dsu_rollback.hpp.html
-title: data-structure/dsu_rollback.hpp
+title: Disjoint Set Union with Rollback
 ---
