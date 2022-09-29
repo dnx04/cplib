@@ -1,47 +1,33 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: strings/manacher.hpp
-    title: strings/manacher.hpp
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
-  attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/enumerate_palindromes
-    links:
-    - https://judge.yosupo.jp/problem/enumerate_palindromes
-  bundledCode: "#line 1 \"strings/test/Enumerate_Palindromes.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/enumerate_palindromes\"\n\n#include <bits/extc++.h>\n\
-    \nusing namespace std;\nusing namespace __gnu_cxx;\nusing namespace __gnu_pbds;\n\
-    \n#line 1 \"strings/manacher.hpp\"\nvector<int> manacher_odd(string s) {\n  int\
-    \ n = s.size();\n  s = \"$\" + s + \"^\";\n  vector<int> p(n + 2);\n  int l =\
-    \ 1, r = 1;\n  for (int i = 1; i <= n; i++) {\n    p[i] = max(0, min(r - i, p[l\
-    \ + (r - i)]));\n    while (s[i - p[i]] == s[i + p[i]]) {\n      p[i]++;\n   \
-    \ }\n    if (i + p[i] > r) {\n      l = i - p[i], r = i + p[i];\n    }\n  }\n\
-    \  return vector<int>(begin(p) + 1, end(p) - 1);\n}\n\nvector<int> manacher(const\
-    \ string &s) {\n  string t;\n  for (auto c : s) {\n    t += string(\"#\") + c;\n\
-    \  }\n  auto res = manacher_odd(t + \"#\");\n  return vector<int>(begin(res) +\
-    \ 1, end(res) - 1);\n}\n#line 10 \"strings/test/Enumerate_Palindromes.test.cpp\"\
-    \n\nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
-    \  string s;\n  cin >> s;\n  auto ans = manacher(s);\n  for (auto v : ans) cout\
-    \ << v - 1 << ' ';\n}\n"
+  _verificationStatusIcon: ':x:'
+  attributes: {}
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
+    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
+    \  File \"/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../manacher.hpp:\
+    \ line -1: no such header\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/enumerate_palindromes\"\
     \n\n#include <bits/extc++.h>\n\nusing namespace std;\nusing namespace __gnu_cxx;\n\
     using namespace __gnu_pbds;\n\n#include \"../manacher.hpp\"\n\nsigned main() {\n\
     \  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
     \  string s;\n  cin >> s;\n  auto ans = manacher(s);\n  for (auto v : ans) cout\
     \ << v - 1 << ' ';\n}"
-  dependsOn:
-  - strings/manacher.hpp
+  dependsOn: []
   isVerificationFile: true
   path: strings/test/Enumerate_Palindromes.test.cpp
   requiredBy: []
-  timestamp: '2022-08-22 00:24:37+07:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '1970-01-01 00:00:00+00:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: strings/test/Enumerate_Palindromes.test.cpp
 layout: document

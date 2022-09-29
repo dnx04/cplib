@@ -25,8 +25,5 @@ data:
   verifiedWith: []
 documentation_of: strings/kmp.hpp
 layout: document
-redirect_from:
-- /library/strings/kmp.hpp
-- /library/strings/kmp.hpp.html
-title: strings/kmp.hpp
+title: $\pi$ function (Knuth-Morris-Pratt algorithm)
 ---

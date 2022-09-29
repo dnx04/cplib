@@ -31,8 +31,5 @@ data:
   - strings/test/Z_Algorithm.test.cpp
 documentation_of: strings/zf.hpp
 layout: document
-redirect_from:
-- /library/strings/zf.hpp
-- /library/strings/zf.hpp.html
-title: strings/zf.hpp
+title: $z$ function
 ---

@@ -14,10 +14,7 @@ data:
       title: Number Theoretic Transform
   - name: data-structure
     pages:
-    - icon: ':warning:'
-      path: data-structure/2dsum.hpp
-      title: data-structure/2dsum.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/dsu.hpp
       title: Disjoint Set Union (with Rank and Path Compression)
     - icon: ':warning:'
@@ -26,15 +23,15 @@ data:
     - icon: ':warning:'
       path: data-structure/dynamic_hull.hpp
       title: Dynamic Line Container (Convex Hull Trick)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/fenwick.hpp
       title: Fenwick Tree
+    - icon: ':x:'
+      path: data-structure/fenwick2d.hpp
+      title: Fenwick Tree 2D
     - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segtree.hpp
       title: Segment Tree (with Lazy Propagation)
-    - icon: ':warning:'
-      path: data-structure/pbds.hpp
-      title: data-structure/pbds.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/rmq.hpp
       title: data-structure/rmq.hpp
@@ -63,9 +60,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/lowlink.hpp
       title: graph/lowlink.hpp
-    - icon: ':x:'
-      path: graph/mst.hpp
-      title: graph/mst.hpp
     - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
       title: Strongly Connected Component
@@ -106,24 +100,21 @@ data:
     pages:
     - icon: ':warning:'
       path: strings/kmp.hpp
-      title: strings/kmp.hpp
+      title: $\pi$ function (Knuth-Morris-Pratt algorithm)
     - icon: ':warning:'
       path: strings/lyndon.hpp
       title: Lyndon factorization
-    - icon: ':heavy_check_mark:'
-      path: strings/manacher.hpp
-      title: strings/manacher.hpp
-    - icon: ':warning:'
-      path: strings/rolling_hash.hpp
-      title: strings/rolling_hash.hpp
     - icon: ':heavy_check_mark:'
       path: strings/suffix_array.hpp
       title: Suffix Array
     - icon: ':heavy_check_mark:'
       path: strings/zf.hpp
-      title: strings/zf.hpp
+      title: $z$ function
   - name: tree
     pages:
+    - icon: ':heavy_check_mark:'
+      path: tree/lca.hpp
+      title: tree/lca.hpp
     - icon: ':heavy_check_mark:'
       path: tree/tree_diameter.hpp
       title: Tree Diameter
@@ -132,6 +123,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: utility/dynamic_modulo.hpp
       title: Dynamic Modular Arithmetic
+    - icon: ':warning:'
+      path: utility/pbds.hpp
+      title: utility/pbds.hpp
     - icon: ':heavy_check_mark:'
       path: utility/static_modulo.hpp
       title: Static Modular Arithmetic
@@ -152,7 +146,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/test/Point_Add_Range_Sum.test.cpp
       title: data-structure/test/Point_Add_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -167,6 +161,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Static_RMQ.test.cpp
       title: data-structure/test/Static_RMQ.test.cpp
+    - icon: ':x:'
+      path: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
+      title: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Unionfind.test.cpp
       title: data-structure/test/Unionfind.test.cpp
@@ -180,9 +177,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/test/2_Sat.test.cpp
       title: graph/test/2_Sat.test.cpp
-    - icon: ':x:'
-      path: graph/test/Minimum_Spanning_Tree.test.cpp
-      title: graph/test/Minimum_Spanning_Tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: graph/test/Strongly_Connected_Components.test.cpp
       title: graph/test/Strongly_Connected_Components.test.cpp
@@ -207,7 +201,7 @@ data:
       title: number-theory/test/Enumerate_Primes.test.cpp
   - name: strings/test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: strings/test/Enumerate_Palindromes.test.cpp
       title: strings/test/Enumerate_Palindromes.test.cpp
     - icon: ':heavy_check_mark:'
@@ -221,6 +215,9 @@ data:
       title: strings/test/Z_Algorithm.test.cpp
   - name: tree/test
     pages:
+    - icon: ':heavy_check_mark:'
+      path: tree/test/Lowest_Common_Ancestor.test.cpp
+      title: tree/test/Lowest_Common_Ancestor.test.cpp
     - icon: ':heavy_check_mark:'
       path: tree/test/Tree_Diameter.test.cpp
       title: tree/test/Tree_Diameter.test.cpp
