@@ -105,6 +105,9 @@ data:
       path: strings/lyndon.hpp
       title: Lyndon factorization
     - icon: ':heavy_check_mark:'
+      path: strings/manacher.hpp
+      title: strings/manacher.hpp
+    - icon: ':heavy_check_mark:'
       path: strings/suffix_array.hpp
       title: Suffix Array
     - icon: ':heavy_check_mark:'
@@ -201,7 +204,7 @@ data:
       title: number-theory/test/Enumerate_Primes.test.cpp
   - name: strings/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: strings/test/Enumerate_Palindromes.test.cpp
       title: strings/test/Enumerate_Palindromes.test.cpp
     - icon: ':heavy_check_mark:'
