@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/fenwick.hpp
     title: Fenwick Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/fenwick2d.hpp
     title: Fenwick Tree 2D
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_B
@@ -45,7 +45,7 @@ data:
     \ (int i = 0; i < n; ++i) {\n    int x1, y1, x2, y2;\n    cin >> x1 >> y1 >> x2\
     \ >> y2;\n    f.add(x1, y1, x2, y2, 1);\n  }\n  int ans = 0;\n  for (int i = 0;\
     \ i < N; ++i) {\n    for (int j = 0; j < N; ++j) {\n      ans = max(ans, f.sum(i\
-    \ + 1, j + 1));\n    }\n  }\n  cout << ans;\n}\n"
+    \ + 1, j + 1));\n    }\n  }\n  cout << ans << '\\n';\n}\n"
   code: "#define PROBLEM \\\n  \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_B\"\
     \n\n#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing ll = long long;\n\
     using ull = unsigned long long;\n\n#include \"data-structure/fenwick2d.hpp\"\n\
@@ -54,15 +54,15 @@ data:
     \ (int i = 0; i < n; ++i) {\n    int x1, y1, x2, y2;\n    cin >> x1 >> y1 >> x2\
     \ >> y2;\n    f.add(x1, y1, x2, y2, 1);\n  }\n  int ans = 0;\n  for (int i = 0;\
     \ i < N; ++i) {\n    for (int j = 0; j < N; ++j) {\n      ans = max(ans, f.sum(i\
-    \ + 1, j + 1));\n    }\n  }\n  cout << ans;\n}"
+    \ + 1, j + 1));\n    }\n  }\n  cout << ans << '\\n';\n}"
   dependsOn:
   - data-structure/fenwick2d.hpp
   - data-structure/fenwick.hpp
   isVerificationFile: true
   path: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
   requiredBy: []
-  timestamp: '2022-09-30 00:18:53+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-09-30 00:44:43+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
 layout: document

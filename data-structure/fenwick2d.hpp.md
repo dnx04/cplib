@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/fenwick.hpp
     title: Fenwick Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
     title: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/fenwick.hpp\"\ntemplate <typename T>\nstruct\
@@ -50,7 +50,7 @@ data:
   path: data-structure/fenwick2d.hpp
   requiredBy: []
   timestamp: '2022-09-29 23:49:51+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
 documentation_of: data-structure/fenwick2d.hpp

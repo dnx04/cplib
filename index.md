@@ -23,10 +23,10 @@ data:
     - icon: ':warning:'
       path: data-structure/dynamic_hull.hpp
       title: Dynamic Line Container (Convex Hull Trick)
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/fenwick.hpp
       title: Fenwick Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/fenwick2d.hpp
       title: Fenwick Tree 2D
     - icon: ':heavy_check_mark:'
@@ -164,7 +164,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Static_RMQ.test.cpp
       title: data-structure/test/Static_RMQ.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
       title: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
     - icon: ':heavy_check_mark:'
