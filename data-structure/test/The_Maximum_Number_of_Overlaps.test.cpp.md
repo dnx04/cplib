@@ -41,7 +41,7 @@ data:
     \ x1, int y1, int x2, int y2) {\n    return sum(x2, y2) - sum(x1, y2) - sum(x2,\
     \ y1) + sum(x1, y1);\n  }\n};\n#line 12 \"data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp\"\
     \n\nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
-    \  const int N = 10;\n  int n;\n  cin >> n;\n  fenwick2d<int> f(N, N);\n  for\
+    \  const int N = 1001;\n  int n;\n  cin >> n;\n  fenwick2d<int> f(N, N);\n  for\
     \ (int i = 0; i < n; ++i) {\n    int x1, y1, x2, y2;\n    cin >> x1 >> y1 >> x2\
     \ >> y2;\n    f.add(x1, y1, x2, y2, 1);\n  }\n  int ans = 0;\n  for (int i = 0;\
     \ i < N; ++i) {\n    for (int j = 0; j < N; ++j) {\n      ans = max(ans, f.sum(i\
@@ -50,7 +50,7 @@ data:
     \n\n#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing ll = long long;\n\
     using ull = unsigned long long;\n\n#include \"data-structure/fenwick2d.hpp\"\n\
     \nsigned main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr), cin.exceptions(cin.failbit);\n\
-    \  const int N = 10;\n  int n;\n  cin >> n;\n  fenwick2d<int> f(N, N);\n  for\
+    \  const int N = 1001;\n  int n;\n  cin >> n;\n  fenwick2d<int> f(N, N);\n  for\
     \ (int i = 0; i < n; ++i) {\n    int x1, y1, x2, y2;\n    cin >> x1 >> y1 >> x2\
     \ >> y2;\n    f.add(x1, y1, x2, y2, 1);\n  }\n  int ans = 0;\n  for (int i = 0;\
     \ i < N; ++i) {\n    for (int j = 0; j < N; ++j) {\n      ans = max(ans, f.sum(i\
@@ -61,7 +61,7 @@ data:
   isVerificationFile: true
   path: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
   requiredBy: []
-  timestamp: '2022-09-30 00:07:15+07:00'
+  timestamp: '2022-09-30 00:18:53+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
