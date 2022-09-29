@@ -6,7 +6,7 @@ data:
     path: data-structure/fenwick2d.hpp
     title: Fenwick Tree 2D
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/test/Point_Add_Range_Sum.test.cpp
     title: data-structure/test/Point_Add_Range_Sum.test.cpp
   - icon: ':x:'
@@ -14,7 +14,7 @@ data:
     title: data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/fenwick.hpp\"\ntemplate <typename T>\nstruct\
@@ -41,7 +41,7 @@ data:
   requiredBy:
   - data-structure/fenwick2d.hpp
   timestamp: '2022-09-29 23:49:51+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - data-structure/test/Point_Add_Range_Sum.test.cpp
   - data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp

@@ -23,7 +23,7 @@ data:
     - icon: ':warning:'
       path: data-structure/dynamic_hull.hpp
       title: Dynamic Line Container (Convex Hull Trick)
-    - icon: ':x:'
+    - icon: ':question:'
       path: data-structure/fenwick.hpp
       title: Fenwick Tree
     - icon: ':x:'
@@ -34,7 +34,7 @@ data:
       title: Segment Tree (with Lazy Propagation)
     - icon: ':heavy_check_mark:'
       path: data-structure/rmq.hpp
-      title: data-structure/rmq.hpp
+      title: Range Minimum/Maximum Query (Sparse Table)
     - icon: ':heavy_check_mark:'
       path: data-structure/segtree.hpp
       title: Segment Tree
@@ -94,8 +94,8 @@ data:
   - name: number-theory
     pages:
     - icon: ':heavy_check_mark:'
-      path: number-theory/sieves.hpp
-      title: number-theory/sieves.hpp
+      path: number-theory/bitset_sieve.hpp
+      title: Sieve of Eratosthenes (using bitset)
   - name: strings
     pages:
     - icon: ':warning:'
@@ -149,7 +149,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Add_Range_Sum.test.cpp
       title: data-structure/test/Point_Add_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'

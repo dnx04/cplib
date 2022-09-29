@@ -44,8 +44,5 @@ data:
   - data-structure/test/Static_RMQ.test.cpp
 documentation_of: data-structure/rmq.hpp
 layout: document
-redirect_from:
-- /library/data-structure/rmq.hpp
-- /library/data-structure/rmq.hpp.html
-title: data-structure/rmq.hpp
+title: Range Minimum/Maximum Query (Sparse Table)
 ---
