@@ -49,8 +49,5 @@ data:
   - tree/test/Lowest_Common_Ancestor.test.cpp
 documentation_of: tree/lca.hpp
 layout: document
-redirect_from:
-- /library/tree/lca.hpp
-- /library/tree/lca.hpp.html
-title: tree/lca.hpp
+title: Lowest Common Ancestor
 ---

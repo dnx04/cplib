@@ -117,7 +117,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: tree/lca.hpp
-      title: tree/lca.hpp
+      title: Lowest Common Ancestor
     - icon: ':heavy_check_mark:'
       path: tree/tree_diameter.hpp
       title: Tree Diameter

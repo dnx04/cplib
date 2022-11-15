@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: tree/lca.hpp
-    title: tree/lca.hpp
+    title: Lowest Common Ancestor
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
