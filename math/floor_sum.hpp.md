@@ -33,7 +33,7 @@ data:
   isVerificationFile: false
   path: math/floor_sum.hpp
   requiredBy: []
-  timestamp: '2022-09-27 20:44:18+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - math/test/Sum_of_Floor_of_Linear.test.cpp

@@ -62,7 +62,7 @@ data:
   isVerificationFile: false
   path: graph/2sat.hpp
   requiredBy: []
-  timestamp: '2022-09-12 10:17:10+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - graph/test/2_Sat.test.cpp

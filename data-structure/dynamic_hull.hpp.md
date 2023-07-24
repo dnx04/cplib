@@ -42,7 +42,7 @@ data:
   isVerificationFile: false
   path: data-structure/dynamic_hull.hpp
   requiredBy: []
-  timestamp: '2022-08-22 00:11:09+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/dynamic_hull.hpp

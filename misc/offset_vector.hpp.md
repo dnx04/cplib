@@ -25,7 +25,7 @@ data:
   isVerificationFile: false
   path: misc/offset_vector.hpp
   requiredBy: []
-  timestamp: '2022-08-12 20:20:35+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/offset_vector.hpp

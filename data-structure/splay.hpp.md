@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
-    title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/splay.hpp\"\ntemplate <class K, class S,\
@@ -188,10 +185,9 @@ data:
   isVerificationFile: false
   path: data-structure/splay.hpp
   requiredBy: []
-  timestamp: '2022-08-19 21:06:49+07:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
+  timestamp: '2023-07-25 00:50:50+07:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: data-structure/splay.hpp
 layout: document
 title: Splay Tree (Implicit Treaps)

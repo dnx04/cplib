@@ -30,7 +30,7 @@ data:
   isVerificationFile: false
   path: dp/lis.hpp
   requiredBy: []
-  timestamp: '2022-09-08 21:32:23+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - dp/test/Longest_Increasing_Subsequence.test.cpp

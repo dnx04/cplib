@@ -2,20 +2,14 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: convolution/test/Bitwise_And_Convolution.test.cpp
-    title: convolution/test/Bitwise_And_Convolution.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: convolution/test/Bitwise_Xor_Convolution.test.cpp
-    title: convolution/test/Bitwise_Xor_Convolution.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"utility/dynamic_modulo.hpp\"\n\nstruct dynamic_modulo {\n\
-    \  using Fp = dynamic_modulo;\n  using i64 = int64_t;\n  using u64 = uint64_t;\n\
+  bundledCode: "#line 2 \"misc/dynamic_modulo.hpp\"\n\nstruct dynamic_modulo {\n \
+    \ using Fp = dynamic_modulo;\n  using i64 = int64_t;\n  using u64 = uint64_t;\n\
     \  using u128 = __uint128_t;\n\n  static u64 mod;\n  static u64 r;\n  static u64\
     \ n2;\n\n  static u64 get_r() {\n    u64 ret = mod;\n    for (i64 i = 0; i < 5;\
     \ ++i) ret *= 2 - mod * ret;\n    return ret;\n  }\n  static void set_mod(u64\
@@ -76,24 +70,15 @@ data:
     \ dynamic_modulo::n2;"
   dependsOn: []
   isVerificationFile: false
-  path: utility/dynamic_modulo.hpp
+  path: misc/dynamic_modulo.hpp
   requiredBy: []
-  timestamp: '2022-09-28 08:32:31+07:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - convolution/test/Bitwise_Xor_Convolution.test.cpp
-  - convolution/test/Bitwise_And_Convolution.test.cpp
-documentation_of: utility/dynamic_modulo.hpp
+  timestamp: '2023-07-25 00:50:50+07:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: misc/dynamic_modulo.hpp
 layout: document
-title: Dynamic Modular Arithmetic
+redirect_from:
+- /library/misc/dynamic_modulo.hpp
+- /library/misc/dynamic_modulo.hpp.html
+title: misc/dynamic_modulo.hpp
 ---
-
-It efficiently performs modular arithmetic in case the modulo is not given at compile time by utilizing inline Barrett reduction.
-
-Use this if the modulo required by a problem is not fixed.
-
-The usage is the same as [Static Modulo](./static_modulo.hpp).
-
-## Complexity
-- $\mathcal{O}(1)$ (all operation except division)
-- $\mathcal{O}(\log M)$ (division, $M$ must be a prime)

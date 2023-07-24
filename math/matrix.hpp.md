@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: math/test/Matrix_Product.test.cpp
-    title: math/test/Matrix_Product.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/matrix.hpp\"\ntemplate <typename T>\nstruct matrix\
@@ -65,10 +62,9 @@ data:
   isVerificationFile: false
   path: math/matrix.hpp
   requiredBy: []
-  timestamp: '2022-09-27 23:05:16+07:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - math/test/Matrix_Product.test.cpp
+  timestamp: '2023-07-25 00:50:50+07:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: math/matrix.hpp
 layout: document
 title: Operators on Matrix

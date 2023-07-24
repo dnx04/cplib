@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: math/test/Find_Linear_Recurrence.test.cpp
-    title: math/test/Find_Linear_Recurrence.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 2 \"math/berlekamp_massey.hpp\"\n\ntemplate <typename Fp>\n\
@@ -37,10 +34,9 @@ data:
   isVerificationFile: false
   path: math/berlekamp_massey.hpp
   requiredBy: []
-  timestamp: '2022-09-27 23:05:16+07:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - math/test/Find_Linear_Recurrence.test.cpp
+  timestamp: '2023-07-25 00:50:50+07:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: math/berlekamp_massey.hpp
 layout: document
 title: Berlekamp-Massey algorithm

@@ -77,7 +77,7 @@ data:
   isVerificationFile: true
   path: graph/test/2_Sat.test.cpp
   requiredBy: []
-  timestamp: '2022-09-12 10:17:10+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: graph/test/2_Sat.test.cpp

@@ -6,10 +6,10 @@ data:
     - icon: ':warning:'
       path: convolution/fft.hpp
       title: Fast Fourier Transform
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: convolution/fwht.hpp
       title: Fast Walsh-Hadamard Transform
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: convolution/ntt.hpp
       title: Number Theoretic Transform
   - name: data-structure
@@ -29,19 +29,19 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/fenwick2d.hpp
       title: Fenwick Tree 2D
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: data-structure/lazy_segtree.hpp
       title: Segment Tree (with Lazy Propagation)
     - icon: ':heavy_check_mark:'
       path: data-structure/rmq.hpp
       title: Range Minimum/Maximum Query (Sparse Table)
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: data-structure/segtree.hpp
       title: Segment Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: data-structure/splay.hpp
       title: Splay Tree (Implicit Treaps)
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: data-structure/swag.hpp
       title: Sliding Window Aggregation
   - name: dp
@@ -57,6 +57,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/2sat.hpp
       title: 2-SAT
+    - icon: ':warning:'
+      path: graph/bipartite_matching.hpp
+      title: graph/bipartite_matching.hpp
     - icon: ':heavy_check_mark:'
       path: graph/lowlink.hpp
       title: graph/lowlink.hpp
@@ -65,13 +68,13 @@ data:
       title: Strongly Connected Component
   - name: math
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: math/berlekamp_massey.hpp
       title: Berlekamp-Massey algorithm
     - icon: ':heavy_check_mark:'
       path: math/floor_sum.hpp
       title: Sum of Floor of Linear
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: math/matrix.hpp
       title: Operators on Matrix
   - name: misc
@@ -83,11 +86,23 @@ data:
       path: misc/dir.hpp
       title: misc/dir.hpp
     - icon: ':warning:'
+      path: misc/dynamic_modulo.hpp
+      title: misc/dynamic_modulo.hpp
+    - icon: ':warning:'
+      path: misc/mo_algo.hpp
+      title: Mo's algorithm
+    - icon: ':warning:'
       path: misc/offset_vector.hpp
       title: misc/offset_vector.hpp
     - icon: ':warning:'
-      path: misc/optimize.hpp
-      title: misc/optimize.hpp
+      path: misc/pbds.hpp
+      title: misc/pbds.hpp
+    - icon: ':warning:'
+      path: misc/static_modulo.hpp
+      title: misc/static_modulo.hpp
+    - icon: ':warning:'
+      path: misc/ternary_search.hpp
+      title: misc/ternary_search.hpp
     - icon: ':warning:'
       path: misc/vec.hpp
       title: misc/vec.hpp
@@ -121,44 +136,33 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/tree_diameter.hpp
       title: Tree Diameter
-  - name: utility
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: utility/dynamic_modulo.hpp
-      title: Dynamic Modular Arithmetic
-    - icon: ':warning:'
-      path: utility/pbds.hpp
-      title: utility/pbds.hpp
-    - icon: ':heavy_check_mark:'
-      path: utility/static_modulo.hpp
-      title: Static Modular Arithmetic
   verificationCategories:
   - name: convolution/test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: convolution/test/Bitwise_And_Convolution.test.cpp
       title: convolution/test/Bitwise_And_Convolution.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: convolution/test/Bitwise_Xor_Convolution.test.cpp
       title: convolution/test/Bitwise_Xor_Convolution.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: convolution/test/Convolution.test.cpp
       title: convolution/test/Convolution.test.cpp
   - name: data-structure/test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Dynamic_Sequence_Range_Affine_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: data-structure/test/Point_Add_Range_Sum.test.cpp
       title: data-structure/test/Point_Add_Range_Sum.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/test/Point_Set_Range_Composite.test.cpp
       title: data-structure/test/Point_Set_Range_Composite.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/test/Queue_Operate_All_Composite.test.cpp
       title: data-structure/test/Queue_Operate_All_Composite.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data-structure/test/Range_Affine_Range_Sum.test.cpp
       title: data-structure/test/Range_Affine_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -188,10 +192,10 @@ data:
       title: graph/test/Two-Edge-Connected_Components.test.cpp
   - name: math/test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: math/test/Find_Linear_Recurrence.test.cpp
       title: math/test/Find_Linear_Recurrence.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: math/test/Matrix_Product.test.cpp
       title: math/test/Matrix_Product.test.cpp
     - icon: ':heavy_check_mark:'

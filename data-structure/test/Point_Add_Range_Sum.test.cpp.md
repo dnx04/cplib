@@ -43,7 +43,7 @@ data:
   isVerificationFile: true
   path: data-structure/test/Point_Add_Range_Sum.test.cpp
   requiredBy: []
-  timestamp: '2022-09-30 00:07:15+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Point_Add_Range_Sum.test.cpp

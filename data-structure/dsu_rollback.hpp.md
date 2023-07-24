@@ -42,7 +42,7 @@ data:
   isVerificationFile: false
   path: data-structure/dsu_rollback.hpp
   requiredBy: []
-  timestamp: '2022-09-27 23:27:56+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/dsu_rollback.hpp

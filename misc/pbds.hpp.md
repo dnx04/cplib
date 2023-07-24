@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"utility/pbds.hpp\"\n\n#include <ext/pb_ds/assoc_container.hpp>\n\
+  bundledCode: "#line 2 \"misc/pbds.hpp\"\n\n#include <ext/pb_ds/assoc_container.hpp>\n\
     #include <ext/pb_ds/tag_and_trait.hpp>\n#include <ext/pb_ds/tree_policy.hpp>\n\
     \nusing namespace __gnu_pbds;  // find_by_order(), order_of_key()\ntemplate <typename\
     \ TK>\nusing pbds_set = tree<TK, null_type, less<TK>, rb_tree_tag,\n         \
@@ -22,15 +22,15 @@ data:
     \ rb_tree_tag, tree_order_statistics_node_update>;"
   dependsOn: []
   isVerificationFile: false
-  path: utility/pbds.hpp
+  path: misc/pbds.hpp
   requiredBy: []
-  timestamp: '2022-09-29 23:49:51+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: utility/pbds.hpp
+documentation_of: misc/pbds.hpp
 layout: document
 redirect_from:
-- /library/utility/pbds.hpp
-- /library/utility/pbds.hpp.html
-title: utility/pbds.hpp
+- /library/misc/pbds.hpp
+- /library/misc/pbds.hpp.html
+title: misc/pbds.hpp
 ---

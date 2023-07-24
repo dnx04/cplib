@@ -40,7 +40,7 @@ data:
   isVerificationFile: true
   path: math/test/Sum_of_Floor_of_Linear.test.cpp
   requiredBy: []
-  timestamp: '2022-09-27 23:15:57+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: math/test/Sum_of_Floor_of_Linear.test.cpp

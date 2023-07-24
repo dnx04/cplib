@@ -40,11 +40,11 @@ data:
   path: data-structure/fenwick.hpp
   requiredBy:
   - data-structure/fenwick2d.hpp
-  timestamp: '2022-09-29 23:49:51+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - data-structure/test/Point_Add_Range_Sum.test.cpp
   - data-structure/test/The_Maximum_Number_of_Overlaps.test.cpp
+  - data-structure/test/Point_Add_Range_Sum.test.cpp
 documentation_of: data-structure/fenwick.hpp
 layout: document
 title: Fenwick Tree

@@ -32,7 +32,7 @@ data:
   isVerificationFile: false
   path: strings/manacher.hpp
   requiredBy: []
-  timestamp: '2022-09-29 23:59:15+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - strings/test/Enumerate_Palindromes.test.cpp

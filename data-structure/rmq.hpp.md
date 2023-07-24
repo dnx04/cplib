@@ -38,7 +38,7 @@ data:
   isVerificationFile: false
   path: data-structure/rmq.hpp
   requiredBy: []
-  timestamp: '2022-09-03 21:27:00+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - data-structure/test/Static_RMQ.test.cpp

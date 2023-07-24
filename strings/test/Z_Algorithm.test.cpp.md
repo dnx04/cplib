@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: strings/test/Z_Algorithm.test.cpp
   requiredBy: []
-  timestamp: '2022-09-28 10:01:57+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: strings/test/Z_Algorithm.test.cpp

@@ -43,7 +43,7 @@ data:
   isVerificationFile: true
   path: data-structure/test/Static_RMQ.test.cpp
   requiredBy: []
-  timestamp: '2022-09-03 22:10:58+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: data-structure/test/Static_RMQ.test.cpp

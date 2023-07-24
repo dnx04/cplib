@@ -65,11 +65,11 @@ data:
   path: graph/scc.hpp
   requiredBy:
   - graph/2sat.hpp
-  timestamp: '2022-09-12 10:17:10+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - graph/test/Strongly_Connected_Components.test.cpp
   - graph/test/2_Sat.test.cpp
+  - graph/test/Strongly_Connected_Components.test.cpp
 documentation_of: graph/scc.hpp
 layout: document
 title: Strongly Connected Component

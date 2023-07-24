@@ -32,7 +32,7 @@ data:
   isVerificationFile: false
   path: number-theory/bitset_sieve.hpp
   requiredBy: []
-  timestamp: '2022-09-30 00:07:15+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - number-theory/test/Enumerate_Primes.test.cpp

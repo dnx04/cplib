@@ -2,16 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: convolution/test/Bitwise_And_Convolution.test.cpp
-    title: convolution/test/Bitwise_And_Convolution.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: convolution/test/Bitwise_Xor_Convolution.test.cpp
-    title: convolution/test/Bitwise_Xor_Convolution.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"convolution/fwht.hpp\"\ntemplate <typename T, typename F>\n\
@@ -65,11 +59,9 @@ data:
   isVerificationFile: false
   path: convolution/fwht.hpp
   requiredBy: []
-  timestamp: '2022-09-28 10:01:57+07:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - convolution/test/Bitwise_Xor_Convolution.test.cpp
-  - convolution/test/Bitwise_And_Convolution.test.cpp
+  timestamp: '2023-07-25 00:50:50+07:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: convolution/fwht.hpp
 layout: document
 title: Fast Walsh-Hadamard Transform

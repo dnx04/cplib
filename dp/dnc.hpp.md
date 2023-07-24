@@ -25,7 +25,7 @@ data:
   isVerificationFile: false
   path: dp/dnc.hpp
   requiredBy: []
-  timestamp: '2022-09-08 21:32:23+07:00'
+  timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: dp/dnc.hpp
