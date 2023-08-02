@@ -10,8 +10,8 @@ data:
     _deprecated_at_docs: docs/misc/mo.md
     document_title: Mo's algorithm
     links: []
-  bundledCode: "#line 2 \"misc/mo_algo.hpp\"\n\n// mo start from 1, so if query is\
-    \ [l, r), then insert [l - 1, r)\n\nstruct mo_algo {\n  int width;\n  vector<int>\
+  bundledCode: "#line 2 \"misc/mo.hpp\"\n\n// mo start from 1, so if query is [l,\
+    \ r), then insert [l - 1, r)\n\nstruct mo_algo {\n  int width;\n  vector<int>\
     \ left, right, order;\n\n  mo_algo(int N, int Q) : order(Q) {\n    width = max<int>(1,\
     \ 1.0 * N / max<double>(1.0, sqrt(Q * 2.0 / 3.0)));\n    iota(begin(order), end(order),\
     \ 0);\n  }\n\n  void insert(int l, int r) { /* [l, r) */\n    left.emplace_back(l);\n\
@@ -46,15 +46,15 @@ data:
     \ */"
   dependsOn: []
   isVerificationFile: false
-  path: misc/mo_algo.hpp
+  path: misc/mo.hpp
   requiredBy: []
-  timestamp: '2023-07-25 00:50:50+07:00'
+  timestamp: '2023-08-02 22:18:29+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: misc/mo_algo.hpp
+documentation_of: misc/mo.hpp
 layout: document
 redirect_from:
-- /library/misc/mo_algo.hpp
-- /library/misc/mo_algo.hpp.html
+- /library/misc/mo.hpp
+- /library/misc/mo.hpp.html
 title: Mo's algorithm
 ---

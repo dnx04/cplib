@@ -63,6 +63,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/lowlink.hpp
       title: graph/lowlink.hpp
+    - icon: ':warning:'
+      path: graph/max_flow.hpp
+      title: graph/max_flow.hpp
     - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
       title: Strongly Connected Component
@@ -89,7 +92,7 @@ data:
       path: misc/dynamic_modulo.hpp
       title: misc/dynamic_modulo.hpp
     - icon: ':warning:'
-      path: misc/mo_algo.hpp
+      path: misc/mo.hpp
       title: Mo's algorithm
     - icon: ':warning:'
       path: misc/offset_vector.hpp
@@ -97,6 +100,9 @@ data:
     - icon: ':warning:'
       path: misc/pbds.hpp
       title: misc/pbds.hpp
+    - icon: ':warning:'
+      path: misc/segment_union.hpp
+      title: misc/segment_union.hpp
     - icon: ':warning:'
       path: misc/static_modulo.hpp
       title: misc/static_modulo.hpp
