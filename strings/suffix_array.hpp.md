@@ -69,8 +69,8 @@ data:
   timestamp: '2023-07-25 00:50:50+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - strings/test/Suffix_Array.test.cpp
   - strings/test/Number_of_Substrings.test.cpp
+  - strings/test/Suffix_Array.test.cpp
 documentation_of: strings/suffix_array.hpp
 layout: document
 title: Suffix Array

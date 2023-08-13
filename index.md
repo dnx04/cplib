@@ -52,6 +52,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: dp/lis.hpp
       title: dp/lis.hpp
+  - name: geometry
+    pages:
+    - icon: ':warning:'
+      path: geometry/basic.hpp
+      title: geometry/basic.hpp
+    - icon: ':warning:'
+      path: geometry/polygon.hpp
+      title: geometry/polygon.hpp
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -91,6 +99,9 @@ data:
     - icon: ':warning:'
       path: misc/dynamic_modulo.hpp
       title: misc/dynamic_modulo.hpp
+    - icon: ':warning:'
+      path: misc/mex.hpp
+      title: misc/mex.hpp
     - icon: ':warning:'
       path: misc/mo.hpp
       title: Mo's algorithm
